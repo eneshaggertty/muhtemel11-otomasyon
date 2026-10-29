@@ -459,6 +459,20 @@ def gorev_puan(fxs, now, api, y):
         y.paylas(key, [img], cap)
 
 
+def gorev_puan_simdi(now, y, lig=config.SUPER_LIG):
+    """Elle istenen anlık puan durumu (hafta bitmesini beklemeden, TFF'den)."""
+    satirlar = tablo.tff(lig)
+    hafta_no = max(r[1] for r in satirlar)
+    key = f"puan:{lig}:{config.SEZON}:Regular Season - {hafta_no}"
+    satirlar = tablo.tff_ile_esitle(lig, satirlar, str(oyun_gunu(now).date()))
+    img = render.puan_durumu(lig_ust(lig), f"{hafta_no}. hafta sonu", satirlar,
+                             os.path.join(post_dir(now), f"puan_{lig}.jpg"))
+    ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(satirlar[:5]))
+    cap = (f"📊 {lig_ust(lig)} | PUAN DURUMU ({hafta_no}. hafta sonu)\n\n{ilk}\n...\n\n"
+           f"Şampiyon kim olur? 👇\n\n{config.LIGLER[lig]['tag']}")
+    y.paylas(key, [img], cap)
+
+
 def _son_milli_kadro(api, state, now):
     """Türkiye'nin son maçındaki ilk 11. Önce hafızadan, yoksa sezon fikstüründen bulur."""
     son = state["cache"].get("milli_son")
@@ -582,9 +596,12 @@ def run(api, now=None):
                     ("sonuc", lambda: gorev_sonuc(fxs, now, api, y)),
                     ("toplu", lambda: gorev_toplu(fxs, now, y)),
                     ("puan", lambda: gorev_puan(fxs, now, api, y)),
-                    ("muhtemel11", lambda: gorev_muhtemel11(now, api, y, state))]:
+                    ("muhtemel11", lambda: gorev_muhtemel11(now, api, y, state)),
+                    ("puan_simdi", lambda: gorev_puan_simdi(now, y))]:
         if sadece and ad_ not in sadece:
             continue
+        if ad_ == "puan_simdi" and "puan_simdi" not in sadece:
+            continue  # sadece elle istenince
         try:
             fn()
         except Exception as e:  # noqa: BLE001  bir görev patlarsa diğerleri yine çalışsın
