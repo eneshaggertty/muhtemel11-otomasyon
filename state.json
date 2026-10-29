@@ -23,9 +23,9 @@
       "city": "Frosinone"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 20,
       "extra": null
      }
     },
@@ -54,13 +54,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -148,7 +148,7 @@
    }
   ],
   "fixtures_date": "2026-10-29",
-  "fixtures_ts": "2026-10-29T20:23:51.277029+03:00",
+  "fixtures_ts": "2026-10-29T20:53:53.920533+03:00",
   "gunler": {
    "2026-10-28": [
     {
