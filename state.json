@@ -23,9 +23,9 @@
       "city": "Frosinone"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 20,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -44,22 +44,22 @@
       "id": 512,
       "name": "Frosinone",
       "logo": "https://media.api-sports.io/football/teams/512.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 867,
       "name": "Lecce",
       "logo": "https://media.api-sports.io/football/teams/867.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 2,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 2,
       "away": 0
      },
      "fulltime": {
@@ -148,7 +148,7 @@
    }
   ],
   "fixtures_date": "2026-10-29",
-  "fixtures_ts": "2026-10-29T20:53:53.920533+03:00",
+  "fixtures_ts": "2026-10-29T21:23:57.310848+03:00",
   "gunler": {
    "2026-10-28": [
     {
