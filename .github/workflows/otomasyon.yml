@@ -44,7 +44,10 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
           TEST_TARIH: ${{ inputs.tarih }}
-        run: python main.py
+        shell: bash
+        run: |
+          mkdir -p posts_test
+          python main.py 2>&1 | tee posts_test/calisma.log
       - name: Durumu kaydet
         if: always()
         run: |
@@ -53,6 +56,15 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "durum güncellendi"
           git pull --rebase -q && git push -q
+      - name: Test sonuçlarını test-sonuc dalına koy
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.dry_run
+        run: |
+          [ -d posts_test ] || exit 0
+          git checkout -q --orphan test-sonuc
+          git rm -rq --cached .
+          git add -f posts_test
+          git commit -q -m "test sonuçları"
+          git push -qf origin test-sonuc
       - name: Test görsellerini indirilebilir yap
         if: always() && github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4

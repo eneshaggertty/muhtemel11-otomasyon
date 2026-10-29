@@ -512,5 +512,6 @@ if __name__ == "__main__":
         log(f"TEST: {test_tarih} günü canlandırılıyor")
     errs = run(ApiFootball(), now=now)
     if errs:
-        print("\n".join(errs), file=sys.stderr)
+        for e in errs:  # GitHub'da "Annotations" olarak da görünsün
+            print(f"::error::{e}"[:900])
         sys.exit(1)
