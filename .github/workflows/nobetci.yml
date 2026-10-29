@@ -1,0 +1,54 @@
+name: Nöbetçi (kesintisiz çalışma)
+
+# GitHub'ın zamanlayıcısına güvenmeden sistemi canlı tutar:
+# 5,5 saat boyunca her 15 dakikada bir main.py'yi çalıştırır, sonra kendini yeniden başlatır.
+# Zincir koparsa aşağıdaki yedek zamanlayıcı yeniden başlatır.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 */6 * * *"
+
+concurrency:
+  group: otomasyon
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  nobet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Git kimliği
+        run: |
+          git config user.name "muhtemel11-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: 15 dakikada bir çalış
+        env:
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          bitis=$((SECONDS + 330*60))
+          while [ $SECONDS -lt $bitis ]; do
+            git pull -q --rebase origin main || true
+            python main.py || echo "::warning::Bu turda hata oldu (bir sonraki turda tekrar denenecek)"
+            mkdir -p posts
+            git add -A posts state.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "durum güncellendi" && (git pull -q --rebase origin main && git push -q || true)
+            fi
+            sleep 900
+          done
+      - name: Kendini yeniden başlat
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run nobetci.yml --ref main -R "$GITHUB_REPOSITORY"

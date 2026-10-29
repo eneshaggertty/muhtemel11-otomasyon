@@ -1,9 +1,7 @@
 name: Muhtemel11 Otomasyon
+# Zamanlanmış çalışma artık nobetci.yml üzerinden. Bu iş akışı elle test/paylaşım için.
 
 on:
-  schedule:
-    # Her 15 dakikada bir, İstanbul saatiyle 10:00 - 01:59 arası (cron UTC'dir)
-    - cron: "0,15,30,45 7-22 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
