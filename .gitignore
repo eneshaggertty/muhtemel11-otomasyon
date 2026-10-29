@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.token_yeni
+posts_test/
+.state_test.json
