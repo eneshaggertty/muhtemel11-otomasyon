@@ -22,6 +22,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
+          [ -f .token_yeni ] || exit 0   # yenileme gerekmedi
           if [ -z "$GH_TOKEN" ]; then
             echo "::warning::GH_PAT tanımlı değil, token GitHub'a kaydedilemedi. README'deki 'Token yenileme' bölümüne bak."
             exit 1
