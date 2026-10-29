@@ -146,7 +146,7 @@ TFF_SAYFA = {203: 198, 204: 142}
 _TFF_TEMIZLE = re.compile(r"\b(A\.?Ş\.?|FUTBOL KULÜBÜ|SPORTİF FAALİYETLER|METRO HOLDİNG|ALAGÖZ HOLDİNG|"
                           r"BATMAN PETROL SPOR A\.Ş\.|EKENLER BETON|ORFA YAPI|TURKA|EMİNEVİM|ARTI DEĞER|SMS GRUP|"
                           r"MISIRLICOMTR|ÇAYKUR|TÜMOSAN|CORENDON|NET GLOBAL|İKAS|ZECORNER|BELLONA|HESAP\.COM|"
-                          r"NATURA DÜNYASI|ATAKAŞ|RAMS|ALANYASPOR A\.Ş)\b", re.IGNORECASE)
+                          r"NATURA DÜNYASI|ATAKAŞ|RAMS|ARCA|KEÇTAŞ ANKARA|KULÜBÜ|FUTBOL)\b", re.IGNORECASE)
 
 
 def _tff_ad(ham):
@@ -154,7 +154,8 @@ def _tff_ad(ham):
     s = _TFF_TEMIZLE.sub(" ", s)
     s = re.sub(r"\s+", " ", s).strip(" .-")
     kucuk = s.replace("I", "ı").replace("İ", "i").lower()
-    return " ".join(w[:1].replace("i", "İ").replace("ı", "I").upper() + w[1:] for w in kucuk.split())
+    ad = " ".join(w[:1].replace("i", "İ").replace("ı", "I").upper() + w[1:] for w in kucuk.split())
+    return re.sub(r"\bFk\b", "FK", re.sub(r"\bSk\b", "SK", ad))
 
 
 def tff(lig):
