@@ -93,9 +93,9 @@
       "city": "Florence"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 37,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -114,23 +114,23 @@
       "id": 502,
       "name": "Fiorentina",
       "logo": "https://media.api-sports.io/football/teams/502.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 499,
       "name": "Atalanta",
       "logo": "https://media.api-sports.io/football/teams/499.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -148,7 +148,7 @@
    }
   ],
   "fixtures_date": "2026-10-29",
-  "fixtures_ts": "2026-10-29T23:24:22.199895+03:00",
+  "fixtures_ts": "2026-10-29T23:54:25.386887+03:00",
   "gunler": {
    "2026-10-28": [
     {
