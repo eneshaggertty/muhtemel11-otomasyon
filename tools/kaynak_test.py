@@ -1,5 +1,7 @@
 """football-data.org anahtar testi (geçici)."""
-import tablo
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import tablo  # noqa: E402
 for lig in (39, 140, 135):
     try:
         rows = tablo.football_data(lig)
