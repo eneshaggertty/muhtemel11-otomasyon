@@ -34,6 +34,17 @@ class Instagram:
             out["me"] = g("me", fields="id,name")
             out["izinler"] = g("me/permissions")
             out["sayfalar"] = g("me/accounts", fields="name,instagram_business_account{id,username}")
+            dbg = g("debug_token", input_token=self.token)
+            try:  # token'ın gerçekten erişebildiği hesap ID'leri
+                d = dbg["data"]
+                out["token_hesaplari"] = [(s["scope"], s.get("target_ids")) for s in d.get("granular_scopes", [])]
+                out["token_turu"] = d.get("type")
+            except Exception:  # noqa: BLE001
+                out["debug"] = dbg
+            uid = self.user_id
+            out["IG_USER_ID_rakamlar"] = f"{len(uid)} hane, '{uid[:5]} {uid[5:10]} {uid[10:]}'"
+            for tid in {t for _, ids in out.get("token_hesaplari", []) for t in (ids or [])}:
+                out[f"hesap_{tid[:5]} {tid[5:]}"] = g(tid, fields="id,username,name")
         return out
 
     def _post(self, path, **data):
