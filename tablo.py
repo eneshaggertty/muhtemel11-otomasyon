@@ -141,6 +141,61 @@ def dogrula(lig, sezon_str):
     return True, "ilk 5 tutuyor"
 
 
+# ------------------------------------------------------------ TFF resmi sitesi
+TFF_SAYFA = {203: 198, 204: 142}
+_TFF_TEMIZLE = re.compile(r"\b(A\.?Ş\.?|FUTBOL KULÜBÜ|SPORTİF FAALİYETLER|METRO HOLDİNG|ALAGÖZ HOLDİNG|"
+                          r"BATMAN PETROL SPOR A\.Ş\.|EKENLER BETON|ORFA YAPI|TURKA|EMİNEVİM|ARTI DEĞER|SMS GRUP|"
+                          r"MISIRLICOMTR|ÇAYKUR|TÜMOSAN|CORENDON|NET GLOBAL|İKAS|ZECORNER|BELLONA|HESAP\.COM|"
+                          r"NATURA DÜNYASI|ATAKAŞ|RAMS|ALANYASPOR A\.Ş)\b", re.IGNORECASE)
+
+
+def _tff_ad(ham):
+    s = re.sub(r"^\d+\.", "", ham).strip()
+    s = _TFF_TEMIZLE.sub(" ", s)
+    s = re.sub(r"\s+", " ", s).strip(" .-")
+    kucuk = s.replace("I", "ı").replace("İ", "i").lower()
+    return " ".join(w[:1].replace("i", "İ").replace("ı", "I").upper() + w[1:] for w in kucuk.split())
+
+
+def tff(lig):
+    """TFF puan cetveli: [(ad, O, G, B, M, AV, P), ...] ya da hata."""
+    from lxml import html as lh
+    r = requests.get(f"https://www.tff.org/Default.aspx?pageID={TFF_SAYFA[lig]}", timeout=40,
+                     headers={"User-Agent": "Mozilla/5.0 (muhtemel11-bot; haftalik puan cetveli)"})
+    r.raise_for_status()
+    metin = r.content.decode("utf-8", errors="strict") if b"charset=utf-8" in r.content[:3000].lower() else None
+    if metin is None:
+        try:
+            metin = r.content.decode("utf-8")
+        except UnicodeDecodeError:
+            metin = r.content.decode("windows-1254")
+    doc = lh.fromstring(metin)
+    for tbl in doc.iter("table"):
+        satirlar = []
+        for tr in tbl.iter("tr"):
+            hucre = [" ".join(td.text_content().split()) for td in tr.findall("td")]
+            if len(hucre) == 9 and re.match(r"^\d+\.", hucre[0]) and all(re.match(r"^-?\d+$", h) for h in hucre[1:]):
+                o, g, b, m, a, y, av, p = (int(h) for h in hucre[1:])
+                satirlar.append((_tff_ad(hucre[0]), o, g, b, m, av, p))
+        if len(satirlar) >= 16:
+            return satirlar
+    raise RuntimeError("TFF sayfasında puan cetveli bulunamadı")
+
+
+def tff_ile_esitle(lig, satirlar, bugun):
+    """TFF tablosunu kendi tablomuza yazar (isimler bizdekiyle eşleştirilir). Görüntülenecek satırları döner."""
+    eski = yukle(lig)
+    adlar = {}
+    if eski:
+        for r in satirlar:
+            adlar[r[0]] = eslestir(r[0], eski["takimlar"], eski.get("alias")) or r[0]
+    yeni = {"lig": (eski or {}).get("lig", str(lig)), "kaynak": f"TFF resmi puan cetveli ({bugun})",
+            "baslangic": bugun, "alias": (eski or {}).get("alias", {}), "islenen": [],
+            "takimlar": {adlar.get(r[0], r[0]): dict(zip(["O", "G", "B", "M", "AV", "P"], r[1:])) for r in satirlar}}
+    kaydet(lig, yeni)
+    return [(adlar.get(r[0], r[0]),) + tuple(r[1:]) for r in satirlar]
+
+
 # ------------------------------------------------------------ football-data.org
 def football_data(lig):
     key = os.environ.get("FOOTBALL_DATA_KEY", "").strip()

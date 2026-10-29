@@ -421,15 +421,26 @@ def gorev_puan(fxs, now, api, y):
                for f in gun_maclari(api, y.state, yarin)):
             continue
         if lig in tablo.KENDI_HESAP:
-            if tablo.yukle(lig) is None:
-                UYARILAR.append(f"Puan durumu: {config.LIG_ADLARI[lig]} başlangıç tablosu yok (tablolar/{lig}.json)")
-                y.mark(key)
-                continue
-            ok, aciklama = tablo.dogrula(lig, f"{config.SEZON}-{config.SEZON + 1}")
-            if not ok:  # paylaşma, sonraki turda tekrar dene (TheSportsDB geç güncellenebilir)
-                UYARILAR.append(f"Puan durumu bekletiliyor ({config.LIG_ADLARI[lig]}): {aciklama}")
-                continue
-            satirlar = tablo.sirali(lig)
+            satirlar = None
+            hafta_no = int(re.search(r"(\d+)\s*$", rnd).group(1)) if re.search(r"(\d+)\s*$", rnd) else None
+            try:  # 1) TFF resmi puan cetveli
+                resmi = tablo.tff(lig)
+                if hafta_no and max(r[1] for r in resmi) >= hafta_no:
+                    satirlar = tablo.tff_ile_esitle(lig, resmi, str(gun))
+                else:
+                    UYARILAR.append(f"Puan durumu bekletiliyor ({config.LIG_ADLARI[lig]}): TFF tablosu henüz {hafta_no}. haftayı içermiyor")
+                    continue
+            except Exception as e:  # noqa: BLE001
+                UYARILAR.append(f"TFF okunamadı ({config.LIG_ADLARI[lig]}): {e}")
+            if satirlar is None:  # 2) yedek: kendi tablomuz + TheSportsDB ilk 5 kontrolü
+                if tablo.yukle(lig) is None:
+                    UYARILAR.append(f"Puan durumu atlandı ({config.LIG_ADLARI[lig]}): TFF yok, başlangıç tablosu da yok")
+                    continue
+                ok, aciklama = tablo.dogrula(lig, f"{config.SEZON}-{config.SEZON + 1}")
+                if not ok:
+                    UYARILAR.append(f"Puan durumu bekletiliyor ({config.LIG_ADLARI[lig]}): {aciklama}")
+                    continue
+                satirlar = tablo.sirali(lig)
         elif lig in tablo.FOOTBALL_DATA:
             try:
                 satirlar = [(ad(r[0]),) + tuple(r[1:]) for r in tablo.football_data(lig)]

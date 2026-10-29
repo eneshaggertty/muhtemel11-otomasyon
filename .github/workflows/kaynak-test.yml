@@ -9,7 +9,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt pandas lxml html5lib
+      - run: pip install -r requirements.txt
       - run: python tools/kaynak_test.py
         env:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
