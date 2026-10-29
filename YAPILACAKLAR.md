@@ -5,17 +5,23 @@
 - Premier Lig / La Liga / Serie A: football-data.org (secret FOOTBALL_DATA_KEY)
 - [ ] İlk gerçek hafta sonunda (Süper Lig 10. hafta) paylaşılan kartları kontrol et
 
-## 2. X (Twitter) hesabı
+## 2. Yeni içerik türleri (kullanıcı isteği, 29 Ekim)
+- [ ] Haftanın en iyi oyuncusu, haftanın 11'i (API-Football /fixtures/players reytingleri, maç başına 1 istek)
+- [ ] Haftanın golcüleri / gol krallığı (maç olaylarından)
+- [ ] Haftanın en çok kurtarış yapan kalecisi (/fixtures/players goalkeeper saves)
+- [ ] Süper Lig'in en pahalı forveti/stoperi/kalecisi (piyasa değerleri: ücretsiz API yok; araştırılıp elle hazırlanacak, ara sıra)
+
+## 3. X (Twitter) hesabı
 - [ ] Sayfanın X hesabına da Instagram ile aynı anda paylaşım
 - [ ] X API erişimi ve güncel ücret/limitler araştırılacak, kullanıcıdan X geliştirici hesabı/anahtarları
 - [ ] Carousel -> X'te en fazla 4 görsel; açıklama 280 karakter sınırına göre kısaltılacak
 
-## 3. Diğer Instagram hesabının video otomasyonunu GitHub'a taşı
+## 4. Diğer Instagram hesabının video otomasyonunu GitHub'a taşı
 - [ ] Şu an kullanıcının bilgisayarında çalışıyor (bilgisayar kapanamıyor)
 - [ ] Mevcut kurulumu incele (ne üretiyor, hangi araçlar, nasıl paylaşıyor), GitHub Actions'a taşı
 - [ ] Video üretimi Actions'ta çalışmalı (ffmpeg vb.), Reels paylaşımı Instagram API ile
 
-## 4. Ayrı proje: YouTube çizgi filmi
+## 5. Ayrı proje: YouTube çizgi filmi
 - [ ] Konu, karakterler, hedef kitle ve bölüm uzunluğu konuşulacak (özgün karakterler)
 
 ## Notlar

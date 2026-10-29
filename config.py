@@ -65,7 +65,7 @@ AD_DUZELT = {
     "Fenerbahce": "Fenerbahçe", "Besiktas": "Beşiktaş", "Basaksehir": "Başakşehir",
     "Istanbul Basaksehir": "Başakşehir", "Goztepe": "Göztepe", "Kasimpasa": "Kasımpaşa",
     "Genclerbirligi": "Gençlerbirliği", "Eyupspor": "Eyüpspor", "Rizespor": "Çaykur Rizespor",
-    "Corum FK": "Çorum FK", "Turkey": "Türkiye", "Turkiye": "Türkiye",
+    "Corum FK": "Çorum FK", "Turkey": "Türkiye", "Turkiye": "Türkiye", "Amedspor": "Amed SFK", "Amed": "Amed SFK",
     # milli takım rakipleri
     "Spain": "İspanya", "Georgia": "Gürcistan", "Bulgaria": "Bulgaristan", "Germany": "Almanya",
     "Italy": "İtalya", "France": "Fransa", "England": "İngiltere", "Portugal": "Portekiz",

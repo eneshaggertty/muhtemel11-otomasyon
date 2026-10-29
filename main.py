@@ -206,6 +206,74 @@ class Yayinci:
         log(f"  paylaşıldı: {media_id}")
 
 
+# ------------------------------------------------------------------ maç önü / sonu yorumları
+LAKAP = {"Galatasaray": "Aslan", "Fenerbahçe": "Kanarya", "Beşiktaş": "Kara Kartal", "Trabzonspor": "Fırtına",
+         "Konyaspor": "Anadolu Kartalı", "Göztepe": "Göz Göz", "Kocaelispor": "Körfez ekibi",
+         "Samsunspor": "Kırmızı Şimşekler", "Gençlerbirliği": "Ankara temsilcisi", "Kasımpaşa": "Apaçiler"}
+BUYUKLER = {"Galatasaray", "Fenerbahçe", "Beşiktaş", "Trabzonspor"}
+
+
+def _sira(lig=config.SUPER_LIG):
+    """Takım adı -> (sıra, puan, takım sayısı), kendi tablomuzdan."""
+    try:
+        rows = tablo.sirali(lig)
+    except Exception:  # noqa: BLE001
+        return {}, 0
+    t = tablo.yukle(lig) or {}
+    sonuc = {}
+    for i, r in enumerate(rows):
+        sonuc[r[0]] = (i + 1, r[6])
+    return sonuc, len(rows), t
+
+
+def _tablo_adi(ad_, lig=config.SUPER_LIG):
+    t = tablo.yukle(lig)
+    return tablo.eslestir(ad_, t["takimlar"], t.get("alias")) if t else None
+
+
+def mac_onu_soru(f):
+    """Maçın önemine göre takipçiye soru: liderlik, zirve, derbi, düşme hattı."""
+    if f["league"]["id"] != config.SUPER_LIG:
+        return ""
+    s = _sira()
+    if not s or not s[0]:
+        return ""
+    sira, n = s[0], s[1]
+    ev, dep = ad(f["teams"]["home"]["name"]), ad(f["teams"]["away"]["name"])
+    te, td = _tablo_adi(f["teams"]["home"]["name"]), _tablo_adi(f["teams"]["away"]["name"])
+    if not te or not td or te not in sira or td not in sira:
+        return ""
+    (re_, pe), (rd, pd) = sira[te], sira[td]
+    lk = lambda takim, gorunen: LAKAP.get(takim, gorunen)  # noqa: E731
+    if te in BUYUKLER and td in BUYUKLER:
+        return f"🔥 Dev derbi! {ev} ({re_}.) ile {dep} ({rd}.) karşı karşıya. Kazanan kim olur?"
+    for takim, gorunen, rakip, r_, p_, ev_mi in ((te, ev, dep, re_, pe, True), (td, dep, ev, rd, pd, False)):
+        if r_ == 1:
+            yer = "sahasında" if ev_mi else "deplasmanda"
+            return f"👑 Lider {gorunen} ({p_} puan) {yer} {rakip} karşısında. {lk(takim, gorunen)} liderliği sürdürecek mi?"
+    if re_ <= 4 and rd <= 4:
+        return f"⚔️ Zirve yarışında kritik maç: {ev} ({re_}.) - {dep} ({rd}.). Sizce kim kazanır?"
+    for takim, gorunen, r_ in ((te, ev, re_), (td, dep, rd)):
+        if r_ >= n - 2:
+            return f"⚠️ {gorunen} ({r_}.) düşme hattında. Bu maçta puan çıkarabilecek mi?"
+    return ""
+
+
+def mac_sonu_yorum(f):
+    if f["league"]["id"] != config.SUPER_LIG or f["goals"]["home"] is None:
+        return ""
+    eg, ag = f["goals"]["home"], f["goals"]["away"]
+    if eg == ag:
+        return "🤝 Puanlar paylaşıldı!"
+    kazanan_api = f["teams"]["home"]["name"] if eg > ag else f["teams"]["away"]["name"]
+    kazanan, takim = ad(kazanan_api), _tablo_adi(kazanan_api)
+    lakap = LAKAP.get(takim, kazanan)
+    fark = abs(eg - ag)
+    if fark >= 3:
+        return f"💥 {lakap} farka koştu!"
+    return f"✅ {lakap} 3 puanı aldı!"
+
+
 # ------------------------------------------------------------------ içerikler
 def post_dir(now):
     return os.path.join(ROOT, POSTS, oyun_gunu(now).strftime("%Y-%m-%d"))
@@ -233,7 +301,9 @@ def gorev_program(fxs, now, y):
         ozet.append(f"🏟️ {config.LIG_ADLARI[lig]}\n" + "\n".join(f"{s} | {e} - {d}" for s, e, d in satir))
     if not images:
         return
-    cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(gun)}\n\n" + "\n\n".join(ozet) +
+    sorular = [q for q in (mac_onu_soru(f) for f in sorted(fxs, key=kickoff)) if q]
+    one_cikan = (sorular[0] + "\n\n") if sorular else ""
+    cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(gun)}\n\n" + one_cikan + "\n\n".join(ozet) +
            "\n\nSizce bugün kim kazanır? 👇\n\n" + birlesik_tag(ligler))
     y.paylas(key, images[:10], cap)
 
@@ -293,7 +363,9 @@ def gorev_ilk11(fxs, now, api, y):
             isimler = ", ".join(kisa_ad(p["player"]["name"]) for p in t["startXI"])
             satir.append(f"🔹 {ad(t['team']['name'])} ({t.get('formation') or '-'}): {isimler}")
         tag = lig_tag(f)
-        cap = f"📋 İLK 11'LER BELLİ OLDU!\n\n⚔️ {mac} | {k.strftime('%H:%M')}\n\n" + "\n\n".join(satir) + f"\n\n{tag}"
+        soru = mac_onu_soru(f)
+        cap = (f"📋 İLK 11'LER BELLİ OLDU!\n\n⚔️ {mac} | {k.strftime('%H:%M')}\n\n" + (soru + "\n\n" if soru else "")
+               + "\n\n".join(satir) + f"\n\n{tag}")
         y.paylas(key, images, cap)
 
 
@@ -357,7 +429,8 @@ def gorev_sonuc(fxs, now, api, y):
         gol_txt = "\n".join(f"⚽ {dk}' {n}{' (' + nt + ')' if nt else ''} ({ev if t == 'ev' else dep})"
                             for dk, n, t, nt in gl)
         tag = lig_tag(f)
-        cap = (f"🏁 MAÇ SONUCU\n\n{ev} {eh}-{ea} {dep}" + (f" ({ek})" if ek else "") +
+        yorum = mac_sonu_yorum(f)
+        cap = (f"🏁 MAÇ SONUCU\n\n{ev} {eh}-{ea} {dep}" + (f" ({ek})" if ek else "") + (f"\n{yorum}" if yorum else "") +
                (f"\n\n{gol_txt}" if gol_txt else "") +
                f"\n\n📍 {lig_adi(f)} · {hafta(f['league']['round'])}\n\nMaçı nasıl buldunuz? 👇\n\n{tag}")
         y.paylas(key, [img], cap)
