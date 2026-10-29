@@ -22,8 +22,19 @@ class Instagram:
         """Token'ın hangi hesaba ait olduğunu döner (token'ı göstermez)."""
         fields = "user_id,username,account_type" if self.hedef == "me" else "username"
         r = requests.get(f"{self.graph}/{self.hedef}", params={"fields": fields, "access_token": self.token}, timeout=30)
-        return {"tur": "Instagram girişi" if self.hedef == "me" else "Facebook girişi",
-                "durum": r.status_code, "yanit": r.json()}
+        out = {"tur": "Instagram girişi" if self.hedef == "me" else "Facebook girişi",
+               "durum": r.status_code, "yanit": r.json()}
+        if self.hedef != "me":  # Facebook girişli token: neye erişebiliyor?
+            def g(path, **p):
+                p["access_token"] = self.token
+                try:
+                    return requests.get(f"{self.graph}/{path}", params=p, timeout=30).json()
+                except Exception as e:  # noqa: BLE001
+                    return str(e)
+            out["me"] = g("me", fields="id,name")
+            out["izinler"] = g("me/permissions")
+            out["sayfalar"] = g("me/accounts", fields="name,instagram_business_account{id,username}")
+        return out
 
     def _post(self, path, **data):
         data["access_token"] = self.token

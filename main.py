@@ -514,8 +514,9 @@ def run(api, now=None):
     if "tani" in sadece:
         from instagram import Instagram
         t = Instagram().tani()
-        log(f"TANI: {t['tur']} | HTTP {t['durum']} | {t['yanit']}")
-        print(f"::notice::TANI {t['tur']} HTTP {t['durum']} {t['yanit']}"[:900])
+        log(f"TANI: {t}")
+        for k, v in t.items():
+            print(f"::notice::TANI {k}: {v}"[:900])
         return []
     for ad_, fn in [("program", lambda: gorev_program(fxs, now, y)),
                     ("ilk11", lambda: gorev_ilk11(fxs, now, api, y)),
