@@ -1,0 +1,30 @@
+name: Instagram token yenile
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # her pazartesi 09:17 (İstanbul)
+  workflow_dispatch:
+
+jobs:
+  yenile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Token'ı yenile
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python refresh_token.py
+      - name: Yeni token'ı gizli bölmeye kaydet
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::GH_PAT tanımlı değil, token GitHub'a kaydedilemedi. README'deki 'Token yenileme' bölümüne bak."
+            exit 1
+          fi
+          gh secret set IG_TOKEN --repo "$GITHUB_REPOSITORY" < .token_yeni
+          rm -f .token_yeni
