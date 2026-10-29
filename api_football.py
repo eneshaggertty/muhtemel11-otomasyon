@@ -31,6 +31,9 @@ class ApiFootball:
             p["last"] = last
         return self.get("/fixtures", **p)
 
+    def fixtures_team_season(self, team, season, tz):
+        return self.get("/fixtures", team=team, season=season, timezone=tz)
+
     def fixture(self, fixture_id, tz):
         r = self.get("/fixtures", id=fixture_id, timezone=tz)
         return r[0] if r else None

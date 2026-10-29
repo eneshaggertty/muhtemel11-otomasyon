@@ -63,7 +63,19 @@ class FakeApi:
 
     def fixtures_by_date(self, date, tz):
         self.calls += 1
-        return [self._sl()] + self._l1()
+        if date == "2026-10-27":  # yarın: milli maç
+            return [fx(900, 1, "Qualification - 5", "Turkey", "Spain", "21:45", ev_id=TR, gun=27)]
+        return [self._sl()] + self._l1() + self._pl()
+
+    def _pl(self):
+        takimlar = [("Arsenal", "Chelsea"), ("Liverpool", "Manchester City"), ("Tottenham", "Newcastle")]
+        if self.durum == "once":
+            return [fx(200 + i, 39, "Regular Season - 10", e, d, "18:00") for i, (e, d) in enumerate(takimlar)]
+        return [fx(200 + i, 39, "Regular Season - 10", e, d, "18:00", "FT", (i + 1, i % 2)) for i, (e, d) in enumerate(takimlar)]
+
+    def fixtures_team_season(self, team, season, tz):
+        self.calls += 1
+        return [fx(899, 1, "Qualification - 4", "Georgia", "Turkey", "19:00", "FT", (1, 2), dep_id=TR, gun=14)]
 
     def lineups(self, fid):
         self.calls += 1
@@ -87,7 +99,7 @@ class FakeApi:
 
     def round_fixtures(self, league, season, rnd, tz):
         self.calls += 1
-        return [self._sl()] if league == SL else self._l1()
+        return {SL: [self._sl()], L1: self._l1(), 39: self._pl()}[league]
 
     def standings(self, league, season):
         self.calls += 1
@@ -99,6 +111,8 @@ class FakeApi:
                 ("Genclerbirligi", 2, 2, 5, -11), ("Samsunspor", 1, 1, 7, -13), ("Eyupspor", 1, 0, 8, -21)]
         if league == L1:
             rows = rows + [("Bodrum FK", 1, 0, 8, -15), ("Sakaryaspor", 0, 2, 7, -20)]
+        if league == 39:
+            rows = [("Arsenal", 8, 1, 1, 15), ("Manchester City", 7, 2, 1, 12), ("Liverpool", 7, 1, 2, 10)] + rows[3:]
         return [{"team": {"name": n}, "all": {"played": w + d + l, "win": w, "draw": d, "lose": l},
                  "goalsDiff": gd, "points": 3 * w + d} for n, w, d, l, gd in rows]
 

@@ -5,16 +5,17 @@ GitHub Actions üzerinde her 15 dakikada bir çalışır, bilgisayarın açık o
 
 ## Neyi, ne zaman paylaşır?
 
-| İçerik | Zaman |
-|---|---|
-| Günün maçları (Süper Lig + 1. Lig, carousel) | Maç günü 12:00'den sonra |
-| İlk 11'ler (Süper Lig + milli maç, iki takım carousel) | Kadrolar açıklanınca (maçtan ~45-60 dk önce) |
-| Maç sonucu (Süper Lig + milli maç) | Maç bitince |
-| 1. Lig günün sonuçları (tek kart) | O günün tüm 1. Lig maçları bitince |
-| Puan durumu (Süper Lig, 1. Lig) | Haftanın tüm maçları bitince |
-| Türkiye muhtemel 11 | Milli maçtan bir gün önce 20:00'den sonra (son maçtaki 11'e göre) |
+| İçerik | Ligler | Zaman |
+|---|---|---|
+| Günün maçları (her lig bir görsel, carousel) | Hepsi | Maç günü 12:00'den sonra |
+| İlk 11 (iki takım, carousel) | Süper Lig + milli maç | Kadrolar açıklanınca |
+| Maç sonucu (her maç ayrı) | Süper Lig + milli maç | Maç bitince |
+| Günün sonuçları (tek kart) | 1. Lig, Premier Lig, La Liga, Serie A | O ligin günlük maçları bitince |
+| Puan durumu | Hepsi | Haftanın tüm maçları bitince |
+| Türkiye muhtemel 11 | Milli takım | Maçtan bir gün önce 20:00'den sonra |
 
-Hangisinin açık olacağını `config.py` içindeki `PAYLAS` bölümünden değiştirebilirsin.
+Ligleri ve her lig için ne paylaşılacağını `config.py` içindeki `LIGLER` tablosundan değiştirebilirsin.
+Sistem İstanbul saatiyle 10:00 - 02:00 arası 15 dakikada bir çalışır.
 
 ## Kurulum
 

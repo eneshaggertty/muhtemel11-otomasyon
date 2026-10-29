@@ -2,8 +2,8 @@ name: Muhtemel11 Otomasyon
 
 on:
   schedule:
-    # Her 15 dakikada bir, İstanbul saatiyle 10:00 - 00:59 arası (cron UTC'dir)
-    - cron: "*/15 7-21 * * *"
+    # Her 15 dakikada bir, İstanbul saatiyle 10:00 - 01:59 arası (cron UTC'dir)
+    - cron: "*/15 7-22 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -54,7 +54,7 @@ jobs:
           git commit -q -m "durum güncellendi"
           git pull --rebase -q && git push -q
       - name: Test görsellerini indirilebilir yap
-        if: github.event_name == 'workflow_dispatch'
+        if: always() && github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: gorseller

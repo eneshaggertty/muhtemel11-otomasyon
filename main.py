@@ -62,6 +62,15 @@ def hafta(round_name):
     return f"{m.group(1)}. Hafta" if m else (round_name or "")
 
 
+def oyun_gunu(now):
+    """Gece 03:00'e kadar önceki gün sayılır; böylece gece yarısını geçen maçlar da yakalanır."""
+    return now - timedelta(hours=3)
+
+
+def lig_tag(f):
+    return config.MILLI_TAG if is_milli(f) else config.LIGLER.get(f["league"]["id"], {}).get("tag", "")
+
+
 def kickoff(fx):
     return datetime.fromisoformat(fx["fixture"]["date"]).astimezone(TZ)
 
@@ -164,32 +173,33 @@ class Yayinci:
 
 # ------------------------------------------------------------------ içerikler
 def post_dir(now):
-    return os.path.join(ROOT, POSTS, now.strftime("%Y-%m-%d"))
+    return os.path.join(ROOT, POSTS, oyun_gunu(now).strftime("%Y-%m-%d"))
 
 
 def gorev_program(fxs, now, y):
     if not config.PAYLAS["program"] or now.hour < config.PROGRAM_SAATI:
         return
-    key = f"program:{now.date()}"
+    gun = oyun_gunu(now)
+    key = f"program:{gun.date()}"
     if y.posted(key):
         return
     images, ozet = [], []
-    for lig in (config.SUPER_LIG, config.BIRINCI_LIG):
+    for lig in config.LIGLER:
         maclar = sorted([f for f in fxs if f["league"]["id"] == lig and status(f) not in IPTAL],
                         key=kickoff)
         if not maclar:
             continue
         satir = [(kickoff(f).strftime("%H:%M"), ad(f["teams"]["home"]["name"]),
                   ad(f["teams"]["away"]["name"])) for f in maclar]
-        alt = f"{tarih_str(now)} · {hafta(maclar[0]['league']['round'])}"
+        alt = f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}"
         images.append(render.program(config.LIG_ADLARI[lig], alt, satir,
                                      os.path.join(post_dir(now), f"program_{lig}.jpg")))
         ozet.append(f"🏟️ {config.LIG_ADLARI[lig]}\n" + "\n".join(f"{s} | {e} - {d}" for s, e, d in satir))
     if not images:
         return
-    cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(now)}\n\n" + "\n\n".join(ozet) +
-           "\n\nSizce bugün kim kazanır? 👇\n\n" + config.HASHTAGS[config.SUPER_LIG])
-    y.paylas(key, images, cap)
+    cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(gun)}\n\n" + "\n\n".join(ozet) +
+           "\n\nSizce bugün kim kazanır? 👇\n\n" + config.LIGLER[config.SUPER_LIG]["tag"])
+    y.paylas(key, images[:10], cap)
 
 
 def satirlar_from_lineup(team):
@@ -215,9 +225,7 @@ def gorev_ilk11(fxs, now, api, y):
     for f in fxs:
         lig = f["league"]["id"]
         milli = is_milli(f)
-        if not (milli and config.PAYLAS["milli_takim"]
-                or lig == config.SUPER_LIG and config.PAYLAS["ilk11_superlig"]
-                or lig == config.BIRINCI_LIG and config.PAYLAS["ilk11_birincilig"]):
+        if not (milli and config.PAYLAS["milli_takim"] or config.LIGLER.get(lig, {}).get("ilk11")):
             continue
         key = f"ilk11:{f['fixture']['id']}"
         k = kickoff(f)
@@ -229,6 +237,10 @@ def gorev_ilk11(fxs, now, api, y):
         if len(lu) < 2 or not all(t.get("startXI") for t in lu):
             log(f"kadro henüz yok: {f['teams']['home']['name']} - {f['teams']['away']['name']}")
             continue
+        if milli:
+            tr = [t for t in lu if t["team"]["id"] == config.TURKIYE_ID]
+            if tr:
+                y.state["cache"]["milli_son"] = {"fixture": f, "lineup": tr[0]}
         ev, dep = ad(f["teams"]["home"]["name"]), ad(f["teams"]["away"]["name"])
         mac = f"{ev} – {dep}"
         alt = f"{lig_adi(f)} · {hafta(f['league']['round'])} · {k.strftime('%H:%M')}"
@@ -244,7 +256,7 @@ def gorev_ilk11(fxs, now, api, y):
         for t in lu:
             isimler = ", ".join(kisa_ad(p["player"]["name"]) for p in t["startXI"])
             satir.append(f"🔹 {ad(t['team']['name'])} ({t.get('formation') or '-'}): {isimler}")
-        tag = config.HASHTAGS["milli" if milli else lig] if (milli or lig in config.HASHTAGS) else ""
+        tag = lig_tag(f)
         cap = f"📋 İLK 11'LER BELLİ OLDU!\n\n⚔️ {mac} | {k.strftime('%H:%M')}\n\n" + "\n\n".join(satir) + f"\n\n{tag}"
         y.paylas(key, images, cap)
 
@@ -275,7 +287,7 @@ def gorev_sonuc(fxs, now, api, y):
     for f in fxs:
         lig = f["league"]["id"]
         milli = is_milli(f)
-        if not (milli and config.PAYLAS["milli_takim"] or lig == config.SUPER_LIG and config.PAYLAS["sonuc_superlig"]):
+        if not (milli and config.PAYLAS["milli_takim"] or config.LIGLER.get(lig, {}).get("sonuc") == "tekil"):
             continue
         key = f"sonuc:{f['fixture']['id']}"
         if y.posted(key) or status(f) not in BITTI:
@@ -308,36 +320,37 @@ def gorev_sonuc(fxs, now, api, y):
         }, os.path.join(post_dir(now), f"sonuc_{f['fixture']['id']}.jpg"))
         gol_txt = "\n".join(f"⚽ {dk}' {n}{' (' + nt + ')' if nt else ''} ({ev if t == 'ev' else dep})"
                             for dk, n, t, nt in gl)
-        tag = config.HASHTAGS["milli" if milli else lig] if (milli or lig in config.HASHTAGS) else ""
+        tag = lig_tag(f)
         cap = (f"🏁 MAÇ SONUCU\n\n{ev} {eh}-{ea} {dep}" + (f" ({ek})" if ek else "") +
                (f"\n\n{gol_txt}" if gol_txt else "") +
                f"\n\n📍 {lig_adi(f)} · {hafta(f['league']['round'])}\n\nMaçı nasıl buldunuz? 👇\n\n{tag}")
         y.paylas(key, [img], cap)
 
 
-def gorev_birincilig_toplu(fxs, now, y):
-    if not config.PAYLAS["sonuc_birincilig"]:
-        return
-    maclar = [f for f in fxs if f["league"]["id"] == config.BIRINCI_LIG and status(f) not in IPTAL]
-    key = f"toplu1lig:{now.date()}"
-    if not maclar or y.posted(key) or not all(status(f) in BITTI for f in maclar):
-        return
-    maclar.sort(key=kickoff)
-    son = [(ad(f["teams"]["home"]["name"]), f["goals"]["home"], f["goals"]["away"],
-            ad(f["teams"]["away"]["name"])) for f in maclar]
-    img = render.gunun_sonuclari(config.LIG_ADLARI[config.BIRINCI_LIG],
-                                 f"{tarih_str(now)} · {hafta(maclar[0]['league']['round'])}", son,
-                                 os.path.join(post_dir(now), "toplu_1lig.jpg"))
-    cap = ("🏁 TRENDYOL 1. LİG | GÜNÜN SONUÇLARI\n\n" +
-           "\n".join(f"{e} {a}-{b} {d}" for e, a, b, d in son) +
-           f"\n\n{config.HASHTAGS[config.BIRINCI_LIG]}")
-    y.paylas(key, [img], cap)
+def gorev_toplu(fxs, now, y):
+    """sonuc='toplu' olan ligler: günün tüm maçları bitince tek kart."""
+    gun = oyun_gunu(now)
+    for lig, ayar in config.LIGLER.items():
+        if ayar.get("sonuc") != "toplu":
+            continue
+        maclar = [f for f in fxs if f["league"]["id"] == lig and status(f) not in IPTAL]
+        key = f"toplu:{lig}:{gun.date()}"
+        if not maclar or y.posted(key) or not all(status(f) in BITTI for f in maclar):
+            continue
+        maclar.sort(key=kickoff)
+        son = [(ad(f["teams"]["home"]["name"]), f["goals"]["home"], f["goals"]["away"],
+                ad(f["teams"]["away"]["name"])) for f in maclar]
+        img = render.gunun_sonuclari(ayar["ad"], f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}", son,
+                                     os.path.join(post_dir(now), f"toplu_{lig}.jpg"))
+        cap = (f"🏁 {render.tr_upper(ayar['ad'])} | GÜNÜN SONUÇLARI\n\n" +
+               "\n".join(f"{e} {a}-{b} {d}" for e, a, b, d in son) + f"\n\n{ayar['tag']}")
+        y.paylas(key, [img], cap)
 
 
 def gorev_puan(fxs, now, api, y):
-    if not config.PAYLAS["puan_durumu"]:
-        return
-    for lig in (config.SUPER_LIG, config.BIRINCI_LIG):
+    for lig, ayar in config.LIGLER.items():
+        if not ayar.get("puan"):
+            continue
         bugun = [f for f in fxs if f["league"]["id"] == lig]
         if not bugun or not all(status(f) in BITTI | IPTAL for f in bugun):
             continue
@@ -357,64 +370,94 @@ def gorev_puan(fxs, now, api, y):
                                  os.path.join(post_dir(now), f"puan_{lig}.jpg"))
         ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(tablo[:5]))
         cap = (f"📊 {render.tr_upper(config.LIG_ADLARI[lig])} | PUAN DURUMU ({hafta(rnd)} sonu)\n\n{ilk}\n...\n\n"
-               f"Şampiyon kim olur? 👇\n\n{config.HASHTAGS[lig]}")
+               f"Şampiyon kim olur? 👇\n\n{ayar['tag']}")
         y.paylas(key, [img], cap)
+
+
+def _son_milli_kadro(api, state, now):
+    """Türkiye'nin son maçındaki ilk 11. Önce hafızadan, yoksa sezon fikstüründen bulur."""
+    son = state["cache"].get("milli_son")
+    if son:
+        return son["fixture"], son["lineup"]
+    try:  # ücretsiz planda izin verilmeyebilir
+        maclar = api.fixtures_team_season(config.TURKIYE_ID, now.year, config.TZ)
+    except Exception as e:  # noqa: BLE001
+        log(f"son milli maç bulunamadı: {e}")
+        return None, None
+    biten = sorted([f for f in maclar if status(f) in BITTI and kickoff(f) < now], key=kickoff)
+    if not biten:
+        return None, None
+    f = biten[-1]
+    lu = [t for t in api.lineups(f["fixture"]["id"]) if t["team"]["id"] == config.TURKIYE_ID]
+    if not lu or not lu[0].get("startXI"):
+        return None, None
+    state["cache"]["milli_son"] = {"fixture": f, "lineup": lu[0]}
+    return f, lu[0]
 
 
 def gorev_muhtemel11(now, api, y, state):
     if not config.PAYLAS["milli_takim"] or now.hour < config.MUHTEMEL11_SAATI:
         return
     c = state["cache"]
-    if c.get("milli_next_date") != str(now.date()):
-        nxt = api.fixtures_team(config.TURKIYE_ID, config.TZ, next_=1)
-        c["milli_next"] = nxt[0] if nxt else None
-        c["milli_next_date"] = str(now.date())
-    f = c.get("milli_next")
-    if not f or kickoff(f).date() != now.date() + timedelta(days=1):
-        return
-    key = f"muhtemel11:{f['fixture']['id']}"
-    if y.posted(key):
-        return
-    last = api.fixtures_team(config.TURKIYE_ID, config.TZ, last=1)
-    if not last:
-        return
-    lu = [t for t in api.lineups(last[0]["fixture"]["id"]) if t["team"]["id"] == config.TURKIYE_ID]
-    if not lu or not lu[0].get("startXI"):
-        return
-    rakip = ad(f["teams"]["away" if f["teams"]["home"]["id"] == config.TURKIYE_ID else "home"]["name"])
-    k = kickoff(f)
-    l0 = last[0]
-    son_rakip = ad(l0["teams"]["away" if l0["teams"]["home"]["id"] == config.TURKIYE_ID else "home"]["name"])
-    img = render.kadro("MUHTEMEL 11", f"TÜRKİYE – {render.tr_upper(rakip)}",
-                       f"{tarih_str(k)} · {k.strftime('%H:%M')}", "Türkiye", renk("Turkey", lu[0]),
-                       satirlar_from_lineup(lu[0]), os.path.join(post_dir(now), f"muhtemel11_{f['fixture']['id']}.jpg"),
-                       dipnot=f"Tahmin: {son_rakip} maçındaki ilk 11 baz alınmıştır. Resmi kadro maç günü açıklanır.",
-                       dizilis=lu[0].get("formation"), hoca=(lu[0].get("coach") or {}).get("name"))
-    isimler = ", ".join(kisa_ad(p["player"]["name"]) for p in lu[0]["startXI"])
-    cap = (f"🇹🇷 MUHTEMEL 11 | Türkiye - {rakip}\n\n📅 {tarih_str(k)} · {k.strftime('%H:%M')}\n\n"
-           f"{isimler}\n\nℹ️ Bu tahmin, {son_rakip} maçındaki ilk 11 baz alınarak hazırlanmıştır. "
-           f"Resmi kadro maç günü açıklanır.\n\nSizin 11'iniz nasıl olurdu? 👇\n\n{config.HASHTAGS['milli']}")
-    y.paylas(key, [img], cap)
+    yarin = str(now.date() + timedelta(days=1))
+    if c.get("milli_yarin_date") != yarin:  # günde 1 API çağrısı
+        c["milli_yarin"] = [f for f in api.fixtures_by_date(yarin, config.TZ) if is_milli(f)]
+        c["milli_yarin_date"] = yarin
+    for f in c.get("milli_yarin") or []:
+        key = f"muhtemel11:{f['fixture']['id']}"
+        if y.posted(key) or status(f) in IPTAL:
+            continue
+        l0, lu = _son_milli_kadro(api, state, now)
+        if not lu:
+            log("muhtemel 11: son milli maç kadrosu yok, atlanıyor")
+            y.mark(key)
+            continue
+        rakip = ad(f["teams"]["away" if f["teams"]["home"]["id"] == config.TURKIYE_ID else "home"]["name"])
+        son_rakip = ad(l0["teams"]["away" if l0["teams"]["home"]["id"] == config.TURKIYE_ID else "home"]["name"])
+        k = kickoff(f)
+        img = render.kadro("MUHTEMEL 11", f"TÜRKİYE – {render.tr_upper(rakip)}",
+                           f"{tarih_str(k)} · {k.strftime('%H:%M')}", "Türkiye", renk("Turkey", lu),
+                           satirlar_from_lineup(lu), os.path.join(post_dir(now), f"muhtemel11_{f['fixture']['id']}.jpg"),
+                           dipnot=f"Tahmin: {son_rakip} maçındaki ilk 11 baz alınmıştır. Resmi kadro maç günü açıklanır.",
+                           dizilis=lu.get("formation"), hoca=(lu.get("coach") or {}).get("name"))
+        isimler = ", ".join(kisa_ad(p["player"]["name"]) for p in lu["startXI"])
+        cap = (f"🇹🇷 MUHTEMEL 11 | Türkiye - {rakip}\n\n📅 {tarih_str(k)} · {k.strftime('%H:%M')}\n\n"
+               f"{isimler}\n\nℹ️ Bu tahmin, {son_rakip} maçındaki ilk 11 baz alınarak hazırlanmıştır. "
+               f"Resmi kadro maç günü açıklanır.\n\nSizin 11'iniz nasıl olurdu? 👇\n\n{config.MILLI_TAG}")
+        y.paylas(key, [img], cap)
 
 
 # ------------------------------------------------------------------ ana akış
 def bugunun_maclari(now, api, state):
-    """API çağrısını azaltmak için önbellekli: sadece maç saatlerine yakınken yeniler."""
+    """API çağrısını azaltmak için önbellekli.
+    - Gün içinde ilk çalışmada bir kez çeker.
+    - Maç saatlerinde en fazla 30 dakikada bir yeniler.
+    - Sonucu beklenen (tekil paylaşılan) bir maç varsa her çalışmada yeniler.
+    """
     c = state["cache"]
-    today = str(now.date())
+    today = str(oyun_gunu(now).date())
     fxs = c.get("fixtures") if c.get("fixtures_date") == today else None
+    son = datetime.fromisoformat(c["fixtures_ts"]) if c.get("fixtures_ts") and fxs is not None else None
 
     def aktif(f):
         k = kickoff(f)
         return (k - timedelta(minutes=config.ILK11_PENCERE_DK + 15) <= now <= k + timedelta(hours=3)
-                and status(f) not in IPTAL)
+                and status(f) not in IPTAL | BITTI)
 
-    if fxs is None or any(aktif(f) for f in fxs):
+    def sonuc_bekleniyor(f):
+        tekil = is_milli(f) or config.LIGLER.get(f["league"]["id"], {}).get("sonuc") == "tekil"
+        k = kickoff(f)
+        return (tekil and status(f) not in IPTAL | BITTI and k + timedelta(minutes=100) <= now <= k + timedelta(hours=4)
+                and f"sonuc:{f['fixture']['id']}" not in state["posted"])
+
+    yenile = (fxs is None
+              or any(sonuc_bekleniyor(f) for f in fxs)
+              or (any(aktif(f) for f in fxs) and (son is None or now - son >= timedelta(minutes=28))))
+    if yenile:
         hepsi = api.fixtures_by_date(today, config.TZ)
-        fxs = [f for f in hepsi if f["league"]["id"] in (config.SUPER_LIG, config.BIRINCI_LIG)
-               or is_milli(f)]
-        c["fixtures"], c["fixtures_date"] = fxs, today
-        log(f"bugün {len(fxs)} maç (API'den yenilendi)")
+        fxs = [f for f in hepsi if f["league"]["id"] in config.LIGLER or is_milli(f)]
+        c["fixtures"], c["fixtures_date"], c["fixtures_ts"] = fxs, today, now.isoformat()
+        log(f"{today}: {len(fxs)} maç (API'den yenilendi)")
     return fxs
 
 
@@ -444,7 +487,7 @@ def run(api, now=None):
     for ad_, fn in [("program", lambda: gorev_program(fxs, now, y)),
                     ("ilk11", lambda: gorev_ilk11(fxs, now, api, y)),
                     ("sonuc", lambda: gorev_sonuc(fxs, now, api, y)),
-                    ("1lig", lambda: gorev_birincilig_toplu(fxs, now, y)),
+                    ("toplu", lambda: gorev_toplu(fxs, now, y)),
                     ("puan", lambda: gorev_puan(fxs, now, api, y)),
                     ("muhtemel11", lambda: gorev_muhtemel11(now, api, y, state))]:
         try:
