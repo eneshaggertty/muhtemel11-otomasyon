@@ -24,6 +24,7 @@ import requests
 
 import config
 import render
+import tablo
 from api_football import PlanHatasi
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -31,6 +32,12 @@ DRY_RUN = os.environ.get("DRY_RUN") == "1"
 # Test modunda gerçek durum dosyasına ve posts/ klasörüne dokunulmaz
 STATE_PATH = os.path.join(ROOT, ".state_test.json" if DRY_RUN else "state.json")
 POSTS = "posts_test" if DRY_RUN else "posts"
+if DRY_RUN:  # test modunda gerçek tablolara dokunma: kopyası üzerinde çalış
+    import shutil as _sh
+    _test_dir = os.path.join(ROOT, ".tablolar_test")
+    if not os.path.isdir(_test_dir) and os.path.isdir(os.path.join(ROOT, "tablolar")):
+        _sh.copytree(os.path.join(ROOT, "tablolar"), _test_dir)
+    tablo.TABLO_DIR = _test_dir
 TZ = ZoneInfo(config.TZ)
 BITTI = {"FT", "AET", "PEN"}
 IPTAL = {"PST", "CANC", "ABD", "AWD", "WO"}
@@ -153,7 +160,7 @@ class Yayinci:
 
     def _push(self, paths, msg):
         save_state(self.state)
-        self._git("add", *paths, "state.json")
+        self._git("add", *paths, "state.json", "tablolar")
         if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0:
             return  # görsel zaten yüklü, yapılacak bir şey yok
         self._git("commit", "-m", msg)
@@ -376,33 +383,66 @@ def gorev_toplu(fxs, now, y):
         y.paylas(key, [img], cap)
 
 
+def gun_maclari(api, state, tarih):
+    """Belirli bir günün (dün/yarın) maç listesi; günde bir kez çekilir (ücretsiz plan ±1 gün izin veriyor)."""
+    c = state["cache"].setdefault("gunler", {})
+    if tarih not in c:
+        hepsi = api.fixtures_by_date(tarih, config.TZ)
+        c[tarih] = [f for f in hepsi if f["league"]["id"] in config.LIGLER]
+        # eski günleri temizle
+        for k in sorted(c)[:-4]:
+            c.pop(k, None)
+    return c[tarih]
+
+
 def gorev_puan(fxs, now, api, y):
+    gun = oyun_gunu(now).date()
+    dun = str(gun - timedelta(days=1))
+    yarin = str(gun + timedelta(days=1))
     for lig, ayar in config.LIGLER.items():
         if not ayar.get("puan"):
             continue
         bugun = [f for f in fxs if f["league"]["id"] == lig]
+        # kendi tuttuğumuz tablolar: bugünün ve dünün biten maçlarını işle (kaçan olmasın)
+        if lig in tablo.KENDI_HESAP and tablo.yukle(lig) is not None:
+            onceki = [f for f in gun_maclari(api, y.state, dun) if f["league"]["id"] == lig]
+            degisti, uyarilar = tablo.isle(lig, onceki + bugun, BITTI)
+            UYARILAR.extend(uyarilar)
+            if degisti:
+                log(f"{config.LIG_ADLARI[lig]} tablosu güncellendi")
         if not bugun or not all(status(f) in BITTI | IPTAL for f in bugun):
             continue
         rnd = bugun[0]["league"]["round"]
         key = f"puan:{lig}:{config.SEZON}:{rnd}"
         if y.posted(key):
             continue
-        try:
-            tum = api.round_fixtures(lig, config.SEZON, rnd, config.TZ)
-            if not all(status(f) in BITTI | IPTAL for f in tum):
-                continue  # haftanın maçları bitmedi
-            st = api.standings(lig, config.SEZON)
-        except PlanHatasi as e:
-            UYARILAR.append(f"Puan durumu atlandı ({config.LIG_ADLARI[lig]}): ücretli plan gerekiyor. {e}")
-            y.mark(key)  # bu hafta için tekrar deneme
+        # yarın aynı haftadan maç varsa hafta bitmemiştir
+        if any(f["league"]["id"] == lig and f["league"]["round"] == rnd and status(f) not in IPTAL
+               for f in gun_maclari(api, y.state, yarin)):
             continue
-        tablo = [(ad(r["team"]["name"]), r["all"]["played"], r["all"]["win"], r["all"]["draw"],
-                  r["all"]["lose"], r["goalsDiff"], r["points"]) for r in st]
-        if not tablo:
+        if lig in tablo.KENDI_HESAP:
+            if tablo.yukle(lig) is None:
+                UYARILAR.append(f"Puan durumu: {config.LIG_ADLARI[lig]} başlangıç tablosu yok (tablolar/{lig}.json)")
+                y.mark(key)
+                continue
+            ok, aciklama = tablo.dogrula(lig, f"{config.SEZON}-{config.SEZON + 1}")
+            if not ok:  # paylaşma, sonraki turda tekrar dene (TheSportsDB geç güncellenebilir)
+                UYARILAR.append(f"Puan durumu bekletiliyor ({config.LIG_ADLARI[lig]}): {aciklama}")
+                continue
+            satirlar = tablo.sirali(lig)
+        elif lig in tablo.FOOTBALL_DATA:
+            try:
+                satirlar = [(ad(r[0]),) + tuple(r[1:]) for r in tablo.football_data(lig)]
+            except Exception as e:  # noqa: BLE001
+                UYARILAR.append(f"Puan durumu alınamadı ({config.LIG_ADLARI[lig]}): {e}")
+                continue
+        else:
             continue
-        img = render.puan_durumu(lig_ust(lig), f"{hafta(rnd)} sonu", tablo,
+        if not satirlar:
+            continue
+        img = render.puan_durumu(lig_ust(lig), f"{hafta(rnd)} sonu", satirlar,
                                  os.path.join(post_dir(now), f"puan_{lig}.jpg"))
-        ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(tablo[:5]))
+        ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(satirlar[:5]))
         cap = (f"📊 {lig_ust(lig)} | PUAN DURUMU ({hafta(rnd)} sonu)\n\n{ilk}\n...\n\n"
                f"Şampiyon kim olur? 👇\n\n{ayar['tag']}")
         y.paylas(key, [img], cap)

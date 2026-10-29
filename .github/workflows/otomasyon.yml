@@ -44,6 +44,7 @@ jobs:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
           TEST_TARIH: ${{ inputs.tarih }}
           SADECE: ${{ inputs.sadece }}
@@ -55,7 +56,7 @@ jobs:
         if: always()
         run: |
           mkdir -p posts
-          git add -A posts state.json
+          git add -A posts state.json tablolar
           git diff --cached --quiet && exit 0
           git commit -q -m "durum güncellendi"
           git pull --rebase -q && git push -q

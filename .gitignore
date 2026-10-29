@@ -1,6 +1,7 @@
 *.mp4
 *.pyc
 .state_test.json
+.tablolar_test/
 .token_yeni
 __pycache__/
 posts_test/

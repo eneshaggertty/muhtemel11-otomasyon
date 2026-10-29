@@ -83,6 +83,8 @@ def isle(lig, fixtures, bitti):
         fid = str(f["fixture"]["id"])
         if fid in t["islenen"]:
             continue
+        if f["fixture"]["date"][:10] <= t.get("baslangic", ""):
+            continue  # başlangıç tablosuna zaten dahil
         ev = eslestir(f["teams"]["home"]["name"], takimlar, t.get("alias"))
         dep = eslestir(f["teams"]["away"]["name"], takimlar, t.get("alias"))
         if not ev or not dep or ev == dep:
@@ -134,7 +136,7 @@ def dogrula(lig, sezon_str):
         return False, f"TheSportsDB'ye ulaşılamadı: {e}"
     if not onlar:
         return False, "TheSportsDB tablo vermedi"
-    if biz != onlar:
+    if sorted(biz) != sorted(onlar):  # eşit puanlı takımların sırası farklı olabilir
         return False, f"ilk 5 tutmuyor: biz {biz} / TheSportsDB {onlar}"
     return True, "ilk 5 tutuyor"
 

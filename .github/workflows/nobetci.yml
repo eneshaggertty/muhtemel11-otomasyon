@@ -35,13 +35,14 @@ jobs:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: |
           bitis=$((SECONDS + 330*60))
           while [ $SECONDS -lt $bitis ]; do
             git pull -q --rebase origin main || true
             python main.py || echo "::warning::Bu turda hata oldu (bir sonraki turda tekrar denenecek)"
             mkdir -p posts
-            git add -A posts state.json
+            git add -A posts state.json tablolar
             if ! git diff --cached --quiet; then
               git commit -q -m "durum güncellendi" && (git pull -q --rebase origin main && git push -q || true)
             fi
