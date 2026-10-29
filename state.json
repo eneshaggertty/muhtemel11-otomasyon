@@ -1,1 +1,359 @@
-{"posted": {}, "cache": {}}
+{
+ "posted": {},
+ "cache": {
+  "fixtures": [
+   {
+    "fixture": {
+     "id": 1550167,
+     "referee": "Juan Luca Sacchi",
+     "timezone": "Europe/Istanbul",
+     "date": "2026-10-28T20:30:00+03:00",
+     "timestamp": 1793208600,
+     "periods": {
+      "first": null,
+      "second": null
+     },
+     "venue": {
+      "id": 907,
+      "name": "San Siro/Giuseppe Meazza",
+      "city": "Milan"
+     },
+     "status": {
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
+      "extra": null
+     }
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "country": "Italy",
+     "logo": "https://media.api-sports.io/football/leagues/135.png",
+     "flag": "https://media.api-sports.io/flags/it.svg",
+     "season": 2026,
+     "round": "Regular Season - 9",
+     "standings": true
+    },
+    "teams": {
+     "home": {
+      "id": 489,
+      "name": "AC Milan",
+      "logo": "https://media.api-sports.io/football/teams/489.png",
+      "winner": false
+     },
+     "away": {
+      "id": 500,
+      "name": "Bologna",
+      "logo": "https://media.api-sports.io/football/teams/500.png",
+      "winner": true
+     }
+    },
+    "goals": {
+     "home": 2,
+     "away": 4
+    },
+    "score": {
+     "halftime": {
+      "home": 2,
+      "away": 1
+     },
+     "fulltime": {
+      "home": 2,
+      "away": 4
+     },
+     "extratime": {
+      "home": null,
+      "away": null
+     },
+     "penalty": {
+      "home": null,
+      "away": null
+     }
+    }
+   },
+   {
+    "fixture": {
+     "id": 1550173,
+     "referee": "Davide Massa",
+     "timezone": "Europe/Istanbul",
+     "date": "2026-10-28T20:30:00+03:00",
+     "timestamp": 1793208600,
+     "periods": {
+      "first": null,
+      "second": null
+     },
+     "venue": {
+      "id": 921,
+      "name": "Ennio Tardini",
+      "city": "Parma"
+     },
+     "status": {
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
+      "extra": null
+     }
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "country": "Italy",
+     "logo": "https://media.api-sports.io/football/leagues/135.png",
+     "flag": "https://media.api-sports.io/flags/it.svg",
+     "season": 2026,
+     "round": "Regular Season - 9",
+     "standings": true
+    },
+    "teams": {
+     "home": {
+      "id": 523,
+      "name": "Parma",
+      "logo": "https://media.api-sports.io/football/teams/523.png",
+      "winner": null
+     },
+     "away": {
+      "id": 494,
+      "name": "Udinese",
+      "logo": "https://media.api-sports.io/football/teams/494.png",
+      "winner": null
+     }
+    },
+    "goals": {
+     "home": 0,
+     "away": 0
+    },
+    "score": {
+     "halftime": {
+      "home": 0,
+      "away": 0
+     },
+     "fulltime": {
+      "home": 0,
+      "away": 0
+     },
+     "extratime": {
+      "home": null,
+      "away": null
+     },
+     "penalty": {
+      "home": null,
+      "away": null
+     }
+    }
+   },
+   {
+    "fixture": {
+     "id": 1550176,
+     "referee": "Luca J. Pairetto",
+     "timezone": "Europe/Istanbul",
+     "date": "2026-10-28T20:30:00+03:00",
+     "timestamp": 1793208600,
+     "periods": {
+      "first": null,
+      "second": null
+     },
+     "venue": {
+      "id": 948,
+      "name": "Stadio Pier Luigi Penzo",
+      "city": "Venice"
+     },
+     "status": {
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
+      "extra": null
+     }
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "country": "Italy",
+     "logo": "https://media.api-sports.io/football/leagues/135.png",
+     "flag": "https://media.api-sports.io/flags/it.svg",
+     "season": 2026,
+     "round": "Regular Season - 9",
+     "standings": true
+    },
+    "teams": {
+     "home": {
+      "id": 517,
+      "name": "Venezia",
+      "logo": "https://media.api-sports.io/football/teams/517.png",
+      "winner": false
+     },
+     "away": {
+      "id": 505,
+      "name": "Inter",
+      "logo": "https://media.api-sports.io/football/teams/505.png",
+      "winner": true
+     }
+    },
+    "goals": {
+     "home": 0,
+     "away": 2
+    },
+    "score": {
+     "halftime": {
+      "home": 0,
+      "away": 0
+     },
+     "fulltime": {
+      "home": 0,
+      "away": 2
+     },
+     "extratime": {
+      "home": null,
+      "away": null
+     },
+     "penalty": {
+      "home": null,
+      "away": null
+     }
+    }
+   },
+   {
+    "fixture": {
+     "id": 1550171,
+     "referee": "Daniele Doveri",
+     "timezone": "Europe/Istanbul",
+     "date": "2026-10-28T22:45:00+03:00",
+     "timestamp": 1793216700,
+     "periods": {
+      "first": null,
+      "second": null
+     },
+     "venue": {
+      "id": 905,
+      "name": "Luigi Ferraris",
+      "city": "Genoa"
+     },
+     "status": {
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
+      "extra": null
+     }
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "country": "Italy",
+     "logo": "https://media.api-sports.io/football/leagues/135.png",
+     "flag": "https://media.api-sports.io/flags/it.svg",
+     "season": 2026,
+     "round": "Regular Season - 9",
+     "standings": true
+    },
+    "teams": {
+     "home": {
+      "id": 495,
+      "name": "Genoa",
+      "logo": "https://media.api-sports.io/football/teams/495.png",
+      "winner": true
+     },
+     "away": {
+      "id": 496,
+      "name": "Juventus",
+      "logo": "https://media.api-sports.io/football/teams/496.png",
+      "winner": false
+     }
+    },
+    "goals": {
+     "home": 2,
+     "away": 0
+    },
+    "score": {
+     "halftime": {
+      "home": 2,
+      "away": 0
+     },
+     "fulltime": {
+      "home": 2,
+      "away": 0
+     },
+     "extratime": {
+      "home": null,
+      "away": null
+     },
+     "penalty": {
+      "home": null,
+      "away": null
+     }
+    }
+   },
+   {
+    "fixture": {
+     "id": 1550172,
+     "referee": "Giovanni Ayroldi",
+     "timezone": "Europe/Istanbul",
+     "date": "2026-10-28T22:45:00+03:00",
+     "timestamp": 1793216700,
+     "periods": {
+      "first": null,
+      "second": null
+     },
+     "venue": {
+      "id": 12086,
+      "name": "Stadio Brianteo",
+      "city": "Monza"
+     },
+     "status": {
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
+      "extra": null
+     }
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "country": "Italy",
+     "logo": "https://media.api-sports.io/football/leagues/135.png",
+     "flag": "https://media.api-sports.io/flags/it.svg",
+     "season": 2026,
+     "round": "Regular Season - 9",
+     "standings": true
+    },
+    "teams": {
+     "home": {
+      "id": 1579,
+      "name": "Monza",
+      "logo": "https://media.api-sports.io/football/teams/1579.png",
+      "winner": false
+     },
+     "away": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media.api-sports.io/football/teams/492.png",
+      "winner": true
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 4
+    },
+    "score": {
+     "halftime": {
+      "home": 1,
+      "away": 1
+     },
+     "fulltime": {
+      "home": 1,
+      "away": 4
+     },
+     "extratime": {
+      "home": null,
+      "away": null
+     },
+     "penalty": {
+      "home": null,
+      "away": null
+     }
+    }
+   }
+  ],
+  "fixtures_date": "2026-10-28",
+  "fixtures_ts": "2026-10-28T23:59:00+03:00"
+ }
+}
