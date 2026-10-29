@@ -511,6 +511,12 @@ def run(api, now=None):
     except Exception as e:  # noqa: BLE001
         hatalar.append(f"maç listesi: {e}")
     sadece = [g.strip() for g in os.environ.get("SADECE", "").split(",") if g.strip()]
+    if "tani" in sadece:
+        from instagram import Instagram
+        t = Instagram().tani()
+        log(f"TANI: {t['tur']} | HTTP {t['durum']} | {t['yanit']}")
+        print(f"::notice::TANI {t['tur']} HTTP {t['durum']} {t['yanit']}"[:900])
+        return []
     for ad_, fn in [("program", lambda: gorev_program(fxs, now, y)),
                     ("ilk11", lambda: gorev_ilk11(fxs, now, api, y)),
                     ("sonuc", lambda: gorev_sonuc(fxs, now, api, y)),

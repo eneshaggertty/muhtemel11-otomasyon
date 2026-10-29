@@ -15,6 +15,15 @@ class Instagram:
         self.token = (token or os.environ["IG_TOKEN"]).strip().strip('"').strip("'")
         self.user_id = (user_id or os.environ["IG_USER_ID"]).strip()
         self.graph = _graph(self.token)
+        # Instagram girişli token'larda hesap "me" ile adreslenir (ID karışıklığını önler)
+        self.hedef = "me" if "graph.instagram.com" in self.graph else self.user_id
+
+    def tani(self):
+        """Token'ın hangi hesaba ait olduğunu döner (token'ı göstermez)."""
+        fields = "user_id,username,account_type" if self.hedef == "me" else "username"
+        r = requests.get(f"{self.graph}/{self.hedef}", params={"fields": fields, "access_token": self.token}, timeout=30)
+        return {"tur": "Instagram girişi" if self.hedef == "me" else "Facebook girişi",
+                "durum": r.status_code, "yanit": r.json()}
 
     def _post(self, path, **data):
         data["access_token"] = self.token
@@ -39,17 +48,17 @@ class Instagram:
     def publish(self, image_urls, caption):
         """Tek görsel ya da carousel paylaşır. Paylaşılan medya ID'sini döner."""
         if len(image_urls) == 1:
-            c = self._post(f"{self.user_id}/media", image_url=image_urls[0], caption=caption)["id"]
+            c = self._post(f"{self.hedef}/media", image_url=image_urls[0], caption=caption)["id"]
         else:
             children = []
             for url in image_urls[:10]:
-                cid = self._post(f"{self.user_id}/media", image_url=url, is_carousel_item="true")["id"]
+                cid = self._post(f"{self.hedef}/media", image_url=url, is_carousel_item="true")["id"]
                 self._wait(cid)
                 children.append(cid)
-            c = self._post(f"{self.user_id}/media", media_type="CAROUSEL",
+            c = self._post(f"{self.hedef}/media", media_type="CAROUSEL",
                            children=",".join(children), caption=caption)["id"]
         self._wait(c)
-        return self._post(f"{self.user_id}/media_publish", creation_id=c)["id"]
+        return self._post(f"{self.hedef}/media_publish", creation_id=c)["id"]
 
 
 def refresh_token(token):
