@@ -459,7 +459,15 @@ def run(api, now=None):
 
 if __name__ == "__main__":
     from api_football import ApiFootball
-    errs = run(ApiFootball())
+    # TEST_TARIH=2026-10-26 -> o günü gün sonu (23:59) itibarıyla canlandırır (sadece test modunda)
+    test_tarih = os.environ.get("TEST_TARIH", "").strip()
+    now = None
+    if test_tarih:
+        if not DRY_RUN:
+            sys.exit("TEST_TARIH sadece test modunda (DRY_RUN=1) kullanılabilir.")
+        now = datetime.fromisoformat(test_tarih).replace(hour=23, minute=59, tzinfo=TZ)
+        log(f"TEST: {test_tarih} günü canlandırılıyor")
+    errs = run(ApiFootball(), now=now)
     if errs:
         print("\n".join(errs), file=sys.stderr)
         sys.exit(1)
