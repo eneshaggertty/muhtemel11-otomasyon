@@ -1,31 +1,14 @@
-"""Ücretsiz puan durumu kaynaklarını dener (geçici test aracı)."""
-import json
+"""API-Football standings ücretsiz planda çalışıyor mu? (geçici test)"""
+import os
 import requests
 
-def get(url):
-    try:
-        r = requests.get(url, timeout=30, headers={"User-Agent": "muhtemel11-bot"})
-        return r.status_code, r.text[:200000]
-    except Exception as e:  # noqa: BLE001
-        return "ERR", str(e)
-
-out = []
-# TheSportsDB: Türkiye ligleri
-code, t = get("https://www.thesportsdb.com/api/v1/json/123/search_all_leagues.php?c=Turkey&s=Soccer")
-try:
-    lg = [(x["idLeague"], x["strLeague"], x.get("strCurrentSeason")) for x in json.loads(t)["countries"] or []]
-except Exception as e:  # noqa: BLE001
-    lg = f"{code} {t[:300]}"
-out.append(f"TSDB ligler: {lg}")
-for lid in ("4339",):
-    for s in ("2026-2027",):
-        code, t = get(f"https://www.thesportsdb.com/api/v1/json/123/lookuptable.php?l={lid}&s={s}")
-        try:
-            rows = json.loads(t).get("table") or []
-            out.append(f"TSDB tablo {lid} {s}: {len(rows)} satır; ilk: " +
-                       str([(r["intRank"], r["strTeam"], r["intPlayed"], r["intPoints"], r.get("dateUpdated")) for r in rows[:6]]))
-        except Exception as e:  # noqa: BLE001
-            out.append(f"TSDB tablo {lid} {s}: {code} {t[:300]}")
-for line in out:
-    print(line)
+key = os.environ["FOOTBALL_API_KEY"].strip()
+for lig in (203, 204, 39):
+    r = requests.get("https://v3.football.api-sports.io/standings", params={"league": lig, "season": 2026},
+                     headers={"x-apisports-key": key}, timeout=30).json()
+    if r.get("errors"):
+        line = f"standings {lig}: HATA {r['errors']}"
+    else:
+        st = r["response"][0]["league"]["standings"][0] if r["response"] else []
+        line = f"standings {lig}: {len(st)} takım; ilk 3: " + str([(x['rank'], x['team']['name'], x['all']['played'], x['points']) for x in st[:3]])
     print(f"::notice::{line}"[:900])

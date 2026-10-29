@@ -11,3 +11,5 @@ jobs:
           python-version: "3.12"
       - run: pip install requests
       - run: python tools/kaynak_test.py
+        env:
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
