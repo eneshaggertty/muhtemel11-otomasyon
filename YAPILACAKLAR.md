@@ -21,7 +21,12 @@
 - [ ] X API erişimi ve güncel ücret/limitler araştırılacak, kullanıcıdan X geliştirici hesabı/anahtarları
 - [ ] Carousel -> X'te en fazla 4 görsel; açıklama 280 karakter sınırına göre kısaltılacak
 
-## 3. Ayrı proje: YouTube çizgi filmi
+## 3. Diğer Instagram hesabının video otomasyonunu GitHub'a taşı
+- [ ] Şu an kullanıcının bilgisayarında çalışıyor (bilgisayar kapanamıyor)
+- [ ] Mevcut kurulumu incele (ne üretiyor, hangi araçlar, nasıl paylaşıyor), GitHub Actions'a taşı
+- [ ] Video üretimi Actions'ta çalışmalı (ffmpeg vb.), Reels paylaşımı Instagram API ile
+
+## 4. Ayrı proje: YouTube çizgi filmi
 - [ ] Konu, karakterler, hedef kitle ve bölüm uzunluğu konuşulacak (özgün karakterler)
 
 ## Notlar
