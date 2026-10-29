@@ -154,6 +154,8 @@ class Yayinci:
     def _push(self, paths, msg):
         save_state(self.state)
         self._git("add", *paths, "state.json")
+        if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0:
+            return  # görsel zaten yüklü, yapılacak bir şey yok
         self._git("commit", "-m", msg)
         for _ in range(3):
             try:
