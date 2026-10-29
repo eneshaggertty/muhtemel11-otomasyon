@@ -3,17 +3,22 @@ import os
 import time
 import requests
 
-GRAPH = "https://graph.instagram.com/v23.0"
+def _graph(token):
+    """IGAA... ile başlayan token'lar Instagram girişiyle, EAA... ile başlayanlar Facebook girişiyle alınmıştır."""
+    if token.startswith("EAA"):
+        return "https://graph.facebook.com/v23.0"
+    return "https://graph.instagram.com/v23.0"
 
 
 class Instagram:
     def __init__(self, token=None, user_id=None):
-        self.token = (token or os.environ["IG_TOKEN"]).strip()
+        self.token = (token or os.environ["IG_TOKEN"]).strip().strip('"').strip("'")
         self.user_id = (user_id or os.environ["IG_USER_ID"]).strip()
+        self.graph = _graph(self.token)
 
     def _post(self, path, **data):
         data["access_token"] = self.token
-        r = requests.post(f"{GRAPH}/{path}", data=data, timeout=60)
+        r = requests.post(f"{self.graph}/{path}", data=data, timeout=60)
         if not r.ok:
             raise RuntimeError(f"Instagram hata {r.status_code}: {r.text[:500]}")
         return r.json()
@@ -21,7 +26,7 @@ class Instagram:
     def _wait(self, container_id, timeout=180):
         t0 = time.time()
         while time.time() - t0 < timeout:
-            r = requests.get(f"{GRAPH}/{container_id}",
+            r = requests.get(f"{self.graph}/{container_id}",
                              params={"fields": "status_code", "access_token": self.token}, timeout=30)
             status = r.json().get("status_code")
             if status == "FINISHED":
