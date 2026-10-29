@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: otomasyon
+  group: manuel
   cancel-in-progress: false
 
 jobs:
