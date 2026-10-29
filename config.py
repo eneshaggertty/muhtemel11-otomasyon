@@ -12,6 +12,7 @@ SEZON = 2026  # 2026/27 sezonu
 # Takip edilen ligler ve her biri için ne paylaşılacağı.
 #   ilk11 : kadrolar açıklanınca her maçın ilk 11'i (2 görsel, carousel)
 #   sonuc : "tekil" = her maç bitince ayrı kart, "toplu" = günün maçları bitince tek kart, None = paylaşma
+#   ust   : (isteğe bağlı) görselde büyük harfle nasıl yazılacağı
 #   puan  : haftanın tüm maçları bitince puan durumu
 # Bir ligi kapatmak için satırını silmen ya da başına # koyman yeterli.
 LIGLER = {
@@ -21,9 +22,9 @@ LIGLER = {
                   "tag": "#1lig #trendyol1lig #futbol #türkfutbolu #muhtemel11"},
     39:          {"ad": "Premier Lig",        "ilk11": False, "sonuc": "toplu", "puan": True,
                   "tag": "#premierlig #premierleague #ingiltere #futbol #muhtemel11"},
-    140:         {"ad": "La Liga",            "ilk11": False, "sonuc": "toplu", "puan": True,
+    140:         {"ad": "La Liga", "ust": "LA LIGA",            "ilk11": False, "sonuc": "toplu", "puan": True,
                   "tag": "#laliga #ispanya #futbol #muhtemel11"},
-    135:         {"ad": "Serie A",            "ilk11": False, "sonuc": "toplu", "puan": True,
+    135:         {"ad": "Serie A", "ust": "SERIE A",            "ilk11": False, "sonuc": "toplu", "puan": True,
                   "tag": "#seriea #italya #futbol #muhtemel11"},
 }
 LIG_ADLARI = {k: v["ad"] for k, v in LIGLER.items()}

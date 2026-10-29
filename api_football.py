@@ -5,6 +5,10 @@ import requests
 BASE = "https://v3.football.api-sports.io"
 
 
+class PlanHatasi(RuntimeError):
+    """Ücretsiz/mevcut planın izin vermediği istek."""
+
+
 class ApiFootball:
     def __init__(self, key=None):
         self.key = (key or os.environ["FOOTBALL_API_KEY"]).strip()
@@ -16,8 +20,11 @@ class ApiFootball:
                          headers={"x-apisports-key": self.key}, timeout=30)
         r.raise_for_status()
         data = r.json()
-        if data.get("errors"):
-            raise RuntimeError(f"API-Football hata ({path}): {data['errors']}")
+        err = data.get("errors")
+        if err:
+            if isinstance(err, dict) and "plan" in err:
+                raise PlanHatasi(f"API-Football plan sınırı ({path}): {err['plan']}")
+            raise RuntimeError(f"API-Football hata ({path}): {err}")
         return data.get("response", [])
 
     def fixtures_by_date(self, date, tz):

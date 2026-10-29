@@ -24,6 +24,7 @@ import requests
 
 import config
 import render
+from api_football import PlanHatasi
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
@@ -65,6 +66,23 @@ def hafta(round_name):
 def oyun_gunu(now):
     """Gece 03:00'e kadar önceki gün sayılır; böylece gece yarısını geçen maçlar da yakalanır."""
     return now - timedelta(hours=3)
+
+
+UYARILAR = []
+
+
+def lig_ust(lig):
+    ayar = config.LIGLER.get(lig, {})
+    return ayar.get("ust") or render.tr_upper(ayar.get("ad", ""))
+
+
+def birlesik_tag(ligler, en_fazla=12):
+    out = []
+    for lig in ligler:
+        for t in config.LIGLER[lig]["tag"].split():
+            if t not in out:
+                out.append(t)
+    return " ".join(out[:en_fazla])
 
 
 def lig_tag(f):
@@ -183,7 +201,7 @@ def gorev_program(fxs, now, y):
     key = f"program:{gun.date()}"
     if y.posted(key):
         return
-    images, ozet = [], []
+    images, ozet, ligler = [], [], []
     for lig in config.LIGLER:
         maclar = sorted([f for f in fxs if f["league"]["id"] == lig and status(f) not in IPTAL],
                         key=kickoff)
@@ -192,13 +210,14 @@ def gorev_program(fxs, now, y):
         satir = [(kickoff(f).strftime("%H:%M"), ad(f["teams"]["home"]["name"]),
                   ad(f["teams"]["away"]["name"])) for f in maclar]
         alt = f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}"
-        images.append(render.program(config.LIG_ADLARI[lig], alt, satir,
+        images.append(render.program(lig_ust(lig), alt, satir,
                                      os.path.join(post_dir(now), f"program_{lig}.jpg")))
+        ligler.append(lig)
         ozet.append(f"🏟️ {config.LIG_ADLARI[lig]}\n" + "\n".join(f"{s} | {e} - {d}" for s, e, d in satir))
     if not images:
         return
     cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(gun)}\n\n" + "\n\n".join(ozet) +
-           "\n\nSizce bugün kim kazanır? 👇\n\n" + config.LIGLER[config.SUPER_LIG]["tag"])
+           "\n\nSizce bugün kim kazanır? 👇\n\n" + birlesik_tag(ligler))
     y.paylas(key, images[:10], cap)
 
 
@@ -340,9 +359,9 @@ def gorev_toplu(fxs, now, y):
         maclar.sort(key=kickoff)
         son = [(ad(f["teams"]["home"]["name"]), f["goals"]["home"], f["goals"]["away"],
                 ad(f["teams"]["away"]["name"])) for f in maclar]
-        img = render.gunun_sonuclari(ayar["ad"], f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}", son,
+        img = render.gunun_sonuclari(lig_ust(lig), f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}", son,
                                      os.path.join(post_dir(now), f"toplu_{lig}.jpg"))
-        cap = (f"🏁 {render.tr_upper(ayar['ad'])} | GÜNÜN SONUÇLARI\n\n" +
+        cap = (f"🏁 {lig_ust(lig)} | GÜNÜN SONUÇLARI\n\n" +
                "\n".join(f"{e} {a}-{b} {d}" for e, a, b, d in son) + f"\n\n{ayar['tag']}")
         y.paylas(key, [img], cap)
 
@@ -358,18 +377,23 @@ def gorev_puan(fxs, now, api, y):
         key = f"puan:{lig}:{config.SEZON}:{rnd}"
         if y.posted(key):
             continue
-        tum = api.round_fixtures(lig, config.SEZON, rnd, config.TZ)
-        if not all(status(f) in BITTI | IPTAL for f in tum):
-            continue  # haftanın maçları bitmedi
-        st = api.standings(lig, config.SEZON)
+        try:
+            tum = api.round_fixtures(lig, config.SEZON, rnd, config.TZ)
+            if not all(status(f) in BITTI | IPTAL for f in tum):
+                continue  # haftanın maçları bitmedi
+            st = api.standings(lig, config.SEZON)
+        except PlanHatasi as e:
+            UYARILAR.append(f"Puan durumu atlandı ({config.LIG_ADLARI[lig]}): ücretli plan gerekiyor. {e}")
+            y.mark(key)  # bu hafta için tekrar deneme
+            continue
         tablo = [(ad(r["team"]["name"]), r["all"]["played"], r["all"]["win"], r["all"]["draw"],
                   r["all"]["lose"], r["goalsDiff"], r["points"]) for r in st]
         if not tablo:
             continue
-        img = render.puan_durumu(config.LIG_ADLARI[lig], f"{hafta(rnd)} sonu", tablo,
+        img = render.puan_durumu(lig_ust(lig), f"{hafta(rnd)} sonu", tablo,
                                  os.path.join(post_dir(now), f"puan_{lig}.jpg"))
         ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(tablo[:5]))
-        cap = (f"📊 {render.tr_upper(config.LIG_ADLARI[lig])} | PUAN DURUMU ({hafta(rnd)} sonu)\n\n{ilk}\n...\n\n"
+        cap = (f"📊 {lig_ust(lig)} | PUAN DURUMU ({hafta(rnd)} sonu)\n\n{ilk}\n...\n\n"
                f"Şampiyon kim olur? 👇\n\n{ayar['tag']}")
         y.paylas(key, [img], cap)
 
@@ -511,6 +535,8 @@ if __name__ == "__main__":
         now = datetime.fromisoformat(test_tarih).replace(hour=23, minute=59, tzinfo=TZ)
         log(f"TEST: {test_tarih} günü canlandırılıyor")
     errs = run(ApiFootball(), now=now)
+    for u in UYARILAR:
+        print(f"::warning::{u}"[:900])
     if errs:
         for e in errs:  # GitHub'da "Annotations" olarak da görünsün
             print(f"::error::{e}"[:900])
