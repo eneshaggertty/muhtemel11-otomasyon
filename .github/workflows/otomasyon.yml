@@ -10,6 +10,10 @@ on:
         description: "Test modu (paylaşmaz, sadece görselleri üretir)"
         type: boolean
         default: true
+      tarih:
+        description: "Test için geçmiş bir gün (örn. 2026-10-26). Boş bırakırsan bugün."
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -39,6 +43,7 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+          TEST_TARIH: ${{ inputs.tarih }}
         run: python main.py
       - name: Durumu kaydet
         if: always()
