@@ -2,7 +2,8 @@
  "posted": {
   "toplu:135:2026-10-28": "2026-10-29T06:23:30.270484+03:00",
   "program:2026-10-29": "2026-10-29T16:53:37.049402+03:00",
-  "puan:203:2026:Regular Season - 9": "2026-10-29T17:24:33.243641+03:00"
+  "puan:203:2026:Regular Season - 9": "2026-10-29T17:24:33.243641+03:00",
+  "toplu:135:2026-10-29": "2026-10-30T00:54:52.449833+03:00"
  },
  "cache": {
   "fixtures": [
@@ -490,6 +491,218 @@
       "fulltime": {
        "home": 1,
        "away": 4
+      },
+      "extratime": {
+       "home": null,
+       "away": null
+      },
+      "penalty": {
+       "home": null,
+       "away": null
+      }
+     }
+    }
+   ],
+   "2026-10-30": [
+    {
+     "fixture": {
+      "id": 1584455,
+      "referee": null,
+      "timezone": "Europe/Istanbul",
+      "date": "2026-10-30T20:00:00+03:00",
+      "timestamp": 1793379600,
+      "periods": {
+       "first": null,
+       "second": null
+      },
+      "venue": {
+       "id": null,
+       "name": "Konya Buyuksehir Belediye Stadium",
+       "city": "Konya"
+      },
+      "status": {
+       "long": "Not Started",
+       "short": "NS",
+       "elapsed": null,
+       "extra": null
+      }
+     },
+     "league": {
+      "id": 203,
+      "name": "Süper Lig",
+      "country": "Turkey",
+      "logo": "https://media.api-sports.io/football/leagues/203.png",
+      "flag": "https://media.api-sports.io/flags/tr.svg",
+      "season": 2026,
+      "round": "Regular Season - 10",
+      "standings": true
+     },
+     "teams": {
+      "home": {
+       "id": 607,
+       "name": "Konyaspor",
+       "logo": "https://media.api-sports.io/football/teams/607.png",
+       "winner": null
+      },
+      "away": {
+       "id": 645,
+       "name": "Galatasaray",
+       "logo": "https://media.api-sports.io/football/teams/645.png",
+       "winner": null
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "halftime": {
+       "home": null,
+       "away": null
+      },
+      "fulltime": {
+       "home": null,
+       "away": null
+      },
+      "extratime": {
+       "home": null,
+       "away": null
+      },
+      "penalty": {
+       "home": null,
+       "away": null
+      }
+     }
+    },
+    {
+     "fixture": {
+      "id": 1585811,
+      "referee": null,
+      "timezone": "Europe/Istanbul",
+      "date": "2026-10-30T20:00:00+03:00",
+      "timestamp": 1793379600,
+      "periods": {
+       "first": null,
+       "second": null
+      },
+      "venue": {
+       "id": 12125,
+       "name": "Esenler Stadium",
+       "city": "Istanbul"
+      },
+      "status": {
+       "long": "Not Started",
+       "short": "NS",
+       "elapsed": null,
+       "extra": null
+      }
+     },
+     "league": {
+      "id": 204,
+      "name": "1. Lig",
+      "country": "Turkey",
+      "logo": "https://media.api-sports.io/football/leagues/204.png",
+      "flag": "https://media.api-sports.io/flags/tr.svg",
+      "season": 2026,
+      "round": "Regular Season - 13",
+      "standings": true
+     },
+     "teams": {
+      "home": {
+       "id": 7402,
+       "name": "Esenler Erokspor",
+       "logo": "https://media.api-sports.io/football/teams/7402.png",
+       "winner": null
+      },
+      "away": {
+       "id": 3595,
+       "name": "Keçiörengücü",
+       "logo": "https://media.api-sports.io/football/teams/3595.png",
+       "winner": null
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "halftime": {
+       "home": null,
+       "away": null
+      },
+      "fulltime": {
+       "home": null,
+       "away": null
+      },
+      "extratime": {
+       "home": null,
+       "away": null
+      },
+      "penalty": {
+       "home": null,
+       "away": null
+      }
+     }
+    },
+    {
+     "fixture": {
+      "id": 1570442,
+      "referee": null,
+      "timezone": "Europe/Istanbul",
+      "date": "2026-10-30T23:00:00+03:00",
+      "timestamp": 1793390400,
+      "periods": {
+       "first": null,
+       "second": null
+      },
+      "venue": {
+       "id": 1498,
+       "name": "Estadio de la Cerámica",
+       "city": "Villarreal"
+      },
+      "status": {
+       "long": "Not Started",
+       "short": "NS",
+       "elapsed": null,
+       "extra": null
+      }
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "country": "Spain",
+      "logo": "https://media.api-sports.io/football/leagues/140.png",
+      "flag": "https://media.api-sports.io/flags/es.svg",
+      "season": 2026,
+      "round": "Regular Season - 11",
+      "standings": true
+     },
+     "teams": {
+      "home": {
+       "id": 533,
+       "name": "Villarreal",
+       "logo": "https://media.api-sports.io/football/teams/533.png",
+       "winner": null
+      },
+      "away": {
+       "id": 540,
+       "name": "Espanyol",
+       "logo": "https://media.api-sports.io/football/teams/540.png",
+       "winner": null
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "halftime": {
+       "home": null,
+       "away": null
+      },
+      "fulltime": {
+       "home": null,
+       "away": null
       },
       "extratime": {
        "home": null,
