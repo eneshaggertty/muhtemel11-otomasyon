@@ -95,7 +95,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 6,
+      "elapsed": 37,
       "extra": null
      }
     },
@@ -148,7 +148,7 @@
    }
   ],
   "fixtures_date": "2026-10-29",
-  "fixtures_ts": "2026-10-29T22:54:17.937357+03:00",
+  "fixtures_ts": "2026-10-29T23:24:22.199895+03:00",
   "gunler": {
    "2026-10-28": [
     {
