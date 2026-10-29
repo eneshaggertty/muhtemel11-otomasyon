@@ -508,12 +508,15 @@ def run(api, now=None):
         fxs = bugunun_maclari(now, api, state)
     except Exception as e:  # noqa: BLE001
         hatalar.append(f"maç listesi: {e}")
+    sadece = [g.strip() for g in os.environ.get("SADECE", "").split(",") if g.strip()]
     for ad_, fn in [("program", lambda: gorev_program(fxs, now, y)),
                     ("ilk11", lambda: gorev_ilk11(fxs, now, api, y)),
                     ("sonuc", lambda: gorev_sonuc(fxs, now, api, y)),
                     ("toplu", lambda: gorev_toplu(fxs, now, y)),
                     ("puan", lambda: gorev_puan(fxs, now, api, y)),
                     ("muhtemel11", lambda: gorev_muhtemel11(now, api, y, state))]:
+        if sadece and ad_ not in sadece:
+            continue
         try:
             fn()
         except Exception as e:  # noqa: BLE001  bir görev patlarsa diğerleri yine çalışsın
@@ -530,8 +533,8 @@ if __name__ == "__main__":
     test_tarih = os.environ.get("TEST_TARIH", "").strip()
     now = None
     if test_tarih:
-        if not DRY_RUN:
-            sys.exit("TEST_TARIH sadece test modunda (DRY_RUN=1) kullanılabilir.")
+        if not DRY_RUN and not os.environ.get("SADECE", "").strip():
+            sys.exit("Gerçek modda TEST_TARIH sadece SADECE ile birlikte kullanılabilir.")
         now = datetime.fromisoformat(test_tarih).replace(hour=23, minute=59, tzinfo=TZ)
         log(f"TEST: {test_tarih} günü canlandırılıyor")
     errs = run(ApiFootball(), now=now)

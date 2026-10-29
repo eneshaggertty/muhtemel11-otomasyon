@@ -14,6 +14,10 @@ on:
         description: "Test için geçmiş bir gün (örn. 2026-10-26). Boş bırakırsan bugün."
         type: string
         default: ""
+      sadece:
+        description: "Sadece bu görevler (örn. toplu). Boş = hepsi"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -44,6 +48,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
           TEST_TARIH: ${{ inputs.tarih }}
+          SADECE: ${{ inputs.sadece }}
         shell: bash
         run: |
           mkdir -p posts_test
