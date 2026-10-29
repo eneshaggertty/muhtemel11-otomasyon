@@ -8,8 +8,8 @@ GRAPH = "https://graph.instagram.com/v23.0"
 
 class Instagram:
     def __init__(self, token=None, user_id=None):
-        self.token = token or os.environ["IG_TOKEN"]
-        self.user_id = user_id or os.environ["IG_USER_ID"]
+        self.token = (token or os.environ["IG_TOKEN"]).strip()
+        self.user_id = (user_id or os.environ["IG_USER_ID"]).strip()
 
     def _post(self, path, **data):
         data["access_token"] = self.token
@@ -50,6 +50,6 @@ class Instagram:
 def refresh_token(token):
     """60 günlük token'ı yeniler (token en az 24 saatlik olmalı)."""
     r = requests.get("https://graph.instagram.com/refresh_access_token",
-                     params={"grant_type": "ig_refresh_token", "access_token": token}, timeout=30)
+                     params={"grant_type": "ig_refresh_token", "access_token": token.strip()}, timeout=30)
     r.raise_for_status()
     return r.json()

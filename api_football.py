@@ -7,7 +7,7 @@ BASE = "https://v3.football.api-sports.io"
 
 class ApiFootball:
     def __init__(self, key=None):
-        self.key = key or os.environ["FOOTBALL_API_KEY"]
+        self.key = (key or os.environ["FOOTBALL_API_KEY"]).strip()
         self.calls = 0
 
     def get(self, path, **params):
