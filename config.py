@@ -38,6 +38,9 @@ PAYLAS = {
     "milli_takim": True,   # Türkiye: muhtemel 11 (maçtan 1 gün önce), ilk 11, sonuç
 }
 
+# Paylaşım biçimi: "reels" (kartlar videoya çevrilir) ya da "post" (görsel / carousel)
+FORMAT = "post"
+
 PROGRAM_SAATI = 12           # günün maçları bu saatten sonra paylaşılır
 MUHTEMEL11_SAATI = 20        # milli maçtan bir gün önce bu saatten sonra
 ILK11_PENCERE_DK = 60        # maça bu kadar dakika kala kadroları kontrol etmeye başla

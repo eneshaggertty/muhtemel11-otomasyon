@@ -1,5 +1,6 @@
-__pycache__/
+*.mp4
 *.pyc
-.token_yeni
-posts_test/
 .state_test.json
+.token_yeni
+__pycache__/
+posts_test/

@@ -173,19 +173,27 @@ class Yayinci:
     def paylas(self, key, images, caption):
         if self.posted(key):
             return
-        log(f"PAYLAŞ [{key}] {len(images)} görsel")
+        reels = config.FORMAT == "reels"
+        video = None
+        if reels:
+            import reels as reels_mod
+            video = reels_mod.reel_yap(images, os.path.splitext(images[0])[0] + ".mp4")
+        log(f"PAYLAŞ [{key}] {'Reels' if reels else str(len(images)) + ' görsel'}")
         log("  " + caption.replace("\n", "\n  "))
         if DRY_RUN:
             self.mark(key)
             return
-        self._push(images, f"görsel: {key}")
-        urls = [self._url(p) for p in images]
-        for u in urls:  # raw.githubusercontent hazır olana kadar bekle
-            for _ in range(12):
-                if requests.head(u, timeout=15).status_code == 200:
-                    break
-                time.sleep(5)
-        media_id = self.ig.publish(urls, caption)
+        if reels:
+            media_id = self.ig.publish_reel(video, caption)
+        else:
+            self._push(images, f"görsel: {key}")
+            urls = [self._url(p) for p in images]
+            for u in urls:  # raw.githubusercontent hazır olana kadar bekle
+                for _ in range(12):
+                    if requests.head(u, timeout=15).status_code == 200:
+                        break
+                    time.sleep(5)
+            media_id = self.ig.publish(urls, caption)
         self.mark(key)
         save_state(self.state)
         log(f"  paylaşıldı: {media_id}")

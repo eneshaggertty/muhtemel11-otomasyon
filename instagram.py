@@ -83,6 +83,27 @@ class Instagram:
         return self._post(f"{self.hedef}/media_publish", creation_id=c)["id"]
 
 
+def _reels_ekle(cls):
+    def publish_reel(self, video_path, caption, timeout=600):
+        """Videoyu doğrudan Instagram'a yükler (resumable upload) ve Reels olarak paylaşır."""
+        c = self._post(f"{self.hedef}/media", media_type="REELS", upload_type="resumable",
+                       caption=caption, share_to_feed="true")
+        cid, uri = c["id"], c.get("uri") or f"https://rupload.facebook.com/ig-api-upload/v23.0/{c['id']}"
+        boyut = os.path.getsize(video_path)
+        with open(video_path, "rb") as f:
+            r = requests.post(uri, data=f, timeout=300, headers={
+                "Authorization": f"OAuth {self.token}", "offset": "0", "file_size": str(boyut)})
+        if not r.ok:
+            raise RuntimeError(f"Reels yükleme hatası {r.status_code}: {r.text[:300]}")
+        self._wait(cid, timeout=timeout)
+        return self._post(f"{self.hedef}/media_publish", creation_id=cid)["id"]
+    cls.publish_reel = publish_reel
+    return cls
+
+
+Instagram = _reels_ekle(Instagram)
+
+
 def refresh_token(token):
     """60 günlük token'ı yeniler (token en az 24 saatlik olmalı)."""
     r = requests.get("https://graph.instagram.com/refresh_access_token",
