@@ -21,6 +21,9 @@
 - [ ] X API erişimi ve güncel ücret/limitler araştırılacak, kullanıcıdan X geliştirici hesabı/anahtarları
 - [ ] Carousel -> X'te en fazla 4 görsel; açıklama 280 karakter sınırına göre kısaltılacak
 
+## 3. Ayrı proje: YouTube çizgi filmi
+- [ ] Konu, karakterler, hedef kitle ve bölüm uzunluğu konuşulacak (özgün karakterler)
+
 ## Notlar
 - Instagram token'ı: sistem kullanıcısı (muhtemel11-bot), süresiz. IG_USER_ID = 17841410173892684
 - API-Football ücretsiz: sadece dün/bugün/yarın tarihli maç sorguları; sezon/sonraki/son maç sorguları ve puan tablosu yok
