@@ -169,9 +169,9 @@
       "city": "Villarreal"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 30,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -224,7 +224,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T23:30:33.930346+03:00",
+  "fixtures_ts": "2026-10-31T00:00:36.873135+03:00",
   "gunler": {
    "2026-10-28": [
     {
