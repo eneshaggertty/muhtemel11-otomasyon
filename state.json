@@ -23,14 +23,14 @@
      },
      "venue": {
       "id": null,
-      "name": "Konya Buyuksehir Belediye Stadium",
+      "name": "Medas Konya Büyüksehir Belediyesi Stadium",
       "city": "Konya"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 29,
-      "extra": null
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
+      "extra": 6
      }
     },
     "league": {
@@ -97,9 +97,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 29,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -222,7 +222,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T20:29:33.606048+03:00",
+  "fixtures_ts": "2026-10-30T20:59:36.808337+03:00",
   "gunler": {
    "2026-10-28": [
     {
