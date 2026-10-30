@@ -13,7 +13,7 @@
    {
     "fixture": {
      "id": 1584455,
-     "referee": "C. Aydin",
+     "referee": "Cihan Aydin, Türkiye",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-30T20:00:00+03:00",
      "timestamp": 1793379600,
@@ -29,7 +29,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 66,
+      "elapsed": 80,
       "extra": null
      }
     },
@@ -99,7 +99,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 68,
+      "elapsed": 83,
       "extra": null
      }
     },
@@ -129,7 +129,7 @@
     },
     "goals": {
      "home": 3,
-     "away": 1
+     "away": 2
     },
     "score": {
      "halftime": {
@@ -222,7 +222,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T21:29:40.010144+03:00",
+  "fixtures_ts": "2026-10-30T21:44:42.617371+03:00",
   "gunler": {
    "2026-10-28": [
     {
