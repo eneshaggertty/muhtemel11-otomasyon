@@ -13,15 +13,17 @@
   "Erzurum BB": "Erzurumspor FK",
   "Erzurumspor": "Erzurumspor FK"
  },
- "islenen": [],
+ "islenen": [
+  "1584455"
+ ],
  "takimlar": {
   "Galatasaray": {
-   "O": 9,
-   "G": 7,
+   "O": 10,
+   "G": 8,
    "B": 1,
    "M": 1,
-   "AV": 7,
-   "P": 22
+   "AV": 11,
+   "P": 25
   },
   "Amed SFK": {
    "O": 9,
@@ -120,11 +122,11 @@
    "P": 10
   },
   "Konyaspor": {
-   "O": 9,
+   "O": 10,
    "G": 2,
    "B": 2,
-   "M": 5,
-   "AV": -3,
+   "M": 6,
+   "AV": -7,
    "P": 8
   },
   "Gaziantep FK": {
