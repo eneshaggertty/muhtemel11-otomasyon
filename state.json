@@ -19,7 +19,7 @@
      "timestamp": 1793379600,
      "periods": {
       "first": 1793379600,
-      "second": null
+      "second": 1793383200
      },
      "venue": {
       "id": null,
@@ -27,10 +27,10 @@
       "city": "Konya"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
-      "extra": 6
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 66,
+      "extra": null
      }
     },
     "league": {
@@ -59,7 +59,7 @@
     },
     "goals": {
      "home": 0,
-     "away": 2
+     "away": 4
     },
     "score": {
      "halftime": {
@@ -97,9 +97,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 68,
       "extra": null
      }
     },
@@ -118,17 +118,17 @@
       "id": 7402,
       "name": "Esenler Erokspor",
       "logo": "https://media.api-sports.io/football/teams/7402.png",
-      "winner": false
+      "winner": true
      },
      "away": {
       "id": 3595,
       "name": "Keçiörengücü",
       "logo": "https://media.api-sports.io/football/teams/3595.png",
-      "winner": true
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 3,
      "away": 1
     },
     "score": {
@@ -222,7 +222,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T20:59:36.808337+03:00",
+  "fixtures_ts": "2026-10-30T21:29:40.010144+03:00",
   "gunler": {
    "2026-10-28": [
     {
