@@ -18,7 +18,7 @@
      "date": "2026-10-30T20:00:00+03:00",
      "timestamp": 1793379600,
      "periods": {
-      "first": null,
+      "first": 1793379600,
       "second": null
      },
      "venue": {
@@ -27,9 +27,9 @@
       "city": "Konya"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 29,
       "extra": null
      }
     },
@@ -48,23 +48,23 @@
       "id": 607,
       "name": "Konyaspor",
       "logo": "https://media.api-sports.io/football/teams/607.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 645,
       "name": "Galatasaray",
       "logo": "https://media.api-sports.io/football/teams/645.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 2
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 2
      },
      "fulltime": {
       "home": null,
@@ -97,9 +97,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 29,
       "extra": null
      }
     },
@@ -118,23 +118,23 @@
       "id": 7402,
       "name": "Esenler Erokspor",
       "logo": "https://media.api-sports.io/football/teams/7402.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 3595,
       "name": "Keçiörengücü",
       "logo": "https://media.api-sports.io/football/teams/3595.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 1
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -222,7 +222,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T19:59:14.763685+03:00",
+  "fixtures_ts": "2026-10-30T20:29:33.606048+03:00",
   "gunler": {
    "2026-10-28": [
     {
