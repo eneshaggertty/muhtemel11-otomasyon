@@ -27,10 +27,10 @@
       "city": "Konya"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 80,
-      "extra": null
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
+      "extra": 3
      }
     },
     "league": {
@@ -67,8 +67,8 @@
       "away": 2
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 4
      },
      "extratime": {
       "home": null,
@@ -97,9 +97,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 83,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -137,8 +137,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 2
      },
      "extratime": {
       "home": null,
@@ -222,7 +222,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T21:44:42.617371+03:00",
+  "fixtures_ts": "2026-10-30T21:59:45.371256+03:00",
   "gunler": {
    "2026-10-28": [
     {
