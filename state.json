@@ -12,7 +12,7 @@
    {
     "fixture": {
      "id": 1584455,
-     "referee": null,
+     "referee": "C. Aydin",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-30T20:00:00+03:00",
      "timestamp": 1793379600,
@@ -82,7 +82,7 @@
    {
     "fixture": {
      "id": 1585811,
-     "referee": null,
+     "referee": "Omer Faruk Gultekin",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-30T20:00:00+03:00",
      "timestamp": 1793379600,
@@ -152,7 +152,7 @@
    {
     "fixture": {
      "id": 1570442,
-     "referee": null,
+     "referee": "Jose Maria Sanchez Martinez",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-30T23:00:00+03:00",
      "timestamp": 1793390400,
@@ -221,7 +221,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-30T03:10:18.442633+03:00",
+  "fixtures_ts": "2026-10-30T18:58:18.398952+03:00",
   "gunler": {
    "2026-10-28": [
     {
