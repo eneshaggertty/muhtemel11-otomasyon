@@ -169,9 +169,9 @@
       "city": "Villarreal"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 73,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -209,8 +209,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -224,7 +224,7 @@
    }
   ],
   "fixtures_date": "2026-10-30",
-  "fixtures_ts": "2026-10-31T00:30:39.755797+03:00",
+  "fixtures_ts": "2026-10-31T01:00:42.646851+03:00",
   "gunler": {
    "2026-10-28": [
     {
