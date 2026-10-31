@@ -174,9 +174,9 @@
       "city": "London"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 75,
       "extra": null
      }
     },
@@ -195,17 +195,17 @@
       "id": 49,
       "name": "Chelsea",
       "logo": "https://media.api-sports.io/football/teams/49.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 33,
       "name": "Manchester United",
       "logo": "https://media.api-sports.io/football/teams/33.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -244,9 +244,9 @@
       "city": "Valencia"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 46,
       "extra": null
      }
     },
@@ -265,23 +265,23 @@
       "id": 539,
       "name": "Levante",
       "logo": "https://media.api-sports.io/football/teams/539.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 530,
       "name": "Atletico Madrid",
       "logo": "https://media.api-sports.io/football/teams/530.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -306,7 +306,7 @@
      "timestamp": 1793451600,
      "periods": {
       "first": 1793451600,
-      "second": null
+      "second": 1793455200
      },
      "venue": {
       "id": null,
@@ -314,9 +314,9 @@
       "city": "Izmit"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 35,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 46,
       "extra": null
      }
     },
@@ -384,9 +384,9 @@
       "city": "Bursa"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 31,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -454,9 +454,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 35,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 47,
       "extra": null
      }
     },
@@ -524,9 +524,9 @@
       "city": "Bologna"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -555,13 +555,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1559,7 +1559,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T16:34:57.512179+03:00",
+  "fixtures_ts": "2026-10-31T17:05:00.301236+03:00",
   "gunler": {
    "2026-10-28": [
     {
