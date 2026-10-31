@@ -525,9 +525,9 @@
       "city": "Bologna"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 76,
       "extra": null
      }
     },
@@ -546,17 +546,17 @@
       "id": 500,
       "name": "Bologna",
       "logo": "https://media.api-sports.io/football/teams/500.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 1579,
       "name": "Monza",
       "logo": "https://media.api-sports.io/football/teams/1579.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 1
     },
     "score": {
@@ -597,7 +597,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 5,
+      "elapsed": 35,
       "extra": null
      }
     },
@@ -616,22 +616,22 @@
       "id": 35,
       "name": "Bournemouth",
       "logo": "https://media.api-sports.io/football/teams/35.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 63,
       "name": "Leeds",
       "logo": "https://media.api-sports.io/football/teams/63.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -667,7 +667,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 4,
+      "elapsed": 35,
       "extra": null
      }
     },
@@ -686,22 +686,22 @@
       "id": 55,
       "name": "Brentford",
       "logo": "https://media.api-sports.io/football/teams/55.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 65,
       "name": "Nottingham Forest",
       "logo": "https://media.api-sports.io/football/teams/65.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -737,7 +737,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 4,
+      "elapsed": 35,
       "extra": null
      }
     },
@@ -756,22 +756,22 @@
       "id": 1346,
       "name": "Coventry",
       "logo": "https://media.api-sports.io/football/teams/1346.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 746,
       "name": "Sunderland",
       "logo": "https://media.api-sports.io/football/teams/746.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -807,7 +807,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 3,
+      "elapsed": 34,
       "extra": null
      }
     },
@@ -826,23 +826,23 @@
       "id": 64,
       "name": "Hull City",
       "logo": "https://media.api-sports.io/football/teams/64.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 57,
       "name": "Ipswich",
       "logo": "https://media.api-sports.io/football/teams/57.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -877,7 +877,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 4,
+      "elapsed": 35,
       "extra": null
      }
     },
@@ -896,23 +896,23 @@
       "id": 50,
       "name": "Manchester City",
       "logo": "https://media.api-sports.io/football/teams/50.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 51,
       "name": "Brighton",
       "logo": "https://media.api-sports.io/football/teams/51.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -945,9 +945,9 @@
       "city": "Madrid"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 17,
       "extra": null
      }
     },
@@ -976,13 +976,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1560,7 +1560,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T18:05:09.369122+03:00",
+  "fixtures_ts": "2026-10-31T18:35:44.739983+03:00",
   "gunler": {
    "2026-10-28": [
     {
