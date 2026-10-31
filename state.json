@@ -1228,9 +1228,9 @@
       "city": "London"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 78,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1268,8 +1268,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -1298,9 +1298,9 @@
       "city": "Seville"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 73,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1338,8 +1338,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -1563,7 +1563,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T22:07:04.233878+03:00",
+  "fixtures_ts": "2026-10-31T22:37:06.520415+03:00",
   "gunler": {
    "2026-10-30": [
     {
