@@ -227,7 +227,7 @@
    {
     "fixture": {
      "id": 1570439,
-     "referee": null,
+     "referee": "Ricardo De Burgos Bengoetxea",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T16:00:00+03:00",
      "timestamp": 1793451600,
@@ -507,7 +507,7 @@
    {
     "fixture": {
      "id": 1550179,
-     "referee": null,
+     "referee": "Andrea Zanotti",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T17:00:00+03:00",
      "timestamp": 1793455200,
@@ -927,7 +927,7 @@
    {
     "fixture": {
      "id": 1570441,
-     "referee": null,
+     "referee": "Manuel Jesus Orellana Cid",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T18:15:00+03:00",
      "timestamp": 1793459700,
@@ -1137,7 +1137,7 @@
    {
     "fixture": {
      "id": 1550186,
-     "referee": null,
+     "referee": "Fabio Maresca",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T20:00:00+03:00",
      "timestamp": 1793466000,
@@ -1277,7 +1277,7 @@
    {
     "fixture": {
      "id": 1570435,
-     "referee": null,
+     "referee": "Mateo Busquets Ferrer",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T20:30:00+03:00",
      "timestamp": 1793467800,
@@ -1347,7 +1347,7 @@
    {
     "fixture": {
      "id": 1550177,
-     "referee": null,
+     "referee": "Marco Guida",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T22:45:00+03:00",
      "timestamp": 1793475900,
@@ -1487,7 +1487,7 @@
    {
     "fixture": {
      "id": 1570434,
-     "referee": null,
+     "referee": "Adrian Cordero Vega",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T23:00:00+03:00",
      "timestamp": 1793476800,
@@ -1556,7 +1556,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T03:01:20.738422+03:00",
+  "fixtures_ts": "2026-10-31T12:17:48.635610+03:00",
   "gunler": {
    "2026-10-28": [
     {
