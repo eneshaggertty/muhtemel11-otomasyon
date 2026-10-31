@@ -1160,7 +1160,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 50,
+      "elapsed": 80,
       "extra": null
      }
     },
@@ -1189,7 +1189,7 @@
      }
     },
     "goals": {
-     "home": 0,
+     "home": 2,
      "away": 4
     },
     "score": {
@@ -1228,9 +1228,9 @@
       "city": "London"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 36,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 48,
       "extra": null
      }
     },
@@ -1298,9 +1298,9 @@
       "city": "Seville"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 32,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1319,22 +1319,22 @@
       "id": 543,
       "name": "Real Betis",
       "logo": "https://media.api-sports.io/football/teams/543.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 535,
       "name": "Malaga",
       "logo": "https://media.api-sports.io/football/teams/535.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 2,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 2,
       "away": 0
      },
      "fulltime": {
@@ -1563,7 +1563,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T21:06:26.162707+03:00",
+  "fixtures_ts": "2026-10-31T21:37:01.745989+03:00",
   "gunler": {
    "2026-10-30": [
     {
