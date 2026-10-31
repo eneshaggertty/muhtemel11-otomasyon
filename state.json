@@ -596,9 +596,9 @@
       "city": "Bournemouth"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 76,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -627,7 +627,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -636,8 +636,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -666,9 +666,9 @@
       "city": "London"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 79,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -706,8 +706,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -736,9 +736,9 @@
       "city": "Coventry"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 79,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -776,8 +776,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -806,9 +806,9 @@
       "city": "Hull"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 76,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -846,8 +846,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 2
      },
      "extratime": {
       "home": null,
@@ -876,9 +876,9 @@
       "city": "Manchester"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 77,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -916,8 +916,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -948,7 +948,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 58,
+      "elapsed": 88,
       "extra": null
      }
     },
@@ -977,7 +977,7 @@
      }
     },
     "goals": {
-     "home": 2,
+     "home": 3,
      "away": 0
     },
     "score": {
@@ -1002,7 +1002,7 @@
    {
     "fixture": {
      "id": 1584451,
-     "referee": "O. Cakir",
+     "referee": "Oguzhan Cakir, Türkiye",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T19:00:00+03:00",
      "timestamp": 1793462400,
@@ -1012,14 +1012,14 @@
      },
      "venue": {
       "id": null,
-      "name": "Chobani Stadium Fenerbahce Sukru Saracoglu",
+      "name": "Chobani Stadium",
       "city": "Istanbul"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
-      "extra": null
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
+      "extra": 3
      }
     },
     "league": {
@@ -1037,22 +1037,22 @@
       "id": 611,
       "name": "Fenerbahçe",
       "logo": "https://media.api-sports.io/football/teams/611.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 994,
       "name": "Göztepe",
       "logo": "https://media.api-sports.io/football/teams/994.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -1086,9 +1086,9 @@
       "city": "Manisa"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 37,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 47,
       "extra": null
      }
     },
@@ -1156,9 +1156,9 @@
       "city": "Udine"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 7,
       "extra": null
      }
     },
@@ -1187,13 +1187,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1561,7 +1561,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T19:36:17.821230+03:00",
+  "fixtures_ts": "2026-10-31T20:06:20.024913+03:00",
   "gunler": {
    "2026-10-28": [
     {
@@ -3813,6 +3813,6 @@
    ]
   },
   "milli_yarin": [],
-  "milli_yarin_date": "2026-10-31"
+  "milli_yarin_date": "2026-11-01"
  }
 }
