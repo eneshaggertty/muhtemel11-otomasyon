@@ -176,7 +176,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 3,
+      "elapsed": 34,
       "extra": null
      }
     },
@@ -244,9 +244,9 @@
       "city": "Valencia"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -275,13 +275,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -305,7 +305,7 @@
      "date": "2026-10-31T16:00:00+03:00",
      "timestamp": 1793451600,
      "periods": {
-      "first": null,
+      "first": 1793451600,
       "second": null
      },
      "venue": {
@@ -314,9 +314,9 @@
       "city": "Izmit"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 5,
       "extra": null
      }
     },
@@ -345,13 +345,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -384,9 +384,9 @@
       "city": "Bursa"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 1,
       "extra": null
      }
     },
@@ -415,13 +415,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -454,9 +454,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 5,
       "extra": null
      }
     },
@@ -485,13 +485,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1559,7 +1559,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T15:34:11.997094+03:00",
+  "fixtures_ts": "2026-10-31T16:04:54.387015+03:00",
   "gunler": {
    "2026-10-28": [
     {
