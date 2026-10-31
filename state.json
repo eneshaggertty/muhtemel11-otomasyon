@@ -1158,9 +1158,9 @@
       "city": "Udine"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 80,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1190,7 +1190,7 @@
     },
     "goals": {
      "home": 2,
-     "away": 4
+     "away": 5
     },
     "score": {
      "halftime": {
@@ -1198,8 +1198,8 @@
       "away": 4
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 5
      },
      "extratime": {
       "home": null,
@@ -1230,7 +1230,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 48,
+      "elapsed": 78,
       "extra": null
      }
     },
@@ -1259,7 +1259,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -1298,9 +1298,9 @@
       "city": "Seville"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 73,
       "extra": null
      }
     },
@@ -1330,7 +1330,7 @@
     },
     "goals": {
      "home": 2,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
@@ -1563,7 +1563,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T21:37:01.745989+03:00",
+  "fixtures_ts": "2026-10-31T22:07:04.233878+03:00",
   "gunler": {
    "2026-10-30": [
     {
