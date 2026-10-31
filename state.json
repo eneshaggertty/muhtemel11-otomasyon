@@ -1018,7 +1018,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 74,
+      "elapsed": 89,
       "extra": null
      }
     },
@@ -1037,18 +1037,18 @@
       "id": 611,
       "name": "Fenerbahçe",
       "logo": "https://media.api-sports.io/football/teams/611.png",
-      "winner": true
+      "winner": false
      },
      "away": {
       "id": 994,
       "name": "Göztepe",
       "logo": "https://media.api-sports.io/football/teams/994.png",
-      "winner": false
+      "winner": true
      }
     },
     "goals": {
      "home": 1,
-     "away": 0
+     "away": 2
     },
     "score": {
      "halftime": {
@@ -1088,8 +1088,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 77,
-      "extra": null
+      "elapsed": 90,
+      "extra": 2
      }
     },
     "league": {
@@ -1156,9 +1156,9 @@
       "city": "Udine"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 36,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1188,12 +1188,12 @@
     },
     "goals": {
      "home": 0,
-     "away": 3
+     "away": 4
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 3
+      "away": 4
      },
      "fulltime": {
       "home": null,
@@ -1228,7 +1228,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 6,
+      "elapsed": 21,
       "extra": null
      }
     },
@@ -1298,7 +1298,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 2,
+      "elapsed": 17,
       "extra": null
      }
     },
@@ -1561,7 +1561,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T20:36:22.479058+03:00",
+  "fixtures_ts": "2026-10-31T20:51:24.361225+03:00",
   "gunler": {
    "2026-10-28": [
     {
