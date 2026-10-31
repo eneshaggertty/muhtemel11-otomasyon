@@ -598,7 +598,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 46,
+      "elapsed": 76,
       "extra": null
      }
     },
@@ -668,7 +668,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 50,
+      "elapsed": 79,
       "extra": null
      }
     },
@@ -697,7 +697,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -738,7 +738,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 49,
+      "elapsed": 79,
       "extra": null
      }
     },
@@ -767,8 +767,8 @@
      }
     },
     "goals": {
-     "home": 2,
-     "away": 0
+     "home": 3,
+     "away": 1
     },
     "score": {
      "halftime": {
@@ -808,7 +808,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 47,
+      "elapsed": 76,
       "extra": null
      }
     },
@@ -827,18 +827,18 @@
       "id": 64,
       "name": "Hull City",
       "logo": "https://media.api-sports.io/football/teams/64.png",
-      "winner": false
+      "winner": null
      },
      "away": {
       "id": 57,
       "name": "Ipswich",
       "logo": "https://media.api-sports.io/football/teams/57.png",
-      "winner": true
+      "winner": null
      }
     },
     "goals": {
-     "home": 0,
-     "away": 1
+     "home": 2,
+     "away": 2
     },
     "score": {
      "halftime": {
@@ -878,7 +878,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 48,
+      "elapsed": 77,
       "extra": null
      }
     },
@@ -946,10 +946,10 @@
       "city": "Madrid"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 45,
-      "extra": 3
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 58,
+      "extra": null
      }
     },
     "league": {
@@ -977,7 +977,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -1018,7 +1018,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 4,
+      "elapsed": 34,
       "extra": null
      }
     },
@@ -1088,7 +1088,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 7,
+      "elapsed": 37,
       "extra": null
      }
     },
@@ -1117,13 +1117,13 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": 1,
+     "away": 1
     },
     "score": {
      "halftime": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -1561,7 +1561,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T19:06:15.449398+03:00",
+  "fixtures_ts": "2026-10-31T19:36:17.821230+03:00",
   "gunler": {
    "2026-10-28": [
     {
