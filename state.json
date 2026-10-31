@@ -18,23 +18,23 @@
    {
     "fixture": {
      "id": 1584450,
-     "referee": "K. Saglam",
+     "referee": "Kadir Saglam, Türkiye",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T13:30:00+03:00",
      "timestamp": 1793442600,
      "periods": {
-      "first": null,
+      "first": 1793442600,
       "second": null
      },
      "venue": {
       "id": null,
-      "name": null,
+      "name": "Kazim Karabekir Stadyumu",
       "city": "Erzurum"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 19,
       "extra": null
      }
     },
@@ -63,13 +63,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -102,9 +102,9 @@
       "city": "Van"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 19,
       "extra": null
      }
     },
@@ -133,13 +133,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1557,7 +1557,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T13:18:13.747511+03:00",
+  "fixtures_ts": "2026-10-31T13:48:59.635134+03:00",
   "gunler": {
    "2026-10-28": [
     {
