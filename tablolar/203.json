@@ -14,7 +14,8 @@
   "Erzurumspor": "Erzurumspor FK"
  },
  "islenen": [
-  "1584455"
+  "1584455",
+  "1584450"
  ],
  "takimlar": {
   "Galatasaray": {
@@ -74,20 +75,20 @@
    "P": 15
   },
   "Erzurumspor FK": {
-   "O": 9,
+   "O": 10,
    "G": 4,
    "B": 2,
-   "M": 3,
-   "AV": -4,
+   "M": 4,
+   "AV": -6,
    "P": 14
   },
   "Çorum FK": {
-   "O": 9,
-   "G": 4,
+   "O": 10,
+   "G": 5,
    "B": 1,
    "M": 4,
-   "AV": 3,
-   "P": 13
+   "AV": 5,
+   "P": 16
   },
   "Göztepe": {
    "O": 9,
