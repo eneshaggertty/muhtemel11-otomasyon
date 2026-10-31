@@ -946,9 +946,9 @@
       "city": "Madrid"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 88,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -986,8 +986,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -1008,7 +1008,7 @@
      "timestamp": 1793462400,
      "periods": {
       "first": 1793462400,
-      "second": null
+      "second": 1793466000
      },
      "venue": {
       "id": null,
@@ -1016,10 +1016,10 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
-      "extra": 3
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 74,
+      "extra": null
      }
     },
     "league": {
@@ -1088,7 +1088,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 47,
+      "elapsed": 77,
       "extra": null
      }
     },
@@ -1107,17 +1107,17 @@
       "id": 3597,
       "name": "Manisa F.K.",
       "logo": "https://media.api-sports.io/football/teams/3597.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 7395,
       "name": "Batman Petrolspor",
       "logo": "https://media.api-sports.io/football/teams/7395.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 1
     },
     "score": {
@@ -1158,7 +1158,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 7,
+      "elapsed": 36,
       "extra": null
      }
     },
@@ -1177,23 +1177,23 @@
       "id": 494,
       "name": "Udinese",
       "logo": "https://media.api-sports.io/football/teams/494.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 497,
       "name": "AS Roma",
       "logo": "https://media.api-sports.io/football/teams/497.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 3
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 3
      },
      "fulltime": {
       "home": null,
@@ -1226,9 +1226,9 @@
       "city": "London"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 6,
       "extra": null
      }
     },
@@ -1257,13 +1257,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1296,9 +1296,9 @@
       "city": "Seville"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 2,
       "extra": null
      }
     },
@@ -1327,13 +1327,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1561,7 +1561,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T20:06:20.024913+03:00",
+  "fixtures_ts": "2026-10-31T20:36:22.479058+03:00",
   "gunler": {
    "2026-10-28": [
     {
