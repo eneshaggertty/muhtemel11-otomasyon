@@ -1368,9 +1368,9 @@
       "city": "Milan"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 18,
       "extra": null
      }
     },
@@ -1389,23 +1389,23 @@
       "id": 489,
       "name": "AC Milan",
       "logo": "https://media.api-sports.io/football/teams/489.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 505,
       "name": "Inter",
       "logo": "https://media.api-sports.io/football/teams/505.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 2,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1438,9 +1438,9 @@
       "city": "Birmingham"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 6,
       "extra": null
      }
     },
@@ -1469,13 +1469,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1508,9 +1508,9 @@
       "city": "Barcelona"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -1539,13 +1539,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1563,7 +1563,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T22:37:06.520415+03:00",
+  "fixtures_ts": "2026-10-31T23:07:08.935219+03:00",
   "gunler": {
    "2026-10-30": [
     {
