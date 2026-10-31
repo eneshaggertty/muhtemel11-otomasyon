@@ -246,8 +246,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 76,
-      "extra": null
+      "elapsed": 90,
+      "extra": 1
      }
     },
     "league": {
@@ -316,8 +316,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 76,
-      "extra": null
+      "elapsed": 90,
+      "extra": 1
      }
     },
     "league": {
@@ -386,7 +386,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 74,
+      "elapsed": 89,
       "extra": null
      }
     },
@@ -456,8 +456,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 77,
-      "extra": null
+      "elapsed": 90,
+      "extra": 2
      }
     },
     "league": {
@@ -524,9 +524,9 @@
       "city": "Bologna"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1559,7 +1559,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T17:35:03.535720+03:00",
+  "fixtures_ts": "2026-10-31T17:50:06.896905+03:00",
   "gunler": {
    "2026-10-28": [
     {
