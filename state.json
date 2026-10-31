@@ -1368,9 +1368,9 @@
       "city": "Milan"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 59,
       "extra": null
      }
     },
@@ -1438,9 +1438,9 @@
       "city": "Birmingham"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 36,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 46,
       "extra": null
      }
     },
@@ -1459,22 +1459,22 @@
       "id": 66,
       "name": "Aston Villa",
       "logo": "https://media.api-sports.io/football/teams/66.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 36,
       "name": "Fulham",
       "logo": "https://media.api-sports.io/football/teams/36.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -1508,9 +1508,9 @@
       "city": "Barcelona"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1539,12 +1539,12 @@
      }
     },
     "goals": {
-     "home": 2,
+     "home": 4,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 2,
+      "home": 4,
       "away": 0
      },
      "fulltime": {
@@ -1563,7 +1563,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T23:37:11.287587+03:00",
+  "fixtures_ts": "2026-11-01T00:07:25.818989+03:00",
   "gunler": {
    "2026-10-30": [
     {
