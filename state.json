@@ -526,9 +526,9 @@
       "city": "Bologna"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 76,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -566,8 +566,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -596,9 +596,9 @@
       "city": "Bournemouth"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 35,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 46,
       "extra": null
      }
     },
@@ -666,9 +666,9 @@
       "city": "London"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 35,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 50,
       "extra": null
      }
     },
@@ -736,9 +736,9 @@
       "city": "Coventry"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 35,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 49,
       "extra": null
      }
     },
@@ -767,12 +767,12 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 1,
+      "home": 2,
       "away": 0
      },
      "fulltime": {
@@ -806,9 +806,9 @@
       "city": "Hull"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 47,
       "extra": null
      }
     },
@@ -876,9 +876,9 @@
       "city": "Manchester"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 35,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 48,
       "extra": null
      }
     },
@@ -948,8 +948,8 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 17,
-      "extra": null
+      "elapsed": 45,
+      "extra": 3
      }
     },
     "league": {
@@ -967,22 +967,22 @@
       "id": 728,
       "name": "Rayo Vallecano",
       "logo": "https://media.api-sports.io/football/teams/728.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 538,
       "name": "Celta Vigo",
       "logo": "https://media.api-sports.io/football/teams/538.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -1007,7 +1007,7 @@
      "date": "2026-10-31T19:00:00+03:00",
      "timestamp": 1793462400,
      "periods": {
-      "first": null,
+      "first": 1793462400,
       "second": null
      },
      "venue": {
@@ -1016,9 +1016,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -1047,13 +1047,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1086,9 +1086,9 @@
       "city": "Manisa"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 7,
       "extra": null
      }
     },
@@ -1117,13 +1117,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1561,7 +1561,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T18:35:44.739983+03:00",
+  "fixtures_ts": "2026-10-31T19:06:15.449398+03:00",
   "gunler": {
    "2026-10-28": [
     {
