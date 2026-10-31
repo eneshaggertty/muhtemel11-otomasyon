@@ -24,7 +24,7 @@
      "timestamp": 1793442600,
      "periods": {
       "first": 1793442600,
-      "second": null
+      "second": 1793446200
      },
      "venue": {
       "id": null,
@@ -32,10 +32,10 @@
       "city": "Erzurum"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
-      "extra": 3
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 60,
+      "extra": null
      }
     },
     "league": {
@@ -102,9 +102,9 @@
       "city": "Van"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 63,
       "extra": null
      }
     },
@@ -1557,7 +1557,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T14:19:02.592555+03:00",
+  "fixtures_ts": "2026-10-31T14:49:05.959073+03:00",
   "gunler": {
    "2026-10-28": [
     {
