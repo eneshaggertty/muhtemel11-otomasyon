@@ -34,7 +34,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 60,
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -63,8 +63,8 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 1
+     "home": 1,
+     "away": 3
     },
     "score": {
      "halftime": {
@@ -104,8 +104,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 63,
-      "extra": null
+      "elapsed": 90,
+      "extra": 3
      }
     },
     "league": {
@@ -123,17 +123,17 @@
       "id": 6342,
       "name": "Vanspor FK",
       "logo": "https://media.api-sports.io/football/teams/6342.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 3605,
       "name": "Sarıyer",
       "logo": "https://media.api-sports.io/football/teams/3605.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
@@ -1557,7 +1557,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T14:49:05.959073+03:00",
+  "fixtures_ts": "2026-10-31T15:19:09.042674+03:00",
   "gunler": {
    "2026-10-28": [
     {
