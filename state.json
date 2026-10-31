@@ -32,10 +32,10 @@
       "city": "Erzurum"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 19,
-      "extra": null
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
+      "extra": 3
      }
     },
     "league": {
@@ -53,23 +53,23 @@
       "id": 1009,
       "name": "Erzurumspor FK",
       "logo": "https://media.api-sports.io/football/teams/1009.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 6343,
       "name": "Çorum FK",
       "logo": "https://media.api-sports.io/football/teams/6343.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -102,9 +102,9 @@
       "city": "Van"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 19,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1557,7 +1557,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T13:48:59.635134+03:00",
+  "fixtures_ts": "2026-10-31T14:19:02.592555+03:00",
   "gunler": {
    "2026-10-28": [
     {
