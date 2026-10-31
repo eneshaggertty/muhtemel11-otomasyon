@@ -174,9 +174,9 @@
       "city": "London"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 75,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -214,8 +214,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -246,7 +246,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 46,
+      "elapsed": 76,
       "extra": null
      }
     },
@@ -276,7 +276,7 @@
     },
     "goals": {
      "home": 0,
-     "away": 1
+     "away": 2
     },
     "score": {
      "halftime": {
@@ -300,7 +300,7 @@
    {
     "fixture": {
      "id": 1584454,
-     "referee": "B. Kolak",
+     "referee": "Batuhan Kolak, Türkiye",
      "timezone": "Europe/Istanbul",
      "date": "2026-10-31T16:00:00+03:00",
      "timestamp": 1793451600,
@@ -310,13 +310,13 @@
      },
      "venue": {
       "id": null,
-      "name": "Turka Arac Muayene Kocaeli Stadyumu",
-      "city": "Izmit"
+      "name": "Turka Araç Muayene Kocaeli Stadyumu",
+      "city": "Kocaeli"
      },
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 46,
+      "elapsed": 76,
       "extra": null
      }
     },
@@ -384,9 +384,9 @@
       "city": "Bursa"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 74,
       "extra": null
      }
     },
@@ -456,7 +456,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 47,
+      "elapsed": 77,
       "extra": null
      }
     },
@@ -475,18 +475,18 @@
       "id": 3589,
       "name": "Fatih Karagümrük",
       "logo": "https://media.api-sports.io/football/teams/3589.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 3601,
       "name": "Pendikspor",
       "logo": "https://media.api-sports.io/football/teams/3601.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
@@ -526,7 +526,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 4,
+      "elapsed": 34,
       "extra": null
      }
     },
@@ -555,13 +555,13 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": 1,
+     "away": 1
     },
     "score": {
      "halftime": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -1559,7 +1559,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T17:05:00.301236+03:00",
+  "fixtures_ts": "2026-10-31T17:35:03.535720+03:00",
   "gunler": {
    "2026-10-28": [
     {
