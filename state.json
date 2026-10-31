@@ -244,10 +244,10 @@
       "city": "Valencia"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
+      "long": "Match Finished",
+      "short": "FT",
       "elapsed": 90,
-      "extra": 1
+      "extra": null
      }
     },
     "league": {
@@ -284,8 +284,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 2
      },
      "extratime": {
       "home": null,
@@ -314,10 +314,10 @@
       "city": "Kocaeli"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
+      "long": "Match Finished",
+      "short": "FT",
       "elapsed": 90,
-      "extra": 1
+      "extra": 4
      }
     },
     "league": {
@@ -354,8 +354,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -384,9 +384,9 @@
       "city": "Bursa"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 89,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -424,8 +424,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 3,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -454,10 +454,10 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
+      "long": "Match Finished",
+      "short": "FT",
       "elapsed": 90,
-      "extra": 2
+      "extra": null
      }
     },
     "league": {
@@ -494,8 +494,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -594,9 +594,9 @@
       "city": "Bournemouth"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 5,
       "extra": null
      }
     },
@@ -625,13 +625,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -664,9 +664,9 @@
       "city": "London"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -695,13 +695,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -734,9 +734,9 @@
       "city": "Coventry"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -765,13 +765,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -804,9 +804,9 @@
       "city": "Hull"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 3,
       "extra": null
      }
     },
@@ -835,13 +835,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -874,9 +874,9 @@
       "city": "Manchester"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 4,
       "extra": null
      }
     },
@@ -905,13 +905,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1559,7 +1559,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T17:50:06.896905+03:00",
+  "fixtures_ts": "2026-10-31T18:05:09.369122+03:00",
   "gunler": {
    "2026-10-28": [
     {
