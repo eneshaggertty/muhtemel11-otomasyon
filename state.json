@@ -174,9 +174,9 @@
       "city": "London"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -246,7 +246,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 4,
+      "elapsed": 34,
       "extra": null
      }
     },
@@ -316,7 +316,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 5,
+      "elapsed": 35,
       "extra": null
      }
     },
@@ -386,7 +386,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 1,
+      "elapsed": 31,
       "extra": null
      }
     },
@@ -405,22 +405,22 @@
       "id": 1003,
       "name": "Bursaspor",
       "logo": "https://media.api-sports.io/football/teams/1003.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 3584,
       "name": "Bandırmaspor",
       "logo": "https://media.api-sports.io/football/teams/3584.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 3,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 3,
       "away": 0
      },
      "fulltime": {
@@ -456,7 +456,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 5,
+      "elapsed": 35,
       "extra": null
      }
     },
@@ -1559,7 +1559,7 @@
    }
   ],
   "fixtures_date": "2026-10-31",
-  "fixtures_ts": "2026-10-31T16:04:54.387015+03:00",
+  "fixtures_ts": "2026-10-31T16:34:57.512179+03:00",
   "gunler": {
    "2026-10-28": [
     {
