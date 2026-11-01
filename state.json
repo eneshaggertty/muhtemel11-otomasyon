@@ -1248,9 +1248,9 @@
       "city": "Bilbao"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 84,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1288,8 +1288,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -1303,7 +1303,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-02T00:48:46.393567+03:00",
+  "fixtures_ts": "2026-11-02T01:19:08.877742+03:00",
   "gunler": {
    "2026-10-30": [
     {
