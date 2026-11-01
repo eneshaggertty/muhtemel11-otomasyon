@@ -256,9 +256,9 @@
       "city": "Getafe"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 38,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 50,
       "extra": null
      }
     },
@@ -318,7 +318,7 @@
      "timestamp": 1793538000,
      "periods": {
       "first": 1793538000,
-      "second": null
+      "second": 1793541600
      },
      "venue": {
       "id": null,
@@ -326,9 +326,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 44,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 55,
       "extra": null
      }
     },
@@ -388,7 +388,7 @@
      "timestamp": 1793538000,
      "periods": {
       "first": 1793538000,
-      "second": null
+      "second": 1793541600
      },
      "venue": {
       "id": 20189,
@@ -396,9 +396,9 @@
       "city": "Trabzon"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 43,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 55,
       "extra": null
      }
     },
@@ -417,22 +417,22 @@
       "id": 998,
       "name": "Trabzonspor",
       "logo": "https://media.api-sports.io/football/teams/998.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 3573,
       "name": "Gaziantep FK",
       "logo": "https://media.api-sports.io/football/teams/3573.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -466,9 +466,9 @@
       "city": "Igdir"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 43,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 54,
       "extra": null
      }
     },
@@ -536,9 +536,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 44,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 55,
       "extra": null
      }
     },
@@ -606,9 +606,9 @@
       "city": "Frosinone"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 11,
       "extra": null
      }
     },
@@ -637,13 +637,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -676,9 +676,9 @@
       "city": "Rome"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 11,
       "extra": null
      }
     },
@@ -707,13 +707,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1291,7 +1291,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T16:42:57.439029+03:00",
+  "fixtures_ts": "2026-11-01T17:12:59.957577+03:00",
   "gunler": {
    "2026-10-30": [
     {
