@@ -749,9 +749,9 @@
       "city": "Santander"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 41,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 51,
       "extra": null
      }
     },
@@ -810,7 +810,7 @@
      "date": "2026-11-01T19:00:00+03:00",
      "timestamp": 1793548800,
      "periods": {
-      "first": null,
+      "first": 1793548800,
       "second": null
      },
      "venue": {
@@ -819,9 +819,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 28,
       "extra": null
      }
     },
@@ -850,13 +850,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -889,9 +889,9 @@
       "city": "Bodrum"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 30,
       "extra": null
      }
     },
@@ -920,13 +920,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 1
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -1294,7 +1294,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T18:59:14.860079+03:00",
+  "fixtures_ts": "2026-11-01T19:29:17.423730+03:00",
   "gunler": {
    "2026-10-30": [
     {
