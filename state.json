@@ -33,7 +33,8 @@
   "tgsonuc:1584449": "2026-11-01T20:59:04.043172+03:00",
   "tgsonuc:1584456": "2026-11-01T20:59:09.292360+03:00",
   "tgsonuc:1584453": "2026-11-01T20:59:14.548935+03:00",
-  "sonuc:1584453": "2026-11-01T20:59:14.548935+03:00"
+  "sonuc:1584453": "2026-11-01T20:59:14.548935+03:00",
+  "program203:2026-11-01": "2026-11-01T22:17:48.426331+03:00"
  },
  "cache": {
   "fixtures": [
@@ -964,9 +965,9 @@
       "city": "Liverpool"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 70,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1004,8 +1005,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -1034,9 +1035,9 @@
       "city": "Lecce"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1074,8 +1075,8 @@
       "away": 2
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 2
      },
      "extratime": {
       "home": null,
@@ -1104,9 +1105,9 @@
       "city": "Elche"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 26,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 88,
       "extra": null
      }
     },
@@ -1125,18 +1126,18 @@
       "id": 797,
       "name": "Elche",
       "logo": "https://media.api-sports.io/football/teams/797.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 532,
       "name": "Valencia",
       "logo": "https://media.api-sports.io/football/teams/532.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
@@ -1299,7 +1300,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T20:58:53.459411+03:00",
+  "fixtures_ts": "2026-11-01T22:17:39.556204+03:00",
   "gunler": {
    "2026-10-30": [
     {
