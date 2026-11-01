@@ -45,8 +45,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 82,
-      "extra": null
+      "elapsed": 90,
+      "extra": 7
      }
     },
     "league": {
@@ -74,7 +74,7 @@
      }
     },
     "goals": {
-     "home": 4,
+     "home": 5,
      "away": 1
     },
     "score": {
@@ -115,8 +115,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 80,
-      "extra": null
+      "elapsed": 90,
+      "extra": 5
      }
     },
     "league": {
@@ -183,9 +183,9 @@
       "city": "Como"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 39,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -204,22 +204,22 @@
       "id": 895,
       "name": "Como",
       "logo": "https://media.api-sports.io/football/teams/895.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 517,
       "name": "Venezia",
       "logo": "https://media.api-sports.io/football/teams/517.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 0,
+      "home": 1,
       "away": 0
      },
      "fulltime": {
@@ -1288,7 +1288,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T15:11:03.172442+03:00",
+  "fixtures_ts": "2026-11-01T15:26:06.088191+03:00",
   "gunler": {
    "2026-10-30": [
     {
