@@ -1177,9 +1177,9 @@
       "city": "Turin"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 75,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1208,7 +1208,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -1217,8 +1217,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -1249,7 +1249,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 54,
+      "elapsed": 84,
       "extra": null
      }
     },
@@ -1302,7 +1302,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-02T00:18:43.051422+03:00",
+  "fixtures_ts": "2026-11-02T00:48:46.393567+03:00",
   "gunler": {
    "2026-10-30": [
     {
