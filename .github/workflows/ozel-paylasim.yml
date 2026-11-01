@@ -25,4 +25,5 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: python ozel_paylas.py ${{ inputs.gorseller }} --aciklama "${{ inputs.aciklama }}"

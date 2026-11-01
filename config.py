@@ -41,6 +41,17 @@ PAYLAS = {
 # Paylaşım biçimi: "reels" (kartlar videoya çevrilir) ya da "post" (görsel / carousel)
 FORMAT = "post"
 
+# Yayın şekli: "instagram" = sistem kendisi paylaşır, "telegram" = Reels + açıklama Telegram'dan
+# sana gelir, sen Instagram'da müziği (marş) ekleyip paylaşırsın (yarı otomatik)
+YAYIN = "telegram"
+
+# Yarı otomatik modda önerilen müzik (Instagram müzik kütüphanesinde aratılacak ad)
+MUZIK_GENEL = "Trend bir spor müziği"
+MARS = {
+    "Galatasaray": "Galatasaray Marşı", "Fenerbahçe": "Fenerbahçe Marşı", "Beşiktaş": "Beşiktaş Marşı",
+    "Trabzonspor": "Trabzonspor Marşı",
+}
+
 PROGRAM_SAATI = 12           # günün maçları bu saatten sonra paylaşılır
 MUHTEMEL11_SAATI = 20        # milli maçtan bir gün önce bu saatten sonra
 ILK11_PENCERE_DK = 60        # maça bu kadar dakika kala kadroları kontrol etmeye başla

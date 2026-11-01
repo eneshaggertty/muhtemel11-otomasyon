@@ -177,20 +177,26 @@ class Yayinci:
         rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
         return f"https://raw.githubusercontent.com/{self.repo}/{self.branch}/{rel}"
 
-    def paylas(self, key, images, caption):
+    def paylas(self, key, images, caption, muzik=None):
+        """muzik: yarı otomatik modda önerilecek müzik (ör. 'Galatasaray marşı')."""
         if self.posted(key):
             return
-        reels = config.FORMAT == "reels"
+        yayin = config.YAYIN
+        if yayin == "telegram" and not os.environ.get("TELEGRAM_BOT_TOKEN", "").strip():
+            yayin = "instagram"  # Telegram kurulmadıysa eskisi gibi doğrudan paylaş
+        reels = config.FORMAT == "reels" or yayin == "telegram"
         video = None
         if reels:
             import reels as reels_mod
             video = reels_mod.reel_yap(images, os.path.splitext(images[0])[0] + ".mp4")
-        log(f"PAYLAŞ [{key}] {'Reels' if reels else str(len(images)) + ' görsel'}")
+        log(f"PAYLAŞ [{key}] {'Reels' if reels else str(len(images)) + ' görsel'} -> {yayin}")
         log("  " + caption.replace("\n", "\n  "))
         if DRY_RUN:
             self.mark(key)
             return
-        if reels:
+        if yayin == "telegram":
+            media_id = self._telegram(video, images, caption, muzik)
+        elif reels:
             media_id = self.ig.publish_reel(video, caption)
         else:
             self._push(images, f"görsel: {key}")
@@ -204,6 +210,19 @@ class Yayinci:
         self.mark(key)
         save_state(self.state)
         log(f"  paylaşıldı: {media_id}")
+
+    def _telegram(self, video, images, caption, muzik):
+        import telegram
+        chat = self.state["cache"].get("telegram_chat")
+        if not chat:
+            chat, _ = telegram.sohbet_bul()
+            if not chat:
+                raise RuntimeError("Telegram sohbeti bulunamadı: bota /start yazılmalı")
+            self.state["cache"]["telegram_chat"] = chat
+        muzik = muzik or config.MUZIK_GENEL
+        telegram.video(chat, video, f"🎵 Müzik önerisi: {muzik}\n\nAçıklama bir sonraki mesajda 👇")
+        telegram.mesaj(chat, caption)
+        return "telegram"
 
 
 # ------------------------------------------------------------------ maç önü / sonu yorumları
@@ -229,6 +248,10 @@ def _sira(lig=config.SUPER_LIG):
 def _tablo_adi(ad_, lig=config.SUPER_LIG):
     t = tablo.yukle(lig)
     return tablo.eslestir(ad_, t["takimlar"], t.get("alias")) if t else None
+
+
+def marş(takim):
+    return config.MARS.get(takim, f"{takim} marşı")
 
 
 def mac_onu_soru(f):
@@ -366,7 +389,7 @@ def gorev_ilk11(fxs, now, api, y):
         soru = mac_onu_soru(f)
         cap = (f"📋 İLK 11'LER BELLİ OLDU!\n\n⚔️ {mac} | {k.strftime('%H:%M')}\n\n" + (soru + "\n\n" if soru else "")
                + "\n\n".join(satir) + f"\n\n{tag}")
-        y.paylas(key, images, cap)
+        y.paylas(key, images, cap, muzik=marş(ev))
 
 
 def goller(f, events):
@@ -433,7 +456,7 @@ def gorev_sonuc(fxs, now, api, y):
         cap = (f"🏁 MAÇ SONUCU\n\n{ev} {eh}-{ea} {dep}" + (f" ({ek})" if ek else "") + (f"\n{yorum}" if yorum else "") +
                (f"\n\n{gol_txt}" if gol_txt else "") +
                f"\n\n📍 {lig_adi(f)} · {hafta(f['league']['round'])}\n\nMaçı nasıl buldunuz? 👇\n\n{tag}")
-        y.paylas(key, [img], cap)
+        y.paylas(key, [img], cap, muzik=marş(ev if eh >= ea else dep))
 
 
 def gorev_toplu(fxs, now, y):
@@ -657,6 +680,17 @@ def run(api, now=None):
     except Exception as e:  # noqa: BLE001
         hatalar.append(f"maç listesi: {e}")
     sadece = [g.strip() for g in os.environ.get("SADECE", "").split(",") if g.strip()]
+    if "telegram_kur" in sadece:
+        import telegram
+        chat, ad_ = telegram.sohbet_bul()
+        if not chat:
+            print("::error::Bota henüz mesaj atılmamış. Telegram'da botu açıp /start yaz.")
+            return ["telegram sohbeti yok"]
+        state["cache"]["telegram_chat"] = chat
+        save_state(state)
+        telegram.mesaj(chat, f"✅ Merhaba {ad_}! @muhtemel11onbir asistanı bağlandı. Paylaşılacak Reels'ler buraya gelecek.")
+        print("::notice::Telegram bağlandı")
+        return []
     if "tani" in sadece:
         from instagram import Instagram
         t = Instagram().tani()

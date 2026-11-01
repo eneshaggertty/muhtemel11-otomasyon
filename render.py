@@ -62,8 +62,9 @@ def base(kicker, title, subtitle=None):
     d.rectangle([0, 0, W, 10], fill=ACCENT)
     d.rectangle([64, 74, 72, 104], fill=ACCENT)
     d.text((86, 70), kicker, font=fit(d, kicker, "Inter-SemiBold.otf", 30, W - 150), fill=TEXT)
-    d.text((60, 108), title, font=fit(d, title, "InterDisplay-Black.otf", 92, W - 128), fill=TEXT)
-    if subtitle:
+    if title:
+        d.text((60, 108), title, font=fit(d, title, "InterDisplay-Black.otf", 92, W - 128), fill=TEXT)
+    if subtitle and title:
         d.text((64, 216), subtitle, font=fit(d, subtitle, "Inter-Medium.otf", 32, W - 128), fill=MUTED)
     d.line([64, H - 120, W - 64, H - 120], fill=LINE, width=2)
     x0 = 64
@@ -260,4 +261,45 @@ def gunun_sonuclari(lig_adi, tarih_str, sonuclar, path):
         center(d, mid, cy - 2, f"{eg} - {ag}", font("InterDisplay-Black.otf", fs), TEXT)
         depf = fit(d, dep, "Inter-SemiBold.otf", fs, W - 84 - mid - 100)
         d.text((mid + 100, cy), dep, font=depf, fill=TEXT)
+    return save(img, path)
+
+
+# ---------------------------------------------------------------- HABER KARTI
+def _sar(d, metin, f, max_w):
+    satirlar, s = [], ""
+    for k in metin.split():
+        aday = (s + " " + k).strip()
+        if d.textlength(aday, font=f) <= max_w:
+            s = aday
+        else:
+            satirlar.append(s)
+            s = k
+    if s:
+        satirlar.append(s)
+    return satirlar
+
+
+def haber(etiket, baslik, kalemler, alt, path, renk=None):
+    """etiket: 'SON DAKİKA'; baslik: büyük başlık; kalemler: [(isim, unvan, aciklama), ...]"""
+    img, d = base(etiket, "", alt)
+    # başlık (çok satırlı)
+    y = 120
+    bf = font("InterDisplay-Black.otf", 84)
+    for s in _sar(d, baslik, bf, W - 128):
+        d.text((60, y), s, font=bf, fill=TEXT)
+        y += 92
+    y += 20
+    d.text((64, y), alt, font=font("Inter-Medium.otf", 30), fill=MUTED)
+    y += 70
+    c1, c2 = renk or (ACCENT, TEXT)
+    for isim, unvan, aciklama in kalemler:
+        kutu_h = 230
+        d.rounded_rectangle([64, y, W - 64, y + kutu_h], radius=24, fill=PANEL, outline=LINE, width=2)
+        d.rectangle([64, y + 24, 74, y + kutu_h - 24], fill=c1)
+        d.text((104, y + 30), tr_upper(unvan), font=font("Inter-SemiBold.otf", 28), fill=ACCENT)
+        d.text((104, y + 70), isim, font=fit(d, isim, "InterDisplay-Black.otf", 64, W - 210), fill=TEXT)
+        af = font("Inter-Medium.otf", 30)
+        for i, s in enumerate(_sar(d, aciklama, af, W - 210)[:2]):
+            d.text((104, y + 150 + i * 38), s, font=af, fill=MUTED)
+        y += kutu_h + 30
     return save(img, path)
