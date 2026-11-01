@@ -238,7 +238,7 @@
    {
     "fixture": {
      "id": 1570438,
-     "referee": null,
+     "referee": "Victor Garcia Verdura",
      "timezone": "Europe/Istanbul",
      "date": "2026-11-01T16:00:00+03:00",
      "timestamp": 1793538000,
@@ -728,7 +728,7 @@
    {
     "fixture": {
      "id": 1570440,
-     "referee": null,
+     "referee": "Jose Luis Munuera Montero",
      "timezone": "Europe/Istanbul",
      "date": "2026-11-01T18:15:00+03:00",
      "timestamp": 1793546100,
@@ -1078,7 +1078,7 @@
    {
     "fixture": {
      "id": 1570437,
-     "referee": null,
+     "referee": "Luis Bestard Servera",
      "timezone": "Europe/Istanbul",
      "date": "2026-11-01T20:30:00+03:00",
      "timestamp": 1793554200,
@@ -1218,7 +1218,7 @@
    {
     "fixture": {
      "id": 1570433,
-     "referee": null,
+     "referee": "Alejandro Hernandez",
      "timezone": "Europe/Istanbul",
      "date": "2026-11-01T23:00:00+03:00",
      "timestamp": 1793563200,
@@ -1287,7 +1287,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T03:08:42.132982+03:00",
+  "fixtures_ts": "2026-11-01T12:25:20.490791+03:00",
   "gunler": {
    "2026-10-30": [
     {
