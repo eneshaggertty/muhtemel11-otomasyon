@@ -821,8 +821,8 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 84,
-      "extra": null
+      "elapsed": 90,
+      "extra": 5
      }
     },
     "league": {
@@ -840,17 +840,17 @@
       "id": 1004,
       "name": "Kasımpaşa",
       "logo": "https://media.api-sports.io/football/teams/1004.png",
-      "winner": false
+      "winner": null
      },
      "away": {
       "id": 549,
       "name": "Beşiktaş",
       "logo": "https://media.api-sports.io/football/teams/549.png",
-      "winner": true
+      "winner": null
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 2
     },
     "score": {
@@ -889,9 +889,9 @@
       "city": "Bodrum"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 88,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -929,8 +929,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -961,7 +961,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 55,
+      "elapsed": 66,
       "extra": null
      }
     },
@@ -1029,9 +1029,9 @@
       "city": "Lecce"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 43,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1101,7 +1101,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 12,
+      "elapsed": 23,
       "extra": null
      }
     },
@@ -1294,7 +1294,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T20:44:27.025233+03:00",
+  "fixtures_ts": "2026-11-01T20:55:51.108865+03:00",
   "gunler": {
    "2026-10-30": [
     {
@@ -4456,6 +4456,7 @@
    ]
   },
   "milli_yarin": [],
-  "milli_yarin_date": "2026-11-02"
+  "milli_yarin_date": "2026-11-02",
+  "telegram_chat": 958313984
  }
 }
