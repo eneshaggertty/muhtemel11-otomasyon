@@ -1179,7 +1179,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 3,
+      "elapsed": 34,
       "extra": null
      }
     },
@@ -1247,9 +1247,9 @@
       "city": "Bilbao"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 14,
       "extra": null
      }
     },
@@ -1268,23 +1268,23 @@
       "id": 531,
       "name": "Athletic Club",
       "logo": "https://media.api-sports.io/football/teams/531.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 548,
       "name": "Real Sociedad",
       "logo": "https://media.api-sports.io/football/teams/548.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1302,7 +1302,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T22:48:33.323526+03:00",
+  "fixtures_ts": "2026-11-01T23:18:36.424350+03:00",
   "gunler": {
    "2026-10-30": [
     {
