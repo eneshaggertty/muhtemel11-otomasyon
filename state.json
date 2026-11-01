@@ -35,7 +35,7 @@
      "timestamp": 1793529000,
      "periods": {
       "first": 1793529000,
-      "second": null
+      "second": 1793532600
      },
      "venue": {
       "id": null,
@@ -43,10 +43,10 @@
       "city": "Diyarbakır"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
-      "extra": 3
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 66,
+      "extra": null
      }
     },
     "league": {
@@ -74,7 +74,7 @@
      }
     },
     "goals": {
-     "home": 3,
+     "home": 4,
      "away": 0
     },
     "score": {
@@ -113,9 +113,9 @@
       "city": "Sivas"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 65,
       "extra": null
      }
     },
@@ -183,9 +183,9 @@
       "city": "Como"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 24,
       "extra": null
      }
     },
@@ -214,13 +214,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1288,7 +1288,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T14:25:58.190625+03:00",
+  "fixtures_ts": "2026-11-01T14:56:00.979406+03:00",
   "gunler": {
    "2026-10-30": [
     {
