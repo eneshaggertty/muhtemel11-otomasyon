@@ -258,7 +258,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 50,
+      "elapsed": 80,
       "extra": null
      }
     },
@@ -277,17 +277,17 @@
       "id": 546,
       "name": "Getafe",
       "logo": "https://media.api-sports.io/football/teams/546.png",
-      "winner": false
+      "winner": true
      },
      "away": {
       "id": 536,
       "name": "Sevilla",
       "logo": "https://media.api-sports.io/football/teams/536.png",
-      "winner": true
+      "winner": false
      }
     },
     "goals": {
-     "home": 0,
+     "home": 2,
      "away": 1
     },
     "score": {
@@ -328,7 +328,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 55,
+      "elapsed": 85,
       "extra": null
      }
     },
@@ -357,8 +357,8 @@
      }
     },
     "goals": {
-     "home": 3,
-     "away": 1
+     "home": 4,
+     "away": 2
     },
     "score": {
      "halftime": {
@@ -398,7 +398,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 55,
+      "elapsed": 85,
       "extra": null
      }
     },
@@ -427,7 +427,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -468,7 +468,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 54,
+      "elapsed": 84,
       "extra": null
      }
     },
@@ -497,8 +497,8 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": 1,
+     "away": 1
     },
     "score": {
      "halftime": {
@@ -538,7 +538,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 55,
+      "elapsed": 85,
       "extra": null
      }
     },
@@ -557,18 +557,18 @@
       "id": 3578,
       "name": "İstanbulspor",
       "logo": "https://media.api-sports.io/football/teams/3578.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 6533,
       "name": "Mardin 1969",
       "logo": "https://media.api-sports.io/football/teams/6533.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 1,
-     "away": 1
+     "away": 2
     },
     "score": {
      "halftime": {
@@ -608,7 +608,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 11,
+      "elapsed": 41,
       "extra": null
      }
     },
@@ -678,7 +678,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 11,
+      "elapsed": 41,
       "extra": null
      }
     },
@@ -707,13 +707,13 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": 1,
+     "away": 1
     },
     "score": {
      "halftime": {
-      "home": 0,
-      "away": 0
+      "home": 1,
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -1291,7 +1291,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T17:12:59.957577+03:00",
+  "fixtures_ts": "2026-11-01T17:43:02.697205+03:00",
   "gunler": {
    "2026-10-30": [
     {
