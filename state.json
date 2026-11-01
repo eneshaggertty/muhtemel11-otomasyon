@@ -43,10 +43,10 @@
       "city": "Diyarbakır"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 26,
-      "extra": null
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
+      "extra": 3
      }
     },
     "league": {
@@ -74,12 +74,12 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 3,
      "away": 0
     },
     "score": {
      "halftime": {
-      "home": 1,
+      "home": 3,
       "away": 0
      },
      "fulltime": {
@@ -113,9 +113,9 @@
       "city": "Sivas"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 26,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1288,7 +1288,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T13:55:55.669679+03:00",
+  "fixtures_ts": "2026-11-01T14:25:58.190625+03:00",
   "gunler": {
    "2026-10-30": [
     {
