@@ -43,8 +43,8 @@
       "city": "Diyarbakır"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
+      "long": "Match Finished",
+      "short": "FT",
       "elapsed": 90,
       "extra": 7
      }
@@ -83,8 +83,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 5,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -113,10 +113,10 @@
       "city": "Sivas"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
+      "long": "Match Finished",
+      "short": "FT",
       "elapsed": 90,
-      "extra": 5
+      "extra": null
      }
     },
     "league": {
@@ -153,8 +153,8 @@
       "away": 2
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 2
      },
      "extratime": {
       "home": null,
@@ -183,9 +183,9 @@
       "city": "Como"
      },
      "status": {
-      "long": "Halftime",
-      "short": "HT",
-      "elapsed": 45,
+      "long": "Second Half",
+      "short": "2H",
+      "elapsed": 50,
       "extra": null
      }
     },
@@ -1288,7 +1288,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T15:26:06.088191+03:00",
+  "fixtures_ts": "2026-11-01T15:41:09.207573+03:00",
   "gunler": {
    "2026-10-30": [
     {
