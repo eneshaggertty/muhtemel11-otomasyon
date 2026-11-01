@@ -188,7 +188,7 @@
      "status": {
       "long": "Second Half",
       "short": "2H",
-      "elapsed": 50,
+      "elapsed": 82,
       "extra": null
      }
     },
@@ -256,9 +256,9 @@
       "city": "Getafe"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 8,
       "extra": null
      }
     },
@@ -287,13 +287,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -317,7 +317,7 @@
      "date": "2026-11-01T16:00:00+03:00",
      "timestamp": 1793538000,
      "periods": {
-      "first": null,
+      "first": 1793538000,
       "second": null
      },
      "venue": {
@@ -326,9 +326,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 14,
       "extra": null
      }
     },
@@ -347,23 +347,23 @@
       "id": 564,
       "name": "Başakşehir",
       "logo": "https://media.api-sports.io/football/teams/564.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 3603,
       "name": "Samsunspor",
       "logo": "https://media.api-sports.io/football/teams/3603.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -387,7 +387,7 @@
      "date": "2026-11-01T16:00:00+03:00",
      "timestamp": 1793538000,
      "periods": {
-      "first": null,
+      "first": 1793538000,
       "second": null
      },
      "venue": {
@@ -396,9 +396,9 @@
       "city": "Trabzon"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 13,
       "extra": null
      }
     },
@@ -427,13 +427,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -466,9 +466,9 @@
       "city": "Igdir"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 13,
       "extra": null
      }
     },
@@ -497,13 +497,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -536,9 +536,9 @@
       "city": "Istanbul"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 14,
       "extra": null
      }
     },
@@ -557,23 +557,23 @@
       "id": 3578,
       "name": "İstanbulspor",
       "logo": "https://media.api-sports.io/football/teams/3578.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 6533,
       "name": "Mardin 1969",
       "logo": "https://media.api-sports.io/football/teams/6533.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 1,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1291,7 +1291,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T15:41:09.207573+03:00",
+  "fixtures_ts": "2026-11-01T16:12:41.250634+03:00",
   "gunler": {
    "2026-10-30": [
     {
