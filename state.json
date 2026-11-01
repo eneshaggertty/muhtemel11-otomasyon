@@ -609,9 +609,9 @@
       "city": "Frosinone"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 67,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -640,7 +640,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -649,8 +649,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 0
      },
      "extratime": {
       "home": null,
@@ -679,9 +679,9 @@
       "city": "Rome"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 69,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -700,17 +700,17 @@
       "id": 487,
       "name": "Lazio",
       "logo": "https://media.api-sports.io/football/teams/487.png",
-      "winner": null
+      "winner": true
      },
      "away": {
       "id": 490,
       "name": "Cagliari",
       "logo": "https://media.api-sports.io/football/teams/490.png",
-      "winner": null
+      "winner": false
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 1
     },
     "score": {
@@ -719,8 +719,8 @@
       "away": 1
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 2,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -751,7 +751,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 11,
+      "elapsed": 41,
       "extra": null
      }
     },
@@ -770,23 +770,23 @@
       "id": 4665,
       "name": "Racing Santander",
       "logo": "https://media.api-sports.io/football/teams/4665.png",
-      "winner": null
+      "winner": false
      },
      "away": {
       "id": 541,
       "name": "Real Madrid",
       "logo": "https://media.api-sports.io/football/teams/541.png",
-      "winner": null
+      "winner": true
      }
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 3
     },
     "score": {
      "halftime": {
       "home": 0,
-      "away": 0
+      "away": 3
      },
      "fulltime": {
       "home": null,
@@ -1294,7 +1294,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T18:28:41.435110+03:00",
+  "fixtures_ts": "2026-11-01T18:59:14.860079+03:00",
   "gunler": {
    "2026-10-30": [
     {
