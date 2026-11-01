@@ -1107,9 +1107,9 @@
       "city": "Elche"
      },
      "status": {
-      "long": "Second Half",
-      "short": "2H",
-      "elapsed": 88,
+      "long": "Match Finished",
+      "short": "FT",
+      "elapsed": 90,
       "extra": null
      }
     },
@@ -1147,8 +1147,8 @@
       "away": 0
      },
      "fulltime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 1
      },
      "extratime": {
       "home": null,
@@ -1177,9 +1177,9 @@
       "city": "Turin"
      },
      "status": {
-      "long": "Not Started",
-      "short": "NS",
-      "elapsed": null,
+      "long": "First Half",
+      "short": "1H",
+      "elapsed": 3,
       "extra": null
      }
     },
@@ -1208,13 +1208,13 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "halftime": {
-      "home": null,
-      "away": null
+      "home": 0,
+      "away": 0
      },
      "fulltime": {
       "home": null,
@@ -1302,7 +1302,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T22:17:39.556204+03:00",
+  "fixtures_ts": "2026-11-01T22:48:33.323526+03:00",
   "gunler": {
    "2026-10-30": [
     {
