@@ -177,11 +177,11 @@ class Yayinci:
         rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
         return f"https://raw.githubusercontent.com/{self.repo}/{self.branch}/{rel}"
 
-    def paylas(self, key, images, caption, muzik=None):
+    def paylas(self, key, images, caption, muzik=None, telegram_zorla=False, lig=None):
         """muzik: yarı otomatik modda önerilecek müzik (ör. 'Galatasaray marşı')."""
         if self.posted(key):
             return
-        yayin = config.YAYIN
+        yayin = "telegram" if (telegram_zorla or (config.YAYIN == "telegram" and lig in config.TELEGRAM_LIGLER)) else "instagram"
         if yayin == "telegram" and not os.environ.get("TELEGRAM_BOT_TOKEN", "").strip():
             yayin = "instagram"  # Telegram kurulmadıysa eskisi gibi doğrudan paylaş
         reels = config.FORMAT == "reels" or yayin == "telegram"
@@ -306,29 +306,32 @@ def gorev_program(fxs, now, y):
     if not config.PAYLAS["program"] or now.hour < config.PROGRAM_SAATI:
         return
     gun = oyun_gunu(now)
-    key = f"program:{gun.date()}"
-    if y.posted(key):
-        return
-    images, ozet, ligler = [], [], []
-    for lig in config.LIGLER:
-        maclar = sorted([f for f in fxs if f["league"]["id"] == lig and status(f) not in IPTAL],
-                        key=kickoff)
-        if not maclar:
+    tg = [l for l in config.LIGLER if config.YAYIN == "telegram" and l in config.TELEGRAM_LIGLER]
+    gruplar = [([l], f"program{l}:{gun.date()}", l) for l in tg] + \
+              [([l for l in config.LIGLER if l not in tg], f"program:{gun.date()}", None)]
+    for ligler_grup, key, lig_tg in gruplar:
+        if y.posted(key):
             continue
-        satir = [(kickoff(f).strftime("%H:%M"), ad(f["teams"]["home"]["name"]),
-                  ad(f["teams"]["away"]["name"])) for f in maclar]
-        alt = f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}"
-        images.append(render.program(lig_ust(lig), alt, satir,
-                                     os.path.join(post_dir(now), f"program_{lig}.jpg")))
-        ligler.append(lig)
-        ozet.append(f"🏟️ {config.LIG_ADLARI[lig]}\n" + "\n".join(f"{s} | {e} - {d}" for s, e, d in satir))
-    if not images:
-        return
-    sorular = [q for q in (mac_onu_soru(f) for f in sorted(fxs, key=kickoff)) if q]
-    one_cikan = (sorular[0] + "\n\n") if sorular else ""
-    cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(gun)}\n\n" + one_cikan + "\n\n".join(ozet) +
-           "\n\nSizce bugün kim kazanır? 👇\n\n" + birlesik_tag(ligler))
-    y.paylas(key, images[:10], cap)
+        images, ozet, ligler = [], [], []
+        for lig in ligler_grup:
+            maclar = sorted([f for f in fxs if f["league"]["id"] == lig and status(f) not in IPTAL], key=kickoff)
+            if not maclar:
+                continue
+            satir = [(kickoff(f).strftime("%H:%M"), ad(f["teams"]["home"]["name"]),
+                      ad(f["teams"]["away"]["name"])) for f in maclar]
+            alt = f"{tarih_str(gun)} · {hafta(maclar[0]['league']['round'])}"
+            images.append(render.program(lig_ust(lig), alt, satir,
+                                         os.path.join(post_dir(now), f"program_{lig}.jpg")))
+            ligler.append(lig)
+            ozet.append(f"🏟️ {config.LIG_ADLARI[lig]}\n" + "\n".join(f"{s} | {e} - {d}" for s, e, d in satir))
+        if not images:
+            continue
+        ilgili = [f for f in fxs if f["league"]["id"] in ligler]
+        sorular = [q for q in (mac_onu_soru(f) for f in sorted(ilgili, key=kickoff)) if q]
+        one_cikan = (sorular[0] + "\n\n") if sorular else ""
+        cap = (f"📅 GÜNÜN MAÇLARI | {tarih_str(gun)}\n\n" + one_cikan + "\n\n".join(ozet) +
+               "\n\nSizce bugün kim kazanır? 👇\n\n" + birlesik_tag(ligler))
+        y.paylas(key, images[:10], cap, lig=lig_tg)
 
 
 def satirlar_from_lineup(team):
@@ -389,7 +392,7 @@ def gorev_ilk11(fxs, now, api, y):
         soru = mac_onu_soru(f)
         cap = (f"📋 İLK 11'LER BELLİ OLDU!\n\n⚔️ {mac} | {k.strftime('%H:%M')}\n\n" + (soru + "\n\n" if soru else "")
                + "\n\n".join(satir) + f"\n\n{tag}")
-        y.paylas(key, images, cap, muzik=marş(ev))
+        y.paylas(key, images, cap, muzik=marş(ev), lig=lig)
 
 
 def goller(f, events):
@@ -414,13 +417,13 @@ def goller(f, events):
     return [tuple(g) for g in out]
 
 
-def gorev_sonuc(fxs, now, api, y):
+def gorev_sonuc(fxs, now, api, y, onek="sonuc", telegram_zorla=False):
     for f in fxs:
         lig = f["league"]["id"]
         milli = is_milli(f)
         if not (milli and config.PAYLAS["milli_takim"] or config.LIGLER.get(lig, {}).get("sonuc") == "tekil"):
             continue
-        key = f"sonuc:{f['fixture']['id']}"
+        key = f"{onek}:{f['fixture']['id']}"
         if y.posted(key) or status(f) not in BITTI:
             continue
         ev, dep = ad(f["teams"]["home"]["name"]), ad(f["teams"]["away"]["name"])
@@ -456,7 +459,7 @@ def gorev_sonuc(fxs, now, api, y):
         cap = (f"🏁 MAÇ SONUCU\n\n{ev} {eh}-{ea} {dep}" + (f" ({ek})" if ek else "") + (f"\n{yorum}" if yorum else "") +
                (f"\n\n{gol_txt}" if gol_txt else "") +
                f"\n\n📍 {lig_adi(f)} · {hafta(f['league']['round'])}\n\nMaçı nasıl buldunuz? 👇\n\n{tag}")
-        y.paylas(key, [img], cap, muzik=marş(ev if eh >= ea else dep))
+        y.paylas(key, [img], cap, muzik=marş(ev if eh >= ea else dep), telegram_zorla=telegram_zorla, lig=lig)
 
 
 def gorev_toplu(fxs, now, y):
@@ -476,7 +479,7 @@ def gorev_toplu(fxs, now, y):
                                      os.path.join(post_dir(now), f"toplu_{lig}.jpg"))
         cap = (f"🏁 {lig_ust(lig)} | GÜNÜN SONUÇLARI\n\n" +
                "\n".join(f"{e} {a}-{b} {d}" for e, a, b, d in son) + f"\n\n{ayar['tag']}")
-        y.paylas(key, [img], cap)
+        y.paylas(key, [img], cap, lig=lig)
 
 
 def gun_maclari(api, state, tarih):
@@ -552,7 +555,7 @@ def gorev_puan(fxs, now, api, y):
         ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(satirlar[:5]))
         cap = (f"📊 {lig_ust(lig)} | PUAN DURUMU ({hafta(rnd)} sonu)\n\n{ilk}\n...\n\n"
                f"Şampiyon kim olur? 👇\n\n{ayar['tag']}")
-        y.paylas(key, [img], cap)
+        y.paylas(key, [img], cap, lig=lig)
 
 
 def gorev_puan_simdi(now, y, lig=config.SUPER_LIG):
@@ -566,7 +569,7 @@ def gorev_puan_simdi(now, y, lig=config.SUPER_LIG):
     ilk = "\n".join(f"{i + 1}. {t[0]} - {t[6]} puan" for i, t in enumerate(satirlar[:5]))
     cap = (f"📊 {lig_ust(lig)} | PUAN DURUMU ({hafta_no}. hafta sonu)\n\n{ilk}\n...\n\n"
            f"Şampiyon kim olur? 👇\n\n{config.LIGLER[lig]['tag']}")
-    y.paylas(key, [img], cap)
+    y.paylas(key, [img], cap, lig=lig)
 
 
 def _son_milli_kadro(api, state, now):
@@ -704,10 +707,12 @@ def run(api, now=None):
                     ("toplu", lambda: gorev_toplu(fxs, now, y)),
                     ("puan", lambda: gorev_puan(fxs, now, api, y)),
                     ("muhtemel11", lambda: gorev_muhtemel11(now, api, y, state)),
-                    ("puan_simdi", lambda: gorev_puan_simdi(now, y))]:
+                    ("puan_simdi", lambda: gorev_puan_simdi(now, y)),
+                    ("sonuc_tg", lambda: gorev_sonuc([f for f in fxs if f["league"]["id"] == config.SUPER_LIG],
+                                                     now, api, y, onek="tgsonuc", telegram_zorla=True))]:
         if sadece and ad_ not in sadece:
             continue
-        if ad_ == "puan_simdi" and "puan_simdi" not in sadece:
+        if ad_ in ("puan_simdi", "sonuc_tg") and ad_ not in sadece:
             continue  # sadece elle istenince
         try:
             fn()

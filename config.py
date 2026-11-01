@@ -44,6 +44,9 @@ FORMAT = "post"
 # Yayın şekli: "instagram" = sistem kendisi paylaşır, "telegram" = Reels + açıklama Telegram'dan
 # sana gelir, sen Instagram'da müziği (marş) ekleyip paylaşırsın (yarı otomatik)
 YAYIN = "telegram"
+# Bu liglerin tüm içerikleri (günün maçları, ilk 11, sonuç, puan durumu) Telegram'a Reels olarak gider;
+# diğer ligler ve milli takım doğrudan Instagram'a görsel post olarak paylaşılır.
+TELEGRAM_LIGLER = [SUPER_LIG]
 
 # Yarı otomatik modda önerilen müzik (Instagram müzik kütüphanesinde aratılacak ad)
 MUZIK_GENEL = "Trend bir spor müziği"
