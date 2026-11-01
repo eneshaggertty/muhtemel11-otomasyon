@@ -1177,9 +1177,9 @@
       "city": "Turin"
      },
      "status": {
-      "long": "First Half",
-      "short": "1H",
-      "elapsed": 34,
+      "long": "Halftime",
+      "short": "HT",
+      "elapsed": 45,
       "extra": null
      }
     },
@@ -1249,7 +1249,7 @@
      "status": {
       "long": "First Half",
       "short": "1H",
-      "elapsed": 14,
+      "elapsed": 44,
       "extra": null
      }
     },
@@ -1268,23 +1268,23 @@
       "id": 531,
       "name": "Athletic Club",
       "logo": "https://media.api-sports.io/football/teams/531.png",
-      "winner": true
+      "winner": null
      },
      "away": {
       "id": 548,
       "name": "Real Sociedad",
       "logo": "https://media.api-sports.io/football/teams/548.png",
-      "winner": false
+      "winner": null
      }
     },
     "goals": {
      "home": 1,
-     "away": 0
+     "away": 1
     },
     "score": {
      "halftime": {
       "home": 1,
-      "away": 0
+      "away": 1
      },
      "fulltime": {
       "home": null,
@@ -1302,7 +1302,7 @@
    }
   ],
   "fixtures_date": "2026-11-01",
-  "fixtures_ts": "2026-11-01T23:18:36.424350+03:00",
+  "fixtures_ts": "2026-11-01T23:48:39.614209+03:00",
   "gunler": {
    "2026-10-30": [
     {
