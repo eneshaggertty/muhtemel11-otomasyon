@@ -25,7 +25,7 @@ import requests
 import config
 import render
 import tablo
-from api_football import PlanHatasi
+from veri_kaynagi import PlanHatasi
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
@@ -378,16 +378,22 @@ def gorev_ilk11(fxs, now, api, y):
         alt = f"{lig_adi(f)} · {hafta(f['league']['round'])} · {k.strftime('%H:%M')}"
         images = []
         for i, t in enumerate(lu):
-            tn = ad(t["team"]["name"])
-            images.append(render.kadro("İLK 11", render.tr_upper(mac), alt, tn, renk(tn, t),
-                                       satirlar_from_lineup(t),
-                                       os.path.join(post_dir(now), f"ilk11_{f['fixture']['id']}_{i}.jpg"),
-                                       dizilis=t.get("formation"),
-                                       hoca=(t.get("coach") or {}).get("name")))
+            tn = ad(t["team"]["name"]) if t["team"].get("name") else (ev if i == 0 else dep)
+            t["team"]["name"] = tn
+            yol = os.path.join(post_dir(now), f"ilk11_{f['fixture']['id']}_{i}.jpg")
+            hoca = (t.get("coach") or {}).get("name")
+            if any(p["player"].get("grid") for p in t["startXI"]):
+                images.append(render.kadro("İLK 11", render.tr_upper(mac), alt, tn, renk(tn, t),
+                                           satirlar_from_lineup(t), yol, dizilis=t.get("formation"), hoca=hoca))
+            else:
+                images.append(render.kadro_liste("İLK 11", render.tr_upper(mac), alt, tn, renk(tn, t),
+                                                 [(p["player"].get("number"), p["player"]["name"]) for p in t["startXI"]],
+                                                 yol, hoca=hoca))
         satir = []
         for t in lu:
             isimler = ", ".join(kisa_ad(p["player"]["name"]) for p in t["startXI"])
-            satir.append(f"🔹 {ad(t['team']['name'])} ({t.get('formation') or '-'}): {isimler}")
+            dz = f" ({t['formation']})" if t.get("formation") else ""
+            satir.append(f"🔹 {t['team']['name']}{dz}: {isimler}")
         tag = lig_tag(f)
         soru = mac_onu_soru(f)
         cap = (f"📋 İLK 11'LER BELLİ OLDU!\n\n⚔️ {mac} | {k.strftime('%H:%M')}\n\n" + (soru + "\n\n" if soru else "")
@@ -406,7 +412,7 @@ def goller(f, events):
         t = e["time"]
         dk = f"{t['elapsed']}+{t['extra']}" if t.get("extra") else str(t["elapsed"])
         notu = "P" if e["detail"] == "Penalty" else ("k.k." if e["detail"] == "Own Goal" else "")
-        taraf = "ev" if e["team"]["id"] == home_id else "dep"
+        taraf = e.get("taraf") or ("ev" if e["team"]["id"] == home_id else "dep")
         out.append([dk, kisa_ad(e["player"]["name"]), taraf, notu])
     # skorla tutarlılık kontrolü: kendi kalesine goller yanlış tarafa yazıldıysa çevir
     eh, ea = f["goals"]["home"], f["goals"]["away"]
@@ -431,8 +437,9 @@ def gorev_sonuc(fxs, now, api, y, onek="sonuc", telegram_zorla=False):
         gl = goller(f, events)
         eh, ea = f["goals"]["home"], f["goals"]["away"]
         bilgi = []
-        venue = (f["fixture"].get("venue") or {}).get("name")
-        ref = (f["fixture"].get("referee") or "").split(",")[0].strip()
+        detay = api.mac_detay(f["fixture"]["id"]) if hasattr(api, "mac_detay") else {}
+        venue = detay.get("stad") or (f["fixture"].get("venue") or {}).get("name")
+        ref = detay.get("hakem") or (f["fixture"].get("referee") or "").split(",")[0].strip()
         if ref:
             bilgi.append(f"Hakem: {ref}")
         kirmizi = [f"{kisa_ad(e['player']['name'])} ({e['time']['elapsed']}')" for e in events
@@ -725,7 +732,7 @@ def run(api, now=None):
 
 
 if __name__ == "__main__":
-    from api_football import ApiFootball
+    from veri_kaynagi import Kaynak
     # TEST_TARIH=2026-10-26 -> o günü gün sonu (23:59) itibarıyla canlandırır (sadece test modunda)
     test_tarih = os.environ.get("TEST_TARIH", "").strip()
     now = None
@@ -734,7 +741,10 @@ if __name__ == "__main__":
             sys.exit("Gerçek modda TEST_TARIH sadece SADECE ile birlikte kullanılabilir.")
         now = datetime.fromisoformat(test_tarih).replace(hour=23, minute=59, tzinfo=TZ)
         log(f"TEST: {test_tarih} günü canlandırılıyor")
-    errs = run(ApiFootball(), now=now)
+    kaynak = Kaynak()
+    if now:
+        kaynak.now = now
+    errs = run(kaynak, now=now)
     for u in UYARILAR:
         print(f"::warning::{u}"[:900])
     if errs:

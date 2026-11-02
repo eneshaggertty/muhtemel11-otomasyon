@@ -35,7 +35,7 @@ TURKIYE_ID = 777
 # Genel ayarlar
 PAYLAS = {
     "program": True,       # maç günü öğlen: günün maçları (her lig bir görsel, carousel)
-    "milli_takim": True,   # Türkiye: muhtemel 11 (maçtan 1 gün önce), ilk 11, sonuç
+    "milli_takim": False,  # Türkiye maçları (ücretsiz kaynakta milli maç verisi yok; şimdilik kapalı)
 }
 
 # Paylaşım biçimi: "reels" (kartlar videoya çevrilir) ya da "post" (görsel / carousel)

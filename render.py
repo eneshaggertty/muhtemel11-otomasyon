@@ -345,3 +345,29 @@ def avrupa_programi(maclar, alt, path):
         d.rounded_rectangle([W - 220, y + 50, W - 92, y + 120], radius=14, fill=ACCENT)
         center(d, W - 156, y + 60, saat, font("InterDisplay-Black.otf", 42), TEXT)
     return save(img, path)
+
+
+# ---------------------------------------------------------------- İLK 11 (LİSTE)
+def kadro_liste(baslik, kicker, alt, takim_adi, renk, oyuncular, path, hoca=None):
+    """Mevki bilgisi yokken ilk 11: numara + isim listesi. oyuncular: [(no, ad), ...]"""
+    img, d = base(kicker, baslik, alt)
+    c1, c2 = renk or (ACCENT, TEXT)
+    t = tr_upper(takim_adi)
+    d.rectangle([64, 286, 72, 334], fill=c1)
+    d.text((90, 284), t, font=fit(d, t, "InterDisplay-Black.otf", 46, W - 160), fill=TEXT)
+    top = 360
+    rh = 64
+    for i, (no, ad) in enumerate(oyuncular[:11]):
+        y = top + i * rh
+        if i % 2 == 0:
+            d.rounded_rectangle([64, y, W - 64, y + rh - 6], radius=12, fill=PANEL)
+        cy = y + (rh - 6) / 2
+        d.ellipse([84, cy - 22, 128, cy + 22], fill=c1, outline=c2, width=3)
+        numf = font("InterDisplay-Black.otf", 22 if no and no >= 10 else 24)
+        center(d, 106, cy - 14, str(no or ""), numf, c2 if sum(c2) > 200 else TEXT)
+        d.text((150, cy - 19), ad, font=fit(d, ad, "Inter-SemiBold.otf", 34, W - 240), fill=TEXT)
+    if hoca:
+        y = top + 11 * rh + 14
+        d.text((90, y), f"Teknik Direktör: {hoca}", font=fit(d, f"Teknik Direktör: {hoca}", "Inter-Medium.otf", 28, W - 180),
+               fill=MUTED)
+    return save(img, path)
