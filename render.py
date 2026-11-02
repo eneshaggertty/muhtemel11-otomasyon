@@ -303,3 +303,45 @@ def haber(etiket, baslik, kalemler, alt, path, renk=None):
             d.text((104, y + 150 + i * 38), s, font=af, fill=MUTED)
         y += kutu_h + 30
     return save(img, path)
+
+
+# ---------------------------------------------------------------- AVRUPA: RAKİPLER / PROGRAM
+SONUC_RENK = {"G": (34, 170, 90), "B": (120, 120, 128), "M": (220, 40, 50)}
+
+
+def rakipler_karti(takim, turnuva, satirlar, alt, path, renk=None):
+    """satirlar: [(rakip, 'Ev 2-1 Dep', 'G'|'B'|'M'), ...]"""
+    img, d = base(tr_upper(f"{takim} · {turnuva}"), "RAKİPLER NE YAPTI?", alt)
+    c1, c2 = renk or (ACCENT, TEXT)
+    d.rectangle([64, 262, 300, 270], fill=c1)
+    d.rectangle([300, 262, 536, 270], fill=c2)
+    top, bottom = 300, H - 150
+    rh = min(112, (bottom - top) / max(len(satirlar), 1))
+    for i, (rakip, mac, s) in enumerate(satirlar):
+        y = top + i * rh
+        d.rounded_rectangle([64, y, W - 64, y + rh - 14], radius=16, fill=PANEL, outline=LINE, width=2)
+        cy = y + (rh - 14) / 2
+        rf = fit(d, rakip, "InterDisplay-ExtraBold.otf", 34, 330)
+        d.text((92, cy - 22), rakip, font=rf, fill=TEXT)
+        mf = fit(d, mac, "Inter-Medium.otf", 28, 470)
+        d.text((440, cy - 17), mac, font=mf, fill=MUTED)
+        rc = SONUC_RENK[s]
+        d.rounded_rectangle([W - 140, cy - 28, W - 84, cy + 28], radius=12, fill=rc)
+        center(d, W - 112, cy - 21, s, font("InterDisplay-Black.otf", 34), TEXT)
+    return save(img, path)
+
+
+def avrupa_programi(maclar, alt, path):
+    """maclar: [(gun, saat, ev, dep, turnuva), ...]"""
+    img, d = base("TEMSİLCİLERİMİZ", "BU HAFTA AVRUPA'DA", alt)
+    top = 300
+    rh = min(200, (H - 150 - top) / max(len(maclar), 1))
+    for i, (gun, saat, ev, dep, turnuva) in enumerate(maclar):
+        y = top + i * rh
+        d.rounded_rectangle([64, y, W - 64, y + rh - 20], radius=20, fill=PANEL, outline=LINE, width=2)
+        d.text((96, y + 22), tr_upper(f"{turnuva} · {gun}"), font=font("Inter-SemiBold.otf", 26), fill=ACCENT)
+        t = f"{ev} – {dep}"
+        d.text((96, y + 62), t, font=fit(d, t, "InterDisplay-Black.otf", 52, W - 330), fill=TEXT)
+        d.rounded_rectangle([W - 220, y + 50, W - 92, y + 120], radius=14, fill=ACCENT)
+        center(d, W - 156, y + 60, saat, font("InterDisplay-Black.otf", 42), TEXT)
+    return save(img, path)
