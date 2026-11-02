@@ -1,0 +1,31 @@
+name: Veri topla (geçici)
+on:
+  workflow_dispatch:
+    inputs:
+      betik:
+        description: "tools/ altındaki betik"
+        default: "rakip_sonuclari.py"
+permissions:
+  contents: write
+jobs:
+  topla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - env:
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: python tools/${{ inputs.betik }}
+      - name: Sonucu veri dalına koy
+        run: |
+          git config user.name "muhtemel11-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q --orphan veri
+          git rm -rq --cached .
+          git add -f veri
+          git commit -q -m "veri"
+          git push -qf origin veri
