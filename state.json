@@ -122,7 +122,7 @@
     "fixture": {
      "id": 10000558541,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-02T20:30:00+03:00",
      "venue": {
@@ -146,8 +146,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -179,42 +179,6 @@
      "away": {
       "id": 112,
       "name": "Parma"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000564731,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-02T23:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 560,
-      "name": "Deportivo"
-     },
-     "away": {
-      "id": 79,
-      "name": "Osasuna"
      }
     },
     "goals": {
@@ -260,10 +224,46 @@
     "score": {
      "penalty": {}
     }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564731,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-02T23:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 560,
+      "name": "Deportivo"
+     },
+     "away": {
+      "id": 79,
+      "name": "Osasuna"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
    }
   ],
   "fixtures_date": "2026-11-02",
-  "fixtures_ts": "2026-11-02T20:23:14.097538+03:00",
+  "fixtures_ts": "2026-11-02T20:53:19.932272+03:00",
   "gunler": {
    "2026-10-30": [
     {
