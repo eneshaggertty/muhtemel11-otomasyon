@@ -30,6 +30,15 @@ for lig in ("uefa.champions", "uefa.europa", "uefa.europa.conf"):
                 sonuc["avrupa"].append(m)
     except Exception as e:  # noqa: BLE001
         hata.append(f"{lig}: {e}")
+ham = {}
+for lig in ("sco.1", "gre.1", "uefa.champions"):
+    try:
+        r = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lig}/scoreboard",
+                         params={"dates": "20261030-20261106"}, timeout=40)
+        ham[lig] = [r.status_code, len(r.json().get("events", [])), [e.get("name") for e in r.json().get("events", [])][:6]]
+    except Exception as e:  # noqa: BLE001
+        ham[lig] = str(e)
+sonuc["ham"] = ham
 sonuc["hatalar"] = hata
 os.makedirs("veri", exist_ok=True)
 json.dump(sonuc, open("veri/espn.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
