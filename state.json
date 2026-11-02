@@ -146,8 +146,8 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -179,42 +179,6 @@
      "away": {
       "id": 112,
       "name": "Parma"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560622,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-02T23:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 9"
-    },
-    "teams": {
-     "home": {
-      "id": 67,
-      "name": "Newcastle"
-     },
-     "away": {
-      "id": 62,
-      "name": "Everton"
      }
     },
     "goals": {
@@ -260,10 +224,46 @@
     "score": {
      "penalty": {}
     }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560622,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-02T23:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 9"
+    },
+    "teams": {
+     "home": {
+      "id": 67,
+      "name": "Newcastle"
+     },
+     "away": {
+      "id": 62,
+      "name": "Everton"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
    }
   ],
   "fixtures_date": "2026-11-02",
-  "fixtures_ts": "2026-11-02T20:53:19.932272+03:00",
+  "fixtures_ts": "2026-11-02T21:23:26.451165+03:00",
   "gunler": {
    "2026-10-30": [
     {
