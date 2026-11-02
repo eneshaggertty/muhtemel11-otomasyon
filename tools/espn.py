@@ -3,9 +3,16 @@ import json, os, requests
 
 def skor(lig, tarihler):
     out = []
-    r = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lig}/scoreboard",
-                     params={"dates": tarihler, "limit": 300}, timeout=40)
-    for e in r.json().get("events", []):
+    bas, son = tarihler.split("-")
+    gunler = [f"{bas[:6]}{d:02d}" for d in range(int(bas[6:]), 32)] if bas[4:6] == "10" else []
+    gunler += [f"202611{d:02d}" for d in range(1 if bas[4:6] == "10" else int(bas[6:]), int(son[6:]) + 1)]
+    olaylar = []
+    for g in gunler:
+        r = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lig}/scoreboard",
+                         params={"dates": g}, timeout=40, headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code == 200:
+            olaylar += r.json().get("events", [])
+    for e in olaylar:
         c = e["competitions"][0]
         tk = {t["homeAway"]: t for t in c["competitors"]}
         out.append({"lig": lig, "tarih": e["date"], "durum": e["status"]["type"]["name"],
@@ -34,7 +41,7 @@ ham = {}
 for lig in ("sco.1", "gre.1", "uefa.champions"):
     try:
         r = requests.get(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lig}/scoreboard",
-                         params={"dates": "20261030-20261106"}, timeout=40)
+                         params={"dates": "20261101"}, timeout=40, headers={"User-Agent": "Mozilla/5.0"})
         ham[lig] = [r.status_code, len(r.json().get("events", [])), [e.get("name") for e in r.json().get("events", [])][:6]]
     except Exception as e:  # noqa: BLE001
         ham[lig] = str(e)
