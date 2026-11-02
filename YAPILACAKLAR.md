@@ -24,6 +24,13 @@
 ## 5. Ayrı proje: YouTube çizgi filmi
 - [ ] Konu, karakterler, hedef kitle ve bölüm uzunluğu konuşulacak (özgün karakterler)
 
+## Veri kaynakları (2 Kasım'dan itibaren, hepsi ücretsiz)
+- API-Football: GitHub'ın ortak IP'leri yüzünden ücretsiz hesap askıya alındı -> kullanılmıyor (veri_kaynagi.py)
+- Süper Lig + 1. Lig: TFF (fikstür pageID 198/142, maç sayfası pageId=29&macId=...). Dizilişi vermiyor -> ilk 11 liste kartı
+- Premier Lig / La Liga / Serie A: football-data.org
+- [ ] Milli takım için ücretsiz kaynak bul (şimdilik PAYLAS["milli_takim"] = False)
+- [ ] İlk gerçek hafta sonunda TFF'nin kadroları maçtan önce yayınlayıp yayınlamadığını kontrol et
+
 ## Notlar
 - Instagram token'ı: sistem kullanıcısı (muhtemel11-bot), süresiz. IG_USER_ID = 17841410173892684
 - API-Football ücretsiz: sadece dün/bugün/yarın tarihli maç sorguları; sezon/sonraki/son maç sorguları ve puan tablosu yok
