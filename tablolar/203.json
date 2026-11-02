@@ -1,7 +1,7 @@
 {
  "lig": "Trendyol Süper Lig",
- "kaynak": "TFF resmi puan cetveli (2026-10-29)",
- "baslangic": "2026-10-29",
+ "kaynak": "TFF resmi puan cetveli (2026-11-02)",
+ "baslangic": "2026-11-02",
  "alias": {
   "Istanbul Basaksehir": "Başakşehir",
   "Basaksehir": "Başakşehir",
@@ -13,16 +13,7 @@
   "Erzurum BB": "Erzurumspor FK",
   "Erzurumspor": "Erzurumspor FK"
  },
- "islenen": [
-  "1584455",
-  "1584450",
-  "1584454",
-  "1584451",
-  "1584448",
-  "1584449",
-  "1584456",
-  "1584453"
- ],
+ "islenen": [],
  "takimlar": {
   "Galatasaray": {
    "O": 10,
@@ -56,14 +47,6 @@
    "AV": 8,
    "P": 19
   },
-  "Fenerbahçe": {
-   "O": 10,
-   "G": 5,
-   "B": 1,
-   "M": 4,
-   "AV": 14,
-   "P": 16
-  },
   "Kasımpaşa": {
    "O": 10,
    "G": 4,
@@ -72,21 +55,13 @@
    "AV": 4,
    "P": 17
   },
-  "Kocaelispor": {
+  "Fenerbahçe": {
    "O": 10,
    "G": 5,
    "B": 1,
    "M": 4,
-   "AV": 2,
+   "AV": 14,
    "P": 16
-  },
-  "Erzurumspor FK": {
-   "O": 10,
-   "G": 4,
-   "B": 2,
-   "M": 4,
-   "AV": -6,
-   "P": 14
   },
   "Çorum FK": {
    "O": 10,
@@ -94,6 +69,14 @@
    "B": 1,
    "M": 4,
    "AV": 5,
+   "P": 16
+  },
+  "Kocaelispor": {
+   "O": 10,
+   "G": 5,
+   "B": 1,
+   "M": 4,
+   "AV": 2,
    "P": 16
   },
   "Göztepe": {
@@ -104,14 +87,6 @@
    "AV": 4,
    "P": 15
   },
-  "Alanyaspor": {
-   "O": 9,
-   "G": 3,
-   "B": 3,
-   "M": 3,
-   "AV": -2,
-   "P": 12
-  },
   "Başakşehir": {
    "O": 10,
    "G": 4,
@@ -120,12 +95,36 @@
    "AV": 1,
    "P": 14
   },
+  "Erzurumspor FK": {
+   "O": 10,
+   "G": 4,
+   "B": 2,
+   "M": 4,
+   "AV": -6,
+   "P": 14
+  },
+  "Alanyaspor": {
+   "O": 10,
+   "G": 3,
+   "B": 3,
+   "M": 4,
+   "AV": -7,
+   "P": 12
+  },
   "Çaykur Rizespor": {
    "O": 10,
    "G": 3,
    "B": 2,
    "M": 5,
    "AV": -4,
+   "P": 11
+  },
+  "Gençlerbirliği": {
+   "O": 10,
+   "G": 3,
+   "B": 2,
+   "M": 5,
+   "AV": -6,
    "P": 11
   },
   "Konyaspor": {
@@ -142,14 +141,6 @@
    "B": 2,
    "M": 6,
    "AV": -8,
-   "P": 8
-  },
-  "Gençlerbirliği": {
-   "O": 9,
-   "G": 2,
-   "B": 2,
-   "M": 5,
-   "AV": -11,
    "P": 8
   },
   "Samsunspor": {
