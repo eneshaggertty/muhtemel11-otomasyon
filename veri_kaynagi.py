@@ -217,8 +217,9 @@ class Kaynak:
                             haftalar.append(self._tff_hafta(lig, h))
             for maclar_h, no_h in haftalar:
                 out += [self._tff_fixture(lig, m, no_h) for m in maclar_h if m[1].date() == gun]
-        try:
-            out += [f for f in self._fd(date, date)]
+        try:  # football-data UTC çalışır ve bitiş gününü dahil etmeyebilir: aralığı genişletip yerel tarihe göre süz
+            bas, son = str(gun - timedelta(days=1)), str(gun + timedelta(days=1))
+            out += [f for f in self._fd(bas, son) if datetime.fromisoformat(f["fixture"]["date"]).date() == gun]
         except Exception as e:  # noqa: BLE001
             print(f"::warning::football-data okunamadı: {e}"[:900])
         return list({f["fixture"]["id"]: f for f in out}.values())
