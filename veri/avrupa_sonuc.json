@@ -1,0 +1,140 @@
+{
+ "maclar": [
+  {
+   "lig": "uefa.champions",
+   "ad": "VfB Stuttgart at Galatasaray",
+   "durum": "STATUS_FULL_TIME",
+   "ev": "Galatasaray",
+   "ev_id": "432",
+   "dep": "VfB Stuttgart",
+   "dep_id": "134",
+   "skor": [
+    "2",
+    "0"
+   ],
+   "stad": "RAMS Park",
+   "olaylar": [
+    {
+     "dk": "2'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "134",
+     "oyuncu": [
+      "Atakan Karazor"
+     ]
+    },
+    {
+     "dk": "12'",
+     "tip": "Goal",
+     "gol": true,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "432",
+     "oyuncu": [
+      "Alexey Batrakov"
+     ]
+    },
+    {
+     "dk": "15'",
+     "tip": "Goal",
+     "gol": true,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "432",
+     "oyuncu": [
+      "Alexey Batrakov"
+     ]
+    },
+    {
+     "dk": "38'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "134",
+     "oyuncu": [
+      "Deniz Undav"
+     ]
+    },
+    {
+     "dk": "39'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "432",
+     "oyuncu": [
+      "Baris Alper Yilmaz"
+     ]
+    },
+    {
+     "dk": "45'+3'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "134",
+     "oyuncu": [
+      "Yanik Spalt"
+     ]
+    },
+    {
+     "dk": "61'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "134",
+     "oyuncu": [
+      "Grischa Prömel"
+     ]
+    },
+    {
+     "dk": "62'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "432",
+     "oyuncu": [
+      "Roland Sallai"
+     ]
+    },
+    {
+     "dk": "79'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "134",
+     "oyuncu": [
+      "Ramon Hendriks"
+     ]
+    },
+    {
+     "dk": "85'",
+     "tip": "Yellow Card",
+     "gol": false,
+     "penalti": false,
+     "kk": false,
+     "kirmizi": false,
+     "takim": "432",
+     "oyuncu": [
+      "Lucas Torreira"
+     ]
+    }
+   ]
+  }
+ ]
+}
