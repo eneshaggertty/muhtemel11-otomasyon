@@ -197,8 +197,44 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": 2,
+     "away": 1
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560634,
+     "status": {
+      "short": "LIVE"
+     },
+     "date": "2026-11-06T23:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 62,
+      "name": "Everton"
+     },
+     "away": {
+      "id": 1076,
+      "name": "Coventry City"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -239,46 +275,10 @@
     "score": {
      "penalty": {}
     }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560634,
-     "status": {
-      "short": "LIVE"
-     },
-     "date": "2026-11-06T23:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 62,
-      "name": "Everton"
-     },
-     "away": {
-      "id": 1076,
-      "name": "Coventry City"
-     }
-    },
-    "goals": {
-     "home": 0,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
    }
   ],
   "fixtures_date": "2026-11-06",
-  "fixtures_ts": "2026-11-06T23:55:28.058659+03:00",
+  "fixtures_ts": "2026-11-07T00:25:36.570291+03:00",
   "gunler": {
    "2026-11-03": [],
    "2026-11-04": [],
