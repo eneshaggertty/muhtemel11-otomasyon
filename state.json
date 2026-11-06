@@ -100,7 +100,7 @@
      "id": 318222,
      "date": "2026-11-06T20:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -123,8 +123,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -136,7 +136,7 @@
      "id": 318224,
      "date": "2026-11-06T20:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -159,8 +159,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -192,42 +192,6 @@
      "away": {
       "id": 115,
       "name": "Udinese"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560634,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-06T23:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 62,
-      "name": "Everton"
-     },
-     "away": {
-      "id": 1076,
-      "name": "Coventry City"
      }
     },
     "goals": {
@@ -273,10 +237,46 @@
     "score": {
      "penalty": {}
     }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560634,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-06T23:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 62,
+      "name": "Everton"
+     },
+     "away": {
+      "id": 1076,
+      "name": "Coventry City"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
    }
   ],
   "fixtures_date": "2026-11-06",
-  "fixtures_ts": "2026-11-06T21:54:20.352516+03:00",
+  "fixtures_ts": "2026-11-06T22:09:27.438743+03:00",
   "gunler": {
    "2026-11-02": [
     {
