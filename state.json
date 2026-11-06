@@ -209,7 +209,7 @@
     "fixture": {
      "id": 10000560634,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-06T23:00:00+03:00",
      "venue": {
@@ -233,8 +233,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -245,7 +245,7 @@
     "fixture": {
      "id": 10000564740,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-06T23:00:00+03:00",
      "venue": {
@@ -269,8 +269,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -278,7 +278,7 @@
    }
   ],
   "fixtures_date": "2026-11-06",
-  "fixtures_ts": "2026-11-06T22:55:03.122818+03:00",
+  "fixtures_ts": "2026-11-06T23:25:10.917009+03:00",
   "gunler": {
    "2026-11-03": [],
    "2026-11-04": [],
