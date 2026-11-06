@@ -205,42 +205,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000564740,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-06T23:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 559,
-      "name": "Sevilla FC"
-     },
-     "away": {
-      "id": 263,
-      "name": "Alavés"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000560634,
      "status": {
       "short": "NS"
@@ -273,10 +237,46 @@
     "score": {
      "penalty": {}
     }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564740,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-06T23:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 559,
+      "name": "Sevilla FC"
+     },
+     "away": {
+      "id": 263,
+      "name": "Alavés"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
    }
   ],
   "fixtures_date": "2026-11-06",
-  "fixtures_ts": "2026-11-06T21:24:15.635013+03:00",
+  "fixtures_ts": "2026-11-06T21:54:20.352516+03:00",
   "gunler": {
    "2026-11-02": [
     {
