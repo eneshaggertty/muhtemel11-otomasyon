@@ -54,7 +54,8 @@
   "puan:135:2026:Regular Season - 10": "2026-11-03T01:42:53.007739+03:00",
   "program203:2026-11-06": "2026-11-06T12:06:55.962385+03:00",
   "program:2026-11-06": "2026-11-06T12:07:32.657359+03:00",
-  "ilk11:317874": "2026-11-06T19:08:44.257110+03:00"
+  "ilk11:317874": "2026-11-06T19:08:44.257110+03:00",
+  "toplu:204:2026-11-06": "2026-11-06T22:09:44.461284+03:00"
  },
  "cache": {
   "fixtures": [
@@ -278,52 +279,36 @@
   "fixtures_date": "2026-11-06",
   "fixtures_ts": "2026-11-06T22:09:27.438743+03:00",
   "gunler": {
-   "2026-11-02": [
+   "2026-11-03": [],
+   "2026-11-04": [],
+   "2026-11-05": [],
+   "2026-11-07": [
     {
+     "kaynak": "tff",
      "fixture": {
-      "id": 1584452,
-      "referee": "F. Tokail",
-      "timezone": "Europe/Istanbul",
-      "date": "2026-11-02T20:00:00+03:00",
-      "timestamp": 1793638800,
-      "periods": {
-       "first": null,
-       "second": null
+      "id": 317875,
+      "date": "2026-11-07T13:30:00+03:00",
+      "status": {
+       "short": "NS"
       },
       "venue": {
-       "id": null,
-       "name": "Eryaman Stadium",
-       "city": "Ankara"
+       "name": null
       },
-      "status": {
-       "long": "Not Started",
-       "short": "NS",
-       "elapsed": null,
-       "extra": null
-      }
+      "referee": null
      },
      "league": {
       "id": 203,
-      "name": "Süper Lig",
-      "country": "Turkey",
-      "logo": "https://media.api-sports.io/football/leagues/203.png",
-      "flag": "https://media.api-sports.io/flags/tr.svg",
-      "season": 2026,
-      "round": "Regular Season - 10",
-      "standings": true
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
      },
      "teams": {
       "home": {
-       "id": 997,
-       "name": "Gençlerbirliği S.K.",
-       "logo": "https://media.api-sports.io/football/teams/997.png",
-       "winner": null
+       "id": 371216,
+       "name": "Eyüpspor"
       },
       "away": {
-       "id": 996,
-       "name": "Alanyaspor",
-       "logo": "https://media.api-sports.io/football/teams/996.png",
-       "winner": null
+       "id": 875259,
+       "name": "Kocaelispor"
       }
      },
      "goals": {
@@ -331,69 +316,143 @@
       "away": null
      },
      "score": {
-      "halftime": {
-       "home": null,
-       "away": null
-      },
-      "fulltime": {
-       "home": null,
-       "away": null
-      },
-      "extratime": {
-       "home": null,
-       "away": null
-      },
-      "penalty": {
-       "home": null,
-       "away": null
-      }
+      "penalty": {}
      }
     },
     {
+     "kaynak": "tff",
      "fixture": {
-      "id": 1585815,
-      "referee": "Yigit Arslan",
-      "timezone": "Europe/Istanbul",
-      "date": "2026-11-02T20:00:00+03:00",
-      "timestamp": 1793638800,
-      "periods": {
-       "first": null,
-       "second": null
+      "id": 317882,
+      "date": "2026-11-07T16:00:00+03:00",
+      "status": {
+       "short": "NS"
       },
       "venue": {
-       "id": 19613,
-       "name": "RHG Enertürk Enerji Stadium",
-       "city": "Kayseri"
+       "name": null
       },
-      "status": {
-       "long": "Not Started",
-       "short": "NS",
-       "elapsed": null,
-       "extra": null
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 228546,
+       "name": "Samsunspor"
+      },
+      "away": {
+       "id": 773301,
+       "name": "Konyaspor"
       }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 317878,
+      "date": "2026-11-07T19:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 549932,
+       "name": "Göztepe"
+      },
+      "away": {
+       "id": 907033,
+       "name": "Başakşehir"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 317880,
+      "date": "2026-11-07T19:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 653029,
+       "name": "Galatasaray"
+      },
+      "away": {
+       "id": 817687,
+       "name": "Amed SFK"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 318220,
+      "date": "2026-11-07T13:30:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
      },
      "league": {
       "id": 204,
-      "name": "1. Lig",
-      "country": "Turkey",
-      "logo": "https://media.api-sports.io/football/leagues/204.png",
-      "flag": "https://media.api-sports.io/flags/tr.svg",
-      "season": 2026,
-      "round": "Regular Season - 13",
-      "standings": true
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
      },
      "teams": {
       "home": {
-       "id": 1001,
-       "name": "Kayserispor",
-       "logo": "https://media.api-sports.io/football/teams/1001.png",
-       "winner": null
+       "id": 582130,
+       "name": "Keçiörengücü"
       },
       "away": {
-       "id": 7414,
-       "name": "Muğlaspor",
-       "logo": "https://media.api-sports.io/football/teams/7414.png",
-       "winner": null
+       "id": 87176,
+       "name": "Manisa"
       }
      },
      "goals": {
@@ -401,69 +460,35 @@
       "away": null
      },
      "score": {
-      "halftime": {
-       "home": null,
-       "away": null
-      },
-      "fulltime": {
-       "home": null,
-       "away": null
-      },
-      "extratime": {
-       "home": null,
-       "away": null
-      },
-      "penalty": {
-       "home": null,
-       "away": null
-      }
+      "penalty": {}
      }
     },
     {
+     "kaynak": "tff",
      "fixture": {
-      "id": 1550185,
-      "referee": "Matteo Marcenaro",
-      "timezone": "Europe/Istanbul",
-      "date": "2026-11-02T20:30:00+03:00",
-      "timestamp": 1793640600,
-      "periods": {
-       "first": null,
-       "second": null
+      "id": 318227,
+      "date": "2026-11-07T13:30:00+03:00",
+      "status": {
+       "short": "NS"
       },
       "venue": {
-       "id": 935,
-       "name": "Mapei Stadium – Città del Tricolore",
-       "city": "Reggio Emilia"
+       "name": null
       },
-      "status": {
-       "long": "Not Started",
-       "short": "NS",
-       "elapsed": null,
-       "extra": null
-      }
+      "referee": null
      },
      "league": {
-      "id": 135,
-      "name": "Serie A",
-      "country": "Italy",
-      "logo": "https://media.api-sports.io/football/leagues/135.png",
-      "flag": "https://media.api-sports.io/flags/it.svg",
-      "season": 2026,
-      "round": "Regular Season - 10",
-      "standings": true
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
      },
      "teams": {
       "home": {
-       "id": 488,
-       "name": "Sassuolo",
-       "logo": "https://media.api-sports.io/football/teams/488.png",
-       "winner": null
+       "id": 228083,
+       "name": "Van Spor"
       },
       "away": {
-       "id": 502,
-       "name": "Fiorentina",
-       "logo": "https://media.api-sports.io/football/teams/502.png",
-       "winner": null
+       "id": 230246,
+       "name": "Sivasspor"
       }
      },
      "goals": {
@@ -471,69 +496,35 @@
       "away": null
      },
      "score": {
-      "halftime": {
-       "home": null,
-       "away": null
-      },
-      "fulltime": {
-       "home": null,
-       "away": null
-      },
-      "extratime": {
-       "home": null,
-       "away": null
-      },
-      "penalty": {
-       "home": null,
-       "away": null
-      }
+      "penalty": {}
      }
     },
     {
+     "kaynak": "tff",
      "fixture": {
-      "id": 1550178,
-      "referee": "Valerio Crezzini",
-      "timezone": "Europe/Istanbul",
-      "date": "2026-11-02T22:45:00+03:00",
-      "timestamp": 1793648700,
-      "periods": {
-       "first": null,
-       "second": null
+      "id": 318229,
+      "date": "2026-11-07T16:00:00+03:00",
+      "status": {
+       "short": "NS"
       },
       "venue": {
-       "id": 879,
-       "name": "New Balance Arena",
-       "city": "Bergamo"
+       "name": null
       },
-      "status": {
-       "long": "Not Started",
-       "short": "NS",
-       "elapsed": null,
-       "extra": null
-      }
+      "referee": null
      },
      "league": {
-      "id": 135,
-      "name": "Serie A",
-      "country": "Italy",
-      "logo": "https://media.api-sports.io/football/leagues/135.png",
-      "flag": "https://media.api-sports.io/flags/it.svg",
-      "season": 2026,
-      "round": "Regular Season - 10",
-      "standings": true
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
      },
      "teams": {
       "home": {
-       "id": 499,
-       "name": "Atalanta",
-       "logo": "https://media.api-sports.io/football/teams/499.png",
-       "winner": null
+       "id": 893474,
+       "name": "Muğlaspor"
       },
       "away": {
-       "id": 523,
-       "name": "Parma",
-       "logo": "https://media.api-sports.io/football/teams/523.png",
-       "winner": null
+       "id": 985777,
+       "name": "Esenler Erokspor"
       }
      },
      "goals": {
@@ -541,69 +532,71 @@
       "away": null
      },
      "score": {
-      "halftime": {
-       "home": null,
-       "away": null
-      },
-      "fulltime": {
-       "home": null,
-       "away": null
-      },
-      "extratime": {
-       "home": null,
-       "away": null
-      },
-      "penalty": {
-       "home": null,
-       "away": null
-      }
+      "penalty": {}
      }
     },
     {
+     "kaynak": "tff",
      "fixture": {
-      "id": 1557455,
-      "referee": "John Brooks",
-      "timezone": "Europe/Istanbul",
-      "date": "2026-11-02T23:00:00+03:00",
-      "timestamp": 1793649600,
-      "periods": {
-       "first": null,
-       "second": null
+      "id": 318221,
+      "date": "2026-11-07T19:00:00+03:00",
+      "status": {
+       "short": "NS"
       },
       "venue": {
-       "id": 562,
-       "name": "St James' Park",
-       "city": "Newcastle upon Tyne"
+       "name": null
       },
-      "status": {
-       "long": "Not Started",
-       "short": "NS",
-       "elapsed": null,
-       "extra": null
+      "referee": null
+     },
+     "league": {
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
+     },
+     "teams": {
+      "home": {
+       "id": 110718,
+       "name": "Pendikspor"
+      },
+      "away": {
+       "id": 977690,
+       "name": "İstanbulspor"
       }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560632,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T15:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
      },
      "league": {
       "id": 39,
-      "name": "Premier League",
-      "country": "England",
-      "logo": "https://media.api-sports.io/football/leagues/39.png",
-      "flag": "https://media.api-sports.io/flags/gb-eng.svg",
-      "season": 2026,
-      "round": "Regular Season - 9",
-      "standings": true
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
      },
      "teams": {
       "home": {
-       "id": 34,
-       "name": "Newcastle",
-       "logo": "https://media.api-sports.io/football/teams/34.png",
-       "winner": null
+       "id": 341,
+       "name": "Leeds United"
       },
       "away": {
-       "id": 45,
-       "name": "Everton",
-       "logo": "https://media.api-sports.io/football/teams/45.png",
-       "winner": null
+       "id": 73,
+       "name": "Tottenham"
       }
      },
      "goals": {
@@ -611,69 +604,35 @@
       "away": null
      },
      "score": {
-      "halftime": {
-       "home": null,
-       "away": null
-      },
-      "fulltime": {
-       "home": null,
-       "away": null
-      },
-      "extratime": {
-       "home": null,
-       "away": null
-      },
-      "penalty": {
-       "home": null,
-       "away": null
-      }
+      "penalty": {}
      }
     },
     {
+     "kaynak": "fd",
      "fixture": {
-      "id": 1570436,
-      "referee": "Jon Ander Gonzalez Esteban",
-      "timezone": "Europe/Istanbul",
-      "date": "2026-11-02T23:00:00+03:00",
-      "timestamp": 1793649600,
-      "periods": {
-       "first": null,
-       "second": null
-      },
-      "venue": {
-       "id": 1471,
-       "name": "Estadio de Riazor",
-       "city": "La Coruna"
-      },
+      "id": 10000564744,
       "status": {
-       "long": "Not Started",
-       "short": "NS",
-       "elapsed": null,
-       "extra": null
-      }
+       "short": "NS"
+      },
+      "date": "2026-11-07T16:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
      },
      "league": {
       "id": 140,
       "name": "La Liga",
-      "country": "Spain",
-      "logo": "https://media.api-sports.io/football/leagues/140.png",
-      "flag": "https://media.api-sports.io/flags/es.svg",
-      "season": 2026,
-      "round": "Regular Season - 11",
-      "standings": true
+      "round": "Regular Season - 12"
      },
      "teams": {
       "home": {
-       "id": 544,
-       "name": "Deportivo La Coruna",
-       "logo": "https://media.api-sports.io/football/teams/544.png",
-       "winner": null
+       "id": 84,
+       "name": "Málaga"
       },
       "away": {
-       "id": 727,
-       "name": "Osasuna",
-       "logo": "https://media.api-sports.io/football/teams/727.png",
-       "winner": null
+       "id": 5335,
+       "name": "Santander"
       }
      },
      "goals": {
@@ -681,28 +640,370 @@
       "away": null
      },
      "score": {
-      "halftime": {
-       "home": null,
-       "away": null
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558534,
+      "status": {
+       "short": "NS"
       },
-      "fulltime": {
-       "home": null,
-       "away": null
+      "date": "2026-11-07T17:00:00+03:00",
+      "venue": {
+       "name": null
       },
-      "extratime": {
-       "home": null,
-       "away": null
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 104,
+       "name": "Cagliari"
       },
-      "penalty": {
-       "home": null,
-       "away": null
+      "away": {
+       "id": 470,
+       "name": "Frosinone"
       }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558532,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 586,
+       "name": "Torino"
+      },
+      "away": {
+       "id": 5890,
+       "name": "Lecce"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560640,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T18:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 57,
+       "name": "Arsenal"
+      },
+      "away": {
+       "id": 322,
+       "name": "Hull City"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560633,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T18:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 63,
+       "name": "Fulham"
+      },
+      "away": {
+       "id": 67,
+       "name": "Newcastle"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564745,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T18:15:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 80,
+       "name": "Espanyol"
+      },
+      "away": {
+       "id": 560,
+       "name": "Deportivo"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558535,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T20:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 112,
+       "name": "Parma"
+      },
+      "away": {
+       "id": 103,
+       "name": "Bologna"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564739,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T20:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 79,
+       "name": "Osasuna"
+      },
+      "away": {
+       "id": 77,
+       "name": "Athletic"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560641,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T20:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 351,
+       "name": "Nottingham"
+      },
+      "away": {
+       "id": 65,
+       "name": "Man City"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558531,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T22:45:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 100,
+       "name": "Roma"
+      },
+      "away": {
+       "id": 471,
+       "name": "Sassuolo"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564741,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-07T23:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 95,
+       "name": "Valencia"
+      },
+      "away": {
+       "id": 86,
+       "name": "Real Madrid"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
      }
     }
-   ],
-   "2026-11-03": [],
-   "2026-11-04": [],
-   "2026-11-05": []
+   ]
   },
   "milli_yarin": [],
   "milli_yarin_date": "2026-11-02",
