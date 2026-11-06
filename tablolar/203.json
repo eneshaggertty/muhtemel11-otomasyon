@@ -13,7 +13,9 @@
   "Erzurum BB": "Erzurumspor FK",
   "Erzurumspor": "Erzurumspor FK"
  },
- "islenen": [],
+ "islenen": [
+  "317874"
+ ],
  "takimlar": {
   "Galatasaray": {
    "O": 10,
@@ -48,12 +50,12 @@
    "P": 19
   },
   "Kasımpaşa": {
-   "O": 10,
-   "G": 4,
+   "O": 11,
+   "G": 5,
    "B": 5,
    "M": 1,
-   "AV": 4,
-   "P": 17
+   "AV": 6,
+   "P": 20
   },
   "Fenerbahçe": {
    "O": 10,
@@ -136,11 +138,11 @@
    "P": 8
   },
   "Gaziantep FK": {
-   "O": 10,
+   "O": 11,
    "G": 2,
    "B": 2,
-   "M": 6,
-   "AV": -8,
+   "M": 7,
+   "AV": -10,
    "P": 8
   },
   "Samsunspor": {
