@@ -434,42 +434,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558534,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 104,
-      "name": "Cagliari"
-     },
-     "away": {
-      "id": 470,
-      "name": "Frosinone"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000558532,
      "status": {
       "short": "FT"
@@ -498,6 +462,42 @@
     "goals": {
      "home": 1,
      "away": 1
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558534,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-07T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 104,
+      "name": "Cagliari"
+     },
+     "away": {
+      "id": 470,
+      "name": "Frosinone"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -652,7 +652,7 @@
     "fixture": {
      "id": 10000560641,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T20:30:00+03:00",
      "venue": {
@@ -676,8 +676,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -688,7 +688,7 @@
     "fixture": {
      "id": 10000564739,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T20:30:00+03:00",
      "venue": {
@@ -712,8 +712,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -793,7 +793,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T20:16:29.073099+03:00",
+  "fixtures_ts": "2026-11-07T20:46:36.346251+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
