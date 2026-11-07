@@ -431,6 +431,42 @@
    {
     "kaynak": "fd",
     "fixture": {
+     "id": 10000558534,
+     "status": {
+      "short": "LIVE"
+     },
+     "date": "2026-11-07T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 104,
+      "name": "Cagliari"
+     },
+     "away": {
+      "id": 470,
+      "name": "Frosinone"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 0
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
      "id": 10000558532,
      "status": {
       "short": "LIVE"
@@ -467,34 +503,34 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558534,
+     "id": 10000560633,
      "status": {
-      "short": "LIVE"
+      "short": "NS"
      },
-     "date": "2026-11-07T17:00:00+03:00",
+     "date": "2026-11-07T18:00:00+03:00",
      "venue": {
       "name": null
      },
      "referee": null
     },
     "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
     },
     "teams": {
      "home": {
-      "id": 104,
-      "name": "Cagliari"
+      "id": 63,
+      "name": "Fulham"
      },
      "away": {
-      "id": 470,
-      "name": "Frosinone"
+      "id": 67,
+      "name": "Newcastle"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -526,42 +562,6 @@
      "away": {
       "id": 322,
       "name": "Hull City"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560633,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T18:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 63,
-      "name": "Fulham"
-     },
-     "away": {
-      "id": 67,
-      "name": "Newcastle"
      }
     },
     "goals": {
@@ -790,7 +790,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T17:45:43.957606+03:00",
+  "fixtures_ts": "2026-11-07T18:00:47.715049+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
