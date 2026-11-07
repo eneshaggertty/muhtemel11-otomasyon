@@ -428,42 +428,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558532,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 586,
-      "name": "Torino"
-     },
-     "away": {
-      "id": 5890,
-      "name": "Lecce"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000558534,
      "status": {
       "short": "NS"
@@ -500,29 +464,29 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560640,
+     "id": 10000558532,
      "status": {
       "short": "NS"
      },
-     "date": "2026-11-07T18:00:00+03:00",
+     "date": "2026-11-07T17:00:00+03:00",
      "venue": {
       "name": null
      },
      "referee": null
     },
     "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
     },
     "teams": {
      "home": {
-      "id": 57,
-      "name": "Arsenal"
+      "id": 586,
+      "name": "Torino"
      },
      "away": {
-      "id": 322,
-      "name": "Hull City"
+      "id": 5890,
+      "name": "Lecce"
      }
     },
     "goals": {
@@ -559,6 +523,42 @@
      "away": {
       "id": 67,
       "name": "Newcastle"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560640,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-07T18:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 57,
+      "name": "Arsenal"
+     },
+     "away": {
+      "id": 322,
+      "name": "Hull City"
      }
     },
     "goals": {
@@ -787,7 +787,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T03:11:39.702584+03:00",
+  "fixtures_ts": "2026-11-07T12:28:45.876289+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
