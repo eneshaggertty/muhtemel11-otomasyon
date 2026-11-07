@@ -367,7 +367,7 @@
     "fixture": {
      "id": 10000560632,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "date": "2026-11-07T15:30:00+03:00",
      "venue": {
@@ -391,8 +391,8 @@
      }
     },
     "goals": {
-     "home": 1,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -403,7 +403,7 @@
     "fixture": {
      "id": 10000564744,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "date": "2026-11-07T16:00:00+03:00",
      "venue": {
@@ -427,44 +427,8 @@
      }
     },
     "goals": {
-     "home": 1,
-     "away": 2
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000558532,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 586,
-      "name": "Torino"
-     },
-     "away": {
-      "id": 5890,
-      "name": "Lecce"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 1
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -475,7 +439,7 @@
     "fixture": {
      "id": 10000558534,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "date": "2026-11-07T17:00:00+03:00",
      "venue": {
@@ -499,8 +463,8 @@
      }
     },
     "goals": {
-     "home": 1,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -509,34 +473,34 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560633,
+     "id": 10000558532,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T18:00:00+03:00",
+     "date": "2026-11-07T17:00:00+03:00",
      "venue": {
       "name": null
      },
      "referee": null
     },
     "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
     },
     "teams": {
      "home": {
-      "id": 63,
-      "name": "Fulham"
+      "id": 586,
+      "name": "Torino"
      },
      "away": {
-      "id": 67,
-      "name": "Newcastle"
+      "id": 5890,
+      "name": "Lecce"
      }
     },
     "goals": {
-     "home": 1,
-     "away": 1
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -547,7 +511,7 @@
     "fixture": {
      "id": 10000560640,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "date": "2026-11-07T18:00:00+03:00",
      "venue": {
@@ -571,8 +535,44 @@
      }
     },
     "goals": {
-     "home": 1,
-     "away": 0
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560633,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-07T18:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 63,
+      "name": "Fulham"
+     },
+     "away": {
+      "id": 67,
+      "name": "Newcastle"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -583,7 +583,7 @@
     "fixture": {
      "id": 10000564745,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "date": "2026-11-07T18:15:00+03:00",
      "venue": {
@@ -607,8 +607,8 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -619,7 +619,7 @@
     "fixture": {
      "id": 10000558535,
      "status": {
-      "short": "LIVE"
+      "short": "NS"
      },
      "date": "2026-11-07T20:00:00+03:00",
      "venue": {
@@ -643,8 +643,8 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 2
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -655,7 +655,7 @@
     "fixture": {
      "id": 10000564739,
      "status": {
-      "short": "LIVE"
+      "short": "NS"
      },
      "date": "2026-11-07T20:30:00+03:00",
      "venue": {
@@ -679,8 +679,8 @@
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -691,7 +691,7 @@
     "fixture": {
      "id": 10000560641,
      "status": {
-      "short": "LIVE"
+      "short": "NS"
      },
      "date": "2026-11-07T20:30:00+03:00",
      "venue": {
@@ -715,8 +715,8 @@
      }
     },
     "goals": {
-     "home": 2,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -796,7 +796,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T21:47:40.870189+03:00",
+  "fixtures_ts": "2026-11-07T22:17:48.986934+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
