@@ -421,7 +421,7 @@
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 0
     },
     "score": {
@@ -647,42 +647,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560641,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 351,
-      "name": "Nottingham"
-     },
-     "away": {
-      "id": 65,
-      "name": "Man City"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000564739,
      "status": {
       "short": "NS"
@@ -706,6 +670,42 @@
      "away": {
       "id": 77,
       "name": "Athletic"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560641,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-07T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 351,
+      "name": "Nottingham"
+     },
+     "away": {
+      "id": 65,
+      "name": "Man City"
      }
     },
     "goals": {
@@ -790,7 +790,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T16:15:27.393573+03:00",
+  "fixtures_ts": "2026-11-07T16:45:33.719381+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
