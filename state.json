@@ -361,7 +361,7 @@
     "fixture": {
      "id": 10000560632,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T15:30:00+03:00",
      "venue": {
@@ -385,8 +385,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -397,7 +397,7 @@
     "fixture": {
      "id": 10000564744,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T16:00:00+03:00",
      "venue": {
@@ -418,6 +418,42 @@
      "away": {
       "id": 5335,
       "name": "Santander"
+     }
+    },
+    "goals": {
+     "home": 0,
+     "away": 0
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558534,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-07T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 104,
+      "name": "Cagliari"
+     },
+     "away": {
+      "id": 470,
+      "name": "Frosinone"
      }
     },
     "goals": {
@@ -454,42 +490,6 @@
      "away": {
       "id": 5890,
       "name": "Lecce"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000558534,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 104,
-      "name": "Cagliari"
-     },
-     "away": {
-      "id": 470,
-      "name": "Frosinone"
      }
     },
     "goals": {
@@ -647,42 +647,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000564739,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 79,
-      "name": "Osasuna"
-     },
-     "away": {
-      "id": 77,
-      "name": "Athletic"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000560641,
      "status": {
       "short": "NS"
@@ -706,6 +670,42 @@
      "away": {
       "id": 65,
       "name": "Man City"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564739,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-07T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 79,
+      "name": "Osasuna"
+     },
+     "away": {
+      "id": 77,
+      "name": "Athletic"
      }
     },
     "goals": {
@@ -790,7 +790,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T15:44:58.730080+03:00",
+  "fixtures_ts": "2026-11-07T16:15:27.393573+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
