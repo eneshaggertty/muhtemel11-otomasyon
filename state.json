@@ -64,7 +64,9 @@
   "program:2026-11-07": "2026-11-07T12:13:43.781976+03:00",
   "ilk11:317875": "2026-11-07T12:44:05.480751+03:00",
   "ilk11:317882": "2026-11-07T15:14:51.227065+03:00",
-  "sonuc:317875": "2026-11-07T15:45:10.989928+03:00"
+  "sonuc:317875": "2026-11-07T15:45:10.989928+03:00",
+  "ilk11:317878": "2026-11-07T18:09:04.808268+03:00",
+  "ilk11:317880": "2026-11-07T18:09:13.398802+03:00"
  },
  "cache": {
   "fixtures": [
@@ -110,7 +112,7 @@
      "id": 317882,
      "date": "2026-11-07T16:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -133,8 +135,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -290,7 +292,7 @@
      "id": 318229,
      "date": "2026-11-07T16:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -313,8 +315,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 5
     },
     "score": {
      "penalty": {}
@@ -397,7 +399,7 @@
     "fixture": {
      "id": 10000564744,
      "status": {
-      "short": "LIVE"
+      "short": "FT"
      },
      "date": "2026-11-07T16:00:00+03:00",
      "venue": {
@@ -423,42 +425,6 @@
     "goals": {
      "home": 1,
      "away": 2
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000558534,
-     "status": {
-      "short": "LIVE"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 104,
-      "name": "Cagliari"
-     },
-     "away": {
-      "id": 470,
-      "name": "Frosinone"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
     },
     "score": {
      "penalty": {}
@@ -503,34 +469,34 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560633,
+     "id": 10000558534,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
-     "date": "2026-11-07T18:00:00+03:00",
+     "date": "2026-11-07T17:00:00+03:00",
      "venue": {
       "name": null
      },
      "referee": null
     },
     "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
     },
     "teams": {
      "home": {
-      "id": 63,
-      "name": "Fulham"
+      "id": 104,
+      "name": "Cagliari"
      },
      "away": {
-      "id": 67,
-      "name": "Newcastle"
+      "id": 470,
+      "name": "Frosinone"
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -541,7 +507,7 @@
     "fixture": {
      "id": 10000560640,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T18:00:00+03:00",
      "venue": {
@@ -565,8 +531,44 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560633,
+     "status": {
+      "short": "LIVE"
+     },
+     "date": "2026-11-07T18:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 63,
+      "name": "Fulham"
+     },
+     "away": {
+      "id": 67,
+      "name": "Newcastle"
+     }
+    },
+    "goals": {
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -790,7 +792,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T18:00:47.715049+03:00",
+  "fixtures_ts": "2026-11-07T18:08:50.822453+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
