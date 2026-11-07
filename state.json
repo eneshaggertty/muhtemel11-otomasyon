@@ -367,7 +367,7 @@
     "fixture": {
      "id": 10000560632,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T15:30:00+03:00",
      "venue": {
@@ -391,8 +391,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -403,7 +403,7 @@
     "fixture": {
      "id": 10000564744,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T16:00:00+03:00",
      "venue": {
@@ -427,8 +427,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 2
     },
     "score": {
      "penalty": {}
@@ -439,7 +439,7 @@
     "fixture": {
      "id": 10000558534,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T17:00:00+03:00",
      "venue": {
@@ -463,8 +463,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -475,7 +475,7 @@
     "fixture": {
      "id": 10000558532,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T17:00:00+03:00",
      "venue": {
@@ -499,44 +499,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560640,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T18:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 57,
-      "name": "Arsenal"
-     },
-     "away": {
-      "id": 322,
-      "name": "Hull City"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -547,7 +511,7 @@
     "fixture": {
      "id": 10000560633,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T18:00:00+03:00",
      "venue": {
@@ -571,8 +535,44 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 1
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560640,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-07T18:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 57,
+      "name": "Arsenal"
+     },
+     "away": {
+      "id": 322,
+      "name": "Hull City"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -583,7 +583,7 @@
     "fixture": {
      "id": 10000564745,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T18:15:00+03:00",
      "venue": {
@@ -607,8 +607,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -619,7 +619,7 @@
     "fixture": {
      "id": 10000558535,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T20:00:00+03:00",
      "venue": {
@@ -643,44 +643,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000564739,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 79,
-      "name": "Osasuna"
-     },
-     "away": {
-      "id": 77,
-      "name": "Athletic"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 2
     },
     "score": {
      "penalty": {}
@@ -691,7 +655,7 @@
     "fixture": {
      "id": 10000560641,
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "date": "2026-11-07T20:30:00+03:00",
      "venue": {
@@ -715,8 +679,44 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 3,
+     "away": 1
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564739,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-07T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 79,
+      "name": "Osasuna"
+     },
+     "away": {
+      "id": 77,
+      "name": "Athletic"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -796,7 +796,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T22:17:48.986934+03:00",
+  "fixtures_ts": "2026-11-07T22:47:55.139238+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
