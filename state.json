@@ -438,42 +438,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558534,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 104,
-      "name": "Cagliari"
-     },
-     "away": {
-      "id": 470,
-      "name": "Frosinone"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000558532,
      "status": {
       "short": "FT"
@@ -510,34 +474,34 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560633,
+     "id": 10000558534,
      "status": {
       "short": "FT"
      },
-     "date": "2026-11-07T18:00:00+03:00",
+     "date": "2026-11-07T17:00:00+03:00",
      "venue": {
       "name": null
      },
      "referee": null
     },
     "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
     },
     "teams": {
      "home": {
-      "id": 63,
-      "name": "Fulham"
+      "id": 104,
+      "name": "Cagliari"
      },
      "away": {
-      "id": 67,
-      "name": "Newcastle"
+      "id": 470,
+      "name": "Frosinone"
      }
     },
     "goals": {
      "home": 1,
-     "away": 1
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -574,6 +538,42 @@
     "goals": {
      "home": 1,
      "away": 0
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560633,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-07T18:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 63,
+      "name": "Fulham"
+     },
+     "away": {
+      "id": 67,
+      "name": "Newcastle"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -654,42 +654,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560641,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 351,
-      "name": "Nottingham"
-     },
-     "away": {
-      "id": 65,
-      "name": "Man City"
-     }
-    },
-    "goals": {
-     "home": 3,
-     "away": 1
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000564739,
      "status": {
       "short": "FT"
@@ -726,9 +690,45 @@
    {
     "kaynak": "fd",
     "fixture": {
+     "id": 10000560641,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-07T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 351,
+      "name": "Nottingham"
+     },
+     "away": {
+      "id": 65,
+      "name": "Man City"
+     }
+    },
+    "goals": {
+     "home": 3,
+     "away": 1
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
      "id": 10000558531,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T22:45:00+03:00",
      "venue": {
@@ -752,8 +752,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -764,7 +764,7 @@
     "fixture": {
      "id": 10000564741,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-07T23:00:00+03:00",
      "venue": {
@@ -788,8 +788,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -797,7 +797,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T22:47:55.139238+03:00",
+  "fixtures_ts": "2026-11-07T23:18:13.919523+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
