@@ -501,42 +501,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560633,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-07T18:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 63,
-      "name": "Fulham"
-     },
-     "away": {
-      "id": 67,
-      "name": "Newcastle"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000560640,
      "status": {
       "short": "NS"
@@ -560,6 +524,42 @@
      "away": {
       "id": 322,
       "name": "Hull City"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560633,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-07T18:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 63,
+      "name": "Fulham"
+     },
+     "away": {
+      "id": 67,
+      "name": "Newcastle"
      }
     },
     "goals": {
@@ -788,7 +788,7 @@
    }
   ],
   "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-07T13:59:19.567281+03:00",
+  "fixtures_ts": "2026-11-07T14:29:25.513647+03:00",
   "gunler": {
    "2026-11-04": [],
    "2026-11-05": [],
