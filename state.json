@@ -69,7 +69,8 @@
   "ilk11:317880": "2026-11-07T18:09:13.398802+03:00",
   "sonuc:317882": "2026-11-07T18:16:06.076130+03:00",
   "sonuc:317878": "2026-11-07T21:16:54.957462+03:00",
-  "sonuc:317880": "2026-11-07T21:17:02.232240+03:00"
+  "sonuc:317880": "2026-11-07T21:17:02.232240+03:00",
+  "toplu:204:2026-11-07": "2026-11-07T21:17:18.919290+03:00"
  },
  "cache": {
   "fixtures": [
@@ -797,7 +798,6 @@
   "fixtures_date": "2026-11-07",
   "fixtures_ts": "2026-11-07T21:16:45.400413+03:00",
   "gunler": {
-   "2026-11-04": [],
    "2026-11-05": [],
    "2026-11-07": [
     {
@@ -1733,6 +1733,836 @@
      "goals": {
       "home": 0,
       "away": 0
+     },
+     "score": {
+      "penalty": {}
+     }
+    }
+   ],
+   "2026-11-08": [
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 317877,
+      "date": "2026-11-08T13:30:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 422727,
+       "name": "Çaykur Rizespor"
+      },
+      "away": {
+       "id": 25570,
+       "name": "Erzurumspor FK"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 317879,
+      "date": "2026-11-08T16:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 47868,
+       "name": "Çorum FK"
+      },
+      "away": {
+       "id": 58687,
+       "name": "Fenerbahçe"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 317876,
+      "date": "2026-11-08T18:30:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 615723,
+       "name": "Alanyaspor"
+      },
+      "away": {
+       "id": 83282,
+       "name": "Trabzonspor"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 317881,
+      "date": "2026-11-08T21:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 203,
+      "name": "Trendyol Süper Lig",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 576906,
+       "name": "Beşiktaş"
+      },
+      "away": {
+       "id": 738668,
+       "name": "Gençlerbirliği"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 318223,
+      "date": "2026-11-08T13:30:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
+     },
+     "teams": {
+      "home": {
+       "id": 590142,
+       "name": "Bandırma Spor"
+      },
+      "away": {
+       "id": 910965,
+       "name": "Fatih Karagümrük"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 318225,
+      "date": "2026-11-08T16:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
+     },
+     "teams": {
+      "home": {
+       "id": 94849,
+       "name": "Ümraniyespor"
+      },
+      "away": {
+       "id": 147482,
+       "name": "Kayserispor"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 318226,
+      "date": "2026-11-08T16:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
+     },
+     "teams": {
+      "home": {
+       "id": 770481,
+       "name": "Boluspor"
+      },
+      "away": {
+       "id": 354590,
+       "name": "Bodrum FK"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "tff",
+     "fixture": {
+      "id": 318228,
+      "date": "2026-11-08T19:00:00+03:00",
+      "status": {
+       "short": "NS"
+      },
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 204,
+      "name": "Trendyol 1. Lig",
+      "round": "Regular Season - 14"
+     },
+     "teams": {
+      "home": {
+       "id": 410496,
+       "name": "Mardin 1969 Spor"
+      },
+      "away": {
+       "id": 845618,
+       "name": "Batman Petrol Spor"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558533,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T14:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 113,
+       "name": "Napoli"
+      },
+      "away": {
+       "id": 110,
+       "name": "Lazio"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564738,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T16:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 285,
+       "name": "Elche"
+      },
+      "away": {
+       "id": 90,
+       "name": "Real Betis"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560636,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 71,
+       "name": "Sunderland"
+      },
+      "away": {
+       "id": 61,
+       "name": "Chelsea"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558538,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 5911,
+       "name": "Monza"
+      },
+      "away": {
+       "id": 102,
+       "name": "Atalanta"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560638,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 397,
+       "name": "Brighton Hove"
+      },
+      "away": {
+       "id": 402,
+       "name": "Brentford"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558536,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 107,
+       "name": "Genoa"
+      },
+      "away": {
+       "id": 98,
+       "name": "Milan"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560637,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 349,
+       "name": "Ipswich Town"
+      },
+      "away": {
+       "id": 1044,
+       "name": "Bournemouth"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560635,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T17:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 354,
+       "name": "Crystal Palace"
+      },
+      "away": {
+       "id": 64,
+       "name": "Liverpool"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564743,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T18:15:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 92,
+       "name": "Real Sociedad"
+      },
+      "away": {
+       "id": 87,
+       "name": "Rayo Vallecano"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000560639,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T19:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 39,
+      "name": "Premier Lig",
+      "round": "Regular Season - 10"
+     },
+     "teams": {
+      "home": {
+       "id": 66,
+       "name": "Man United"
+      },
+      "away": {
+       "id": 58,
+       "name": "Aston Villa"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558530,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T20:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 108,
+       "name": "Inter"
+      },
+      "away": {
+       "id": 7397,
+       "name": "Como 1907"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564747,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T20:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 94,
+       "name": "Villarreal"
+      },
+      "away": {
+       "id": 82,
+       "name": "Getafe"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564742,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T20:30:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 558,
+       "name": "Celta"
+      },
+      "away": {
+       "id": 88,
+       "name": "Levante"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000558529,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T22:45:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 135,
+      "name": "Serie A",
+      "round": "Regular Season - 11"
+     },
+     "teams": {
+      "home": {
+       "id": 99,
+       "name": "Fiorentina"
+      },
+      "away": {
+       "id": 109,
+       "name": "Juventus"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
+     },
+     "score": {
+      "penalty": {}
+     }
+    },
+    {
+     "kaynak": "fd",
+     "fixture": {
+      "id": 10000564746,
+      "status": {
+       "short": "NS"
+      },
+      "date": "2026-11-08T23:00:00+03:00",
+      "venue": {
+       "name": null
+      },
+      "referee": null
+     },
+     "league": {
+      "id": 140,
+      "name": "La Liga",
+      "round": "Regular Season - 12"
+     },
+     "teams": {
+      "home": {
+       "id": 78,
+       "name": "Atleti"
+      },
+      "away": {
+       "id": 81,
+       "name": "Barça"
+      }
+     },
+     "goals": {
+      "home": null,
+      "away": null
      },
      "score": {
       "penalty": {}
