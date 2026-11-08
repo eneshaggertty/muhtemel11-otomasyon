@@ -399,7 +399,7 @@
      }
     },
     "goals": {
-     "home": 0,
+     "home": 1,
      "away": 1
     },
     "score": {
@@ -411,7 +411,7 @@
     "fixture": {
      "id": 10000564738,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-08T16:00:00+03:00",
      "venue": {
@@ -435,44 +435,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560636,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 71,
-      "name": "Sunderland"
-     },
-     "away": {
-      "id": 61,
-      "name": "Chelsea"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -540,6 +504,42 @@
      "away": {
       "id": 402,
       "name": "Brentford"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560636,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 71,
+      "name": "Sunderland"
+     },
+     "away": {
+      "id": 61,
+      "name": "Chelsea"
      }
     },
     "goals": {
@@ -912,7 +912,7 @@
    }
   ],
   "fixtures_date": "2026-11-08",
-  "fixtures_ts": "2026-11-08T15:37:27.879411+03:00",
+  "fixtures_ts": "2026-11-08T16:07:39.449912+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
