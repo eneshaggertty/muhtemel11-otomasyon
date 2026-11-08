@@ -81,7 +81,8 @@
   "sonuc:317877": "2026-11-08T15:37:36.898803+03:00",
   "ilk11:317876": "2026-11-08T17:38:09.130469+03:00",
   "sonuc:317879": "2026-11-08T18:08:25.270719+03:00",
-  "ilk11:317881": "2026-11-08T20:09:20.659745+03:00"
+  "ilk11:317881": "2026-11-08T20:09:20.659745+03:00",
+  "sonuc:317876": "2026-11-08T20:39:38.137337+03:00"
  },
  "cache": {
   "fixtures": [
@@ -163,7 +164,7 @@
      "id": 317876,
      "date": "2026-11-08T18:30:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -186,8 +187,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 2
     },
     "score": {
      "penalty": {}
@@ -556,42 +557,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560635,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 354,
-      "name": "Crystal Palace"
-     },
-     "away": {
-      "id": 64,
-      "name": "Liverpool"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 3
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000558536,
      "status": {
       "short": "FT"
@@ -656,6 +621,42 @@
     "goals": {
      "home": 1,
      "away": 2
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560635,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 354,
+      "name": "Crystal Palace"
+     },
+     "away": {
+      "id": 64,
+      "name": "Liverpool"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 3
     },
     "score": {
      "penalty": {}
@@ -762,7 +763,7 @@
      }
     },
     "goals": {
-     "home": 1,
+     "home": 2,
      "away": 0
     },
     "score": {
@@ -774,7 +775,7 @@
     "fixture": {
      "id": 10000564747,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-08T20:30:00+03:00",
      "venue": {
@@ -798,8 +799,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -810,7 +811,7 @@
     "fixture": {
      "id": 10000564742,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-08T20:30:00+03:00",
      "venue": {
@@ -834,8 +835,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -915,7 +916,7 @@
    }
   ],
   "fixtures_date": "2026-11-08",
-  "fixtures_ts": "2026-11-08T20:24:22.751532+03:00",
+  "fixtures_ts": "2026-11-08T20:39:27.374345+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
