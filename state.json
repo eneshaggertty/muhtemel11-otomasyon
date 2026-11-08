@@ -75,7 +75,8 @@
   "toplu:135:2026-11-07": "2026-11-08T00:48:47.521830+03:00",
   "toplu:140:2026-11-07": "2026-11-08T01:19:09.122030+03:00",
   "program203:2026-11-08": "2026-11-08T12:05:17.385336+03:00",
-  "program:2026-11-08": "2026-11-08T12:06:03.016587+03:00"
+  "program:2026-11-08": "2026-11-08T12:06:03.016587+03:00",
+  "ilk11:317877": "2026-11-08T12:51:23.984016+03:00"
  },
  "cache": {
   "fixtures": [
@@ -442,114 +443,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560636,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 71,
-      "name": "Sunderland"
-     },
-     "away": {
-      "id": 61,
-      "name": "Chelsea"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000558538,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 5911,
-      "name": "Monza"
-     },
-     "away": {
-      "id": 102,
-      "name": "Atalanta"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560638,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 397,
-      "name": "Brighton Hove"
-     },
-     "away": {
-      "id": 402,
-      "name": "Brentford"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000558536,
      "status": {
       "short": "NS"
@@ -645,6 +538,114 @@
      "away": {
       "id": 64,
       "name": "Liverpool"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560636,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 71,
+      "name": "Sunderland"
+     },
+     "away": {
+      "id": 61,
+      "name": "Chelsea"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558538,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 5911,
+      "name": "Monza"
+     },
+     "away": {
+      "id": 102,
+      "name": "Atalanta"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560638,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 397,
+      "name": "Brighton Hove"
+     },
+     "away": {
+      "id": 402,
+      "name": "Brentford"
      }
     },
     "goals": {
@@ -766,42 +767,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000564747,
-     "status": {
-      "short": "NS"
-     },
-     "date": "2026-11-08T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 94,
-      "name": "Villarreal"
-     },
-     "away": {
-      "id": 82,
-      "name": "Getafe"
-     }
-    },
-    "goals": {
-     "home": null,
-     "away": null
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000564742,
      "status": {
       "short": "NS"
@@ -825,6 +790,42 @@
      "away": {
       "id": 88,
       "name": "Levante"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564747,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 94,
+      "name": "Villarreal"
+     },
+     "away": {
+      "id": 82,
+      "name": "Getafe"
      }
     },
     "goals": {
@@ -909,7 +910,7 @@
    }
   ],
   "fixtures_date": "2026-11-08",
-  "fixtures_ts": "2026-11-08T12:21:05.212220+03:00",
+  "fixtures_ts": "2026-11-08T12:51:12.032134+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
