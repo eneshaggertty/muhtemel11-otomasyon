@@ -270,7 +270,7 @@
      "id": 318225,
      "date": "2026-11-08T16:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -293,8 +293,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 2,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -306,7 +306,7 @@
      "id": 318226,
      "date": "2026-11-08T16:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -329,8 +329,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 2
     },
     "score": {
      "penalty": {}
@@ -447,42 +447,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560636,
-     "status": {
-      "short": "LIVE"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 71,
-      "name": "Sunderland"
-     },
-     "away": {
-      "id": 61,
-      "name": "Chelsea"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000558538,
      "status": {
       "short": "LIVE"
@@ -510,7 +474,7 @@
     },
     "goals": {
      "home": 0,
-     "away": 0
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -555,7 +519,7 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560635,
+     "id": 10000560636,
      "status": {
       "short": "LIVE"
      },
@@ -572,17 +536,17 @@
     },
     "teams": {
      "home": {
-      "id": 354,
-      "name": "Crystal Palace"
+      "id": 71,
+      "name": "Sunderland"
      },
      "away": {
-      "id": 64,
-      "name": "Liverpool"
+      "id": 61,
+      "name": "Chelsea"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 1
+     "home": 1,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -653,8 +617,44 @@
      }
     },
     "goals": {
+     "home": 1,
+     "away": 2
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560635,
+     "status": {
+      "short": "LIVE"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 354,
+      "name": "Crystal Palace"
+     },
+     "away": {
+      "id": 64,
+      "name": "Liverpool"
+     }
+    },
+    "goals": {
      "home": 0,
-     "away": 1
+     "away": 2
     },
     "score": {
      "penalty": {}
@@ -665,7 +665,7 @@
     "fixture": {
      "id": 10000564743,
      "status": {
-      "short": "NS"
+      "short": "LIVE"
      },
      "date": "2026-11-08T18:15:00+03:00",
      "venue": {
@@ -689,8 +689,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 0
     },
     "score": {
      "penalty": {}
@@ -914,7 +914,7 @@
    }
   ],
   "fixtures_date": "2026-11-08",
-  "fixtures_ts": "2026-11-08T18:08:16.377436+03:00",
+  "fixtures_ts": "2026-11-08T18:38:27.948827+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
