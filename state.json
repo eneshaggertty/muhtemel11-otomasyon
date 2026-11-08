@@ -344,7 +344,7 @@
      "id": 318228,
      "date": "2026-11-08T19:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -367,8 +367,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 1,
+     "away": 1
     },
     "score": {
      "penalty": {}
@@ -440,6 +440,114 @@
     },
     "goals": {
      "home": 0,
+     "away": 2
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560635,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 354,
+      "name": "Crystal Palace"
+     },
+     "away": {
+      "id": 64,
+      "name": "Liverpool"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 3
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558536,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 107,
+      "name": "Genoa"
+     },
+     "away": {
+      "id": 98,
+      "name": "Milan"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 2
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560637,
+     "status": {
+      "short": "FT"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 349,
+      "name": "Ipswich Town"
+     },
+     "away": {
+      "id": 1044,
+      "name": "Bournemouth"
+     }
+    },
+    "goals": {
+     "home": 1,
      "away": 2
     },
     "score": {
@@ -557,114 +665,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558536,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 107,
-      "name": "Genoa"
-     },
-     "away": {
-      "id": 98,
-      "name": "Milan"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 2
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560637,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 349,
-      "name": "Ipswich Town"
-     },
-     "away": {
-      "id": 1044,
-      "name": "Bournemouth"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 2
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560635,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 354,
-      "name": "Crystal Palace"
-     },
-     "away": {
-      "id": 64,
-      "name": "Liverpool"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 3
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000564743,
      "status": {
       "short": "FT"
@@ -728,7 +728,7 @@
     },
     "goals": {
      "home": 2,
-     "away": 2
+     "away": 4
     },
     "score": {
      "penalty": {}
@@ -773,42 +773,6 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000564747,
-     "status": {
-      "short": "LIVE"
-     },
-     "date": "2026-11-08T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 94,
-      "name": "Villarreal"
-     },
-     "away": {
-      "id": 82,
-      "name": "Getafe"
-     }
-    },
-    "goals": {
-     "home": 0,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
      "id": 10000564742,
      "status": {
       "short": "LIVE"
@@ -832,6 +796,42 @@
      "away": {
       "id": 88,
       "name": "Levante"
+     }
+    },
+    "goals": {
+     "home": 1,
+     "away": 0
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564747,
+     "status": {
+      "short": "LIVE"
+     },
+     "date": "2026-11-08T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 94,
+      "name": "Villarreal"
+     },
+     "away": {
+      "id": 82,
+      "name": "Getafe"
      }
     },
     "goals": {
@@ -916,7 +916,7 @@
    }
   ],
   "fixtures_date": "2026-11-08",
-  "fixtures_ts": "2026-11-08T20:39:27.374345+03:00",
+  "fixtures_ts": "2026-11-08T21:09:40.667322+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
