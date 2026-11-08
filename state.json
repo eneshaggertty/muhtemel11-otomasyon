@@ -79,7 +79,8 @@
   "ilk11:317877": "2026-11-08T12:51:23.984016+03:00",
   "ilk11:317879": "2026-11-08T15:07:20.060640+03:00",
   "sonuc:317877": "2026-11-08T15:37:36.898803+03:00",
-  "ilk11:317876": "2026-11-08T17:38:09.130469+03:00"
+  "ilk11:317876": "2026-11-08T17:38:09.130469+03:00",
+  "sonuc:317879": "2026-11-08T18:08:25.270719+03:00"
  },
  "cache": {
   "fixtures": [
@@ -125,7 +126,7 @@
      "id": 317879,
      "date": "2026-11-08T16:00:00+03:00",
      "status": {
-      "short": "NS"
+      "short": "FT"
      },
      "venue": {
       "name": null
@@ -148,8 +149,8 @@
      }
     },
     "goals": {
-     "home": null,
-     "away": null
+     "home": 0,
+     "away": 5
     },
     "score": {
      "penalty": {}
@@ -412,7 +413,7 @@
     "fixture": {
      "id": 10000564738,
      "status": {
-      "short": "LIVE"
+      "short": "FT"
      },
      "date": "2026-11-08T16:00:00+03:00",
      "venue": {
@@ -554,6 +555,42 @@
    {
     "kaynak": "fd",
     "fixture": {
+     "id": 10000560635,
+     "status": {
+      "short": "LIVE"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 354,
+      "name": "Crystal Palace"
+     },
+     "away": {
+      "id": 64,
+      "name": "Liverpool"
+     }
+    },
+    "goals": {
+     "home": 0,
+     "away": 1
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
      "id": 10000558536,
      "status": {
       "short": "LIVE"
@@ -613,42 +650,6 @@
      "away": {
       "id": 1044,
       "name": "Bournemouth"
-     }
-    },
-    "goals": {
-     "home": 0,
-     "away": 1
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560635,
-     "status": {
-      "short": "LIVE"
-     },
-     "date": "2026-11-08T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 354,
-      "name": "Crystal Palace"
-     },
-     "away": {
-      "id": 64,
-      "name": "Liverpool"
      }
     },
     "goals": {
@@ -913,7 +914,7 @@
    }
   ],
   "fixtures_date": "2026-11-08",
-  "fixtures_ts": "2026-11-08T17:53:11.335191+03:00",
+  "fixtures_ts": "2026-11-08T18:08:16.377436+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
