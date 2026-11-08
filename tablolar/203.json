@@ -1,7 +1,7 @@
 {
  "lig": "Trendyol Süper Lig",
- "kaynak": "TFF resmi puan cetveli (2026-11-02)",
- "baslangic": "2026-11-02",
+ "kaynak": "TFF resmi puan cetveli (2026-11-08)",
+ "baslangic": "2026-11-08",
  "alias": {
   "Istanbul Basaksehir": "Başakşehir",
   "Basaksehir": "Başakşehir",
@@ -13,16 +13,7 @@
   "Erzurum BB": "Erzurumspor FK",
   "Erzurumspor": "Erzurumspor FK"
  },
- "islenen": [
-  "317874",
-  "317875",
-  "317882",
-  "317878",
-  "317880",
-  "317877",
-  "317879",
-  "317876"
- ],
+ "islenen": [],
  "takimlar": {
   "Galatasaray": {
    "O": 11,
@@ -32,14 +23,6 @@
    "AV": 12,
    "P": 28
   },
-  "Amed SFK": {
-   "O": 11,
-   "G": 7,
-   "B": 2,
-   "M": 2,
-   "AV": 13,
-   "P": 23
-  },
   "Trabzonspor": {
    "O": 11,
    "G": 8,
@@ -48,13 +31,21 @@
    "AV": 18,
    "P": 25
   },
+  "Amed SFK": {
+   "O": 11,
+   "G": 7,
+   "B": 2,
+   "M": 2,
+   "AV": 13,
+   "P": 23
+  },
   "Beşiktaş": {
-   "O": 10,
-   "G": 6,
+   "O": 11,
+   "G": 7,
    "B": 1,
    "M": 3,
-   "AV": 8,
-   "P": 19
+   "AV": 11,
+   "P": 22
   },
   "Kasımpaşa": {
    "O": 11,
@@ -72,14 +63,6 @@
    "AV": 19,
    "P": 19
   },
-  "Çorum FK": {
-   "O": 11,
-   "G": 5,
-   "B": 1,
-   "M": 5,
-   "AV": 0,
-   "P": 16
-  },
   "Kocaelispor": {
    "O": 11,
    "G": 6,
@@ -87,6 +70,22 @@
    "M": 4,
    "AV": 4,
    "P": 19
+  },
+  "Başakşehir": {
+   "O": 11,
+   "G": 5,
+   "B": 2,
+   "M": 4,
+   "AV": 2,
+   "P": 17
+  },
+  "Çorum FK": {
+   "O": 11,
+   "G": 5,
+   "B": 1,
+   "M": 5,
+   "AV": 0,
+   "P": 16
   },
   "Göztepe": {
    "O": 11,
@@ -96,13 +95,13 @@
    "AV": 3,
    "P": 15
   },
-  "Başakşehir": {
+  "Çaykur Rizespor": {
    "O": 11,
-   "G": 5,
+   "G": 4,
    "B": 2,
-   "M": 4,
-   "AV": 2,
-   "P": 17
+   "M": 5,
+   "AV": -3,
+   "P": 14
   },
   "Erzurumspor FK": {
    "O": 11,
@@ -120,20 +119,12 @@
    "AV": -9,
    "P": 12
   },
-  "Çaykur Rizespor": {
-   "O": 11,
-   "G": 4,
-   "B": 2,
-   "M": 5,
-   "AV": -3,
-   "P": 14
-  },
   "Gençlerbirliği": {
-   "O": 10,
+   "O": 11,
    "G": 3,
    "B": 2,
-   "M": 5,
-   "AV": -6,
+   "M": 6,
+   "AV": -9,
    "P": 11
   },
   "Konyaspor": {
