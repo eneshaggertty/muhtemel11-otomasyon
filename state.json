@@ -80,10 +80,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 317875,
-     "date": "2026-11-07T13:30:00+03:00",
+     "id": 317877,
+     "date": "2026-11-08T13:30:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -97,17 +97,17 @@
     },
     "teams": {
      "home": {
-      "id": 371216,
-      "name": "Eyüpspor"
+      "id": 422727,
+      "name": "Çaykur Rizespor"
      },
      "away": {
-      "id": 875259,
-      "name": "Kocaelispor"
+      "id": 25570,
+      "name": "Erzurumspor FK"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 2
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -116,10 +116,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 317882,
-     "date": "2026-11-07T16:00:00+03:00",
+     "id": 317879,
+     "date": "2026-11-08T16:00:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -133,17 +133,17 @@
     },
     "teams": {
      "home": {
-      "id": 228546,
-      "name": "Samsunspor"
+      "id": 47868,
+      "name": "Çorum FK"
      },
      "away": {
-      "id": 773301,
-      "name": "Konyaspor"
+      "id": 58687,
+      "name": "Fenerbahçe"
      }
     },
     "goals": {
-     "home": 1,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -152,10 +152,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 317878,
-     "date": "2026-11-07T19:00:00+03:00",
+     "id": 317876,
+     "date": "2026-11-08T18:30:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -169,17 +169,17 @@
     },
     "teams": {
      "home": {
-      "id": 549932,
-      "name": "Göztepe"
+      "id": 615723,
+      "name": "Alanyaspor"
      },
      "away": {
-      "id": 907033,
-      "name": "Başakşehir"
+      "id": 83282,
+      "name": "Trabzonspor"
      }
     },
     "goals": {
-     "home": 1,
-     "away": 2
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -188,10 +188,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 317880,
-     "date": "2026-11-07T19:00:00+03:00",
+     "id": 317881,
+     "date": "2026-11-08T21:00:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -205,17 +205,17 @@
     },
     "teams": {
      "home": {
-      "id": 653029,
-      "name": "Galatasaray"
+      "id": 576906,
+      "name": "Beşiktaş"
      },
      "away": {
-      "id": 817687,
-      "name": "Amed SFK"
+      "id": 738668,
+      "name": "Gençlerbirliği"
      }
     },
     "goals": {
-     "home": 4,
-     "away": 3
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -224,10 +224,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 318220,
-     "date": "2026-11-07T13:30:00+03:00",
+     "id": 318223,
+     "date": "2026-11-08T13:30:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -241,17 +241,17 @@
     },
     "teams": {
      "home": {
-      "id": 582130,
-      "name": "Keçiörengücü"
+      "id": 590142,
+      "name": "Bandırma Spor"
      },
      "away": {
-      "id": 87176,
-      "name": "Manisa"
+      "id": 910965,
+      "name": "Fatih Karagümrük"
      }
     },
     "goals": {
-     "home": 1,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -260,10 +260,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 318227,
-     "date": "2026-11-07T13:30:00+03:00",
+     "id": 318225,
+     "date": "2026-11-08T16:00:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -277,17 +277,17 @@
     },
     "teams": {
      "home": {
-      "id": 228083,
-      "name": "Van Spor"
+      "id": 94849,
+      "name": "Ümraniyespor"
      },
      "away": {
-      "id": 230246,
-      "name": "Sivasspor"
+      "id": 147482,
+      "name": "Kayserispor"
      }
     },
     "goals": {
-     "home": 3,
-     "away": 1
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -296,10 +296,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 318229,
-     "date": "2026-11-07T16:00:00+03:00",
+     "id": 318226,
+     "date": "2026-11-08T16:00:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -313,17 +313,17 @@
     },
     "teams": {
      "home": {
-      "id": 893474,
-      "name": "Muğlaspor"
+      "id": 770481,
+      "name": "Boluspor"
      },
      "away": {
-      "id": 985777,
-      "name": "Esenler Erokspor"
+      "id": 354590,
+      "name": "Bodrum FK"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 5
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -332,10 +332,10 @@
    {
     "kaynak": "tff",
     "fixture": {
-     "id": 318221,
-     "date": "2026-11-07T19:00:00+03:00",
+     "id": 318228,
+     "date": "2026-11-08T19:00:00+03:00",
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
      "venue": {
       "name": null
@@ -349,17 +349,17 @@
     },
     "teams": {
      "home": {
-      "id": 110718,
-      "name": "Pendikspor"
+      "id": 410496,
+      "name": "Mardin 1969 Spor"
      },
      "away": {
-      "id": 977690,
-      "name": "İstanbulspor"
+      "id": 845618,
+      "name": "Batman Petrol Spor"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 2
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -368,83 +368,11 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000560632,
+     "id": 10000558533,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T15:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 341,
-      "name": "Leeds United"
-     },
-     "away": {
-      "id": 73,
-      "name": "Tottenham"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000564744,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T16:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 84,
-      "name": "Málaga"
-     },
-     "away": {
-      "id": 5335,
-      "name": "Santander"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 2
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000558532,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T17:00:00+03:00",
+     "date": "2026-11-08T14:30:00+03:00",
      "venue": {
       "name": null
      },
@@ -457,17 +385,17 @@
     },
     "teams": {
      "home": {
-      "id": 586,
-      "name": "Torino"
+      "id": 113,
+      "name": "Napoli"
      },
      "away": {
-      "id": 5890,
-      "name": "Lecce"
+      "id": 110,
+      "name": "Lazio"
      }
     },
     "goals": {
-     "home": 1,
-     "away": 1
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -476,119 +404,11 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558534,
+     "id": 10000564738,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T17:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 135,
-     "name": "Serie A",
-     "round": "Regular Season - 11"
-    },
-    "teams": {
-     "home": {
-      "id": 104,
-      "name": "Cagliari"
-     },
-     "away": {
-      "id": 470,
-      "name": "Frosinone"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560640,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T18:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 57,
-      "name": "Arsenal"
-     },
-     "away": {
-      "id": 322,
-      "name": "Hull City"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 0
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560633,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T18:00:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 39,
-     "name": "Premier Lig",
-     "round": "Regular Season - 10"
-    },
-    "teams": {
-     "home": {
-      "id": 63,
-      "name": "Fulham"
-     },
-     "away": {
-      "id": 67,
-      "name": "Newcastle"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 1
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000564745,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T18:15:00+03:00",
+     "date": "2026-11-08T16:00:00+03:00",
      "venue": {
       "name": null
      },
@@ -601,17 +421,17 @@
     },
     "teams": {
      "home": {
-      "id": 80,
-      "name": "Espanyol"
+      "id": 285,
+      "name": "Elche"
      },
      "away": {
-      "id": 560,
-      "name": "Deportivo"
+      "id": 90,
+      "name": "Real Betis"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -620,11 +440,11 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558535,
+     "id": 10000558536,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T20:00:00+03:00",
+     "date": "2026-11-08T17:00:00+03:00",
      "venue": {
       "name": null
      },
@@ -637,17 +457,17 @@
     },
     "teams": {
      "home": {
-      "id": 112,
-      "name": "Parma"
+      "id": 107,
+      "name": "Genoa"
      },
      "away": {
-      "id": 103,
-      "name": "Bologna"
+      "id": 98,
+      "name": "Milan"
      }
     },
     "goals": {
-     "home": 1,
-     "away": 2
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -656,47 +476,11 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000564739,
+     "id": 10000560637,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T20:30:00+03:00",
-     "venue": {
-      "name": null
-     },
-     "referee": null
-    },
-    "league": {
-     "id": 140,
-     "name": "La Liga",
-     "round": "Regular Season - 12"
-    },
-    "teams": {
-     "home": {
-      "id": 79,
-      "name": "Osasuna"
-     },
-     "away": {
-      "id": 77,
-      "name": "Athletic"
-     }
-    },
-    "goals": {
-     "home": 1,
-     "away": 1
-    },
-    "score": {
-     "penalty": {}
-    }
-   },
-   {
-    "kaynak": "fd",
-    "fixture": {
-     "id": 10000560641,
-     "status": {
-      "short": "FT"
-     },
-     "date": "2026-11-07T20:30:00+03:00",
+     "date": "2026-11-08T17:00:00+03:00",
      "venue": {
       "name": null
      },
@@ -709,17 +493,17 @@
     },
     "teams": {
      "home": {
-      "id": 351,
-      "name": "Nottingham"
+      "id": 349,
+      "name": "Ipswich Town"
      },
      "away": {
-      "id": 65,
-      "name": "Man City"
+      "id": 1044,
+      "name": "Bournemouth"
      }
     },
     "goals": {
-     "home": 3,
-     "away": 1
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -728,11 +512,83 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000558531,
+     "id": 10000560635,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T22:45:00+03:00",
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 354,
+      "name": "Crystal Palace"
+     },
+     "away": {
+      "id": 64,
+      "name": "Liverpool"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560636,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 71,
+      "name": "Sunderland"
+     },
+     "away": {
+      "id": 61,
+      "name": "Chelsea"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558538,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T17:00:00+03:00",
      "venue": {
       "name": null
      },
@@ -745,17 +601,17 @@
     },
     "teams": {
      "home": {
-      "id": 100,
-      "name": "Roma"
+      "id": 5911,
+      "name": "Monza"
      },
      "away": {
-      "id": 471,
-      "name": "Sassuolo"
+      "id": 102,
+      "name": "Atalanta"
      }
     },
     "goals": {
-     "home": 3,
-     "away": 0
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
@@ -764,11 +620,47 @@
    {
     "kaynak": "fd",
     "fixture": {
-     "id": 10000564741,
+     "id": 10000560638,
      "status": {
-      "short": "FT"
+      "short": "NS"
      },
-     "date": "2026-11-07T23:00:00+03:00",
+     "date": "2026-11-08T17:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 397,
+      "name": "Brighton Hove"
+     },
+     "away": {
+      "id": 402,
+      "name": "Brentford"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564743,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T18:15:00+03:00",
      "venue": {
       "name": null
      },
@@ -781,25 +673,241 @@
     },
     "teams": {
      "home": {
-      "id": 95,
-      "name": "Valencia"
+      "id": 92,
+      "name": "Real Sociedad"
      },
      "away": {
-      "id": 86,
-      "name": "Real Madrid"
+      "id": 87,
+      "name": "Rayo Vallecano"
      }
     },
     "goals": {
-     "home": 0,
-     "away": 3
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000560639,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T19:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 39,
+     "name": "Premier Lig",
+     "round": "Regular Season - 10"
+    },
+    "teams": {
+     "home": {
+      "id": 66,
+      "name": "Man United"
+     },
+     "away": {
+      "id": 58,
+      "name": "Aston Villa"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558530,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T20:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 108,
+      "name": "Inter"
+     },
+     "away": {
+      "id": 7397,
+      "name": "Como 1907"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564742,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 558,
+      "name": "Celta"
+     },
+     "away": {
+      "id": 88,
+      "name": "Levante"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564747,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T20:30:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 94,
+      "name": "Villarreal"
+     },
+     "away": {
+      "id": 82,
+      "name": "Getafe"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000558529,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T22:45:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 135,
+     "name": "Serie A",
+     "round": "Regular Season - 11"
+    },
+    "teams": {
+     "home": {
+      "id": 99,
+      "name": "Fiorentina"
+     },
+     "away": {
+      "id": 109,
+      "name": "Juventus"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
+    },
+    "score": {
+     "penalty": {}
+    }
+   },
+   {
+    "kaynak": "fd",
+    "fixture": {
+     "id": 10000564746,
+     "status": {
+      "short": "NS"
+     },
+     "date": "2026-11-08T23:00:00+03:00",
+     "venue": {
+      "name": null
+     },
+     "referee": null
+    },
+    "league": {
+     "id": 140,
+     "name": "La Liga",
+     "round": "Regular Season - 12"
+    },
+    "teams": {
+     "home": {
+      "id": 78,
+      "name": "Atleti"
+     },
+     "away": {
+      "id": 81,
+      "name": "Barça"
+     }
+    },
+    "goals": {
+     "home": null,
+     "away": null
     },
     "score": {
      "penalty": {}
     }
    }
   ],
-  "fixtures_date": "2026-11-07",
-  "fixtures_ts": "2026-11-08T01:18:50.040543+03:00",
+  "fixtures_date": "2026-11-08",
+  "fixtures_ts": "2026-11-08T03:04:14.340754+03:00",
   "gunler": {
    "2026-11-05": [],
    "2026-11-07": [
