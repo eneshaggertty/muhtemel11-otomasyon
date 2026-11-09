@@ -1,0 +1,37 @@
+name: Reels paylaş
+
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: "Repo'daki video yolu"
+        required: true
+      aciklama:
+        description: "Açıklama dosyası"
+        required: true
+      saat:
+        description: "Yayın saati (HH:MM, İstanbul). Boş = hemen"
+        default: ""
+      test:
+        description: "Sadece yükle, yayınlama"
+        type: boolean
+        default: true
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          ARGS="${{ inputs.video }} ${{ inputs.aciklama }}"
+          [ -n "${{ inputs.saat }}" ] && ARGS="$ARGS --saat ${{ inputs.saat }}"
+          [ "${{ inputs.test }}" = "true" ] && ARGS="$ARGS --test"
+          python reels_paylas.py $ARGS
